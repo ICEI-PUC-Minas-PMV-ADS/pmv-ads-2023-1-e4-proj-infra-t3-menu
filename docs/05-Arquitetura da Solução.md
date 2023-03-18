@@ -10,6 +10,31 @@ Definição de como o software é estruturado em termos dos componentes que faze
 
 ![Arquitetura Distribuída](img/CookingArquiteturaDistribuida.jpg)
 
+## Diagrama de Casos de Uso
+
+Identificação dos usuários do sistema:
+* Administrador
+* Usuário de manutenção no site - Usuário responsável pelas atualizações cadastrais
+* Clientes do restaurante
+* Atendente do restaurante
+
+Casos de uso:
+
+1. O administrador do sistema cadastra o Usuário de manutenção responsável pelo cadastro de produtos
+2. O Usuário de manutenção cadastra os produtos disponíveis para venda
+3. O Usuário de manutenção atualiza os produtos disponíveis para venda
+4. O Usuário de manutenção exclui produtos disponíveis para venda
+5. O cliente cadastra o seu próprio usuário
+6. O cliente cadastra o seu pedido
+7. O sistema avisa sobre o novo pedido cadastrado ao Atendente
+8. O Atendente coloca o pedido no Status "em Andamento"
+9. O cliente poderá cancelar um pedido desde que ele não tenha sido iniciado, ou seja, o pedido não poderá ser cancelado
+se estiver no status "em Andamento"
+10. O Atendente finaliza o pedido
+
+
+![image](/docs/img/UseCaseCookingDigital.jpeg)
+
 ## Diagrama de Classes
 
 O diagrama de classes ilustra graficamente como será a estrutura do software, e como cada uma das classes da sua estrutura estarão interligadas. Essas classes servem de modelo para materializar os objetos que executarão na memória.
