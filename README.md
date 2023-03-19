@@ -10,12 +10,12 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 
 ## Integrantes
 
-* Hugo Vinicius Damasceno Pinto
 * Camila Jardim Francisco
+* Diego Lúcio de Paula Rocha
+* Hugo Vinicius Damasceno Pinto
+* Jaqueline Câmara Poletto
 * Rafael Mautone Costa
 * Tarcísio Junior Amaral de Almeida
-* Diego Lúcio de Paula Rocha
-* Jaqueline Câmara Poletto
 
 ## Orientador
 
