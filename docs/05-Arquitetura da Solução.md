@@ -26,12 +26,6 @@ O sistema deve ter medidas de segurança adequadas, como autenticação e autori
 7. Escalabilidade:
 A arquitetura de software distribuído é projetada para ser escalável, permitindo que o sistema seja expandido facilmente para lidar com um grande número de usuários.
 
-<span style="color:red">Pré-requisitos: <a href="3-Projeto de Interface.md"> Projeto de Interface</a></span>
-
-Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
-
-![Arquitetura da Solução](img/02-mob-arch.png)
-
 ## Arquitetura do Software Distribuído
 
 ![Arquitetura Distribuída](img/CookingArquiteturaDistribuida.jpg)
