@@ -1,5 +1,31 @@
 # Arquitetura da Solução
 
+Utilizaremos no nosso projeto o estilo arquitetural de microserviços.
+
+Definição: Este estilo arquitetural coloca prioridade no desacoplamento entre serviços através da definição de domínios de aplicação que são independentes de outros, em termos de código fonte e esquemas de banco de dados. Baseia-se no conceito de contexto limitado, onde em cada contexto são acoplados código e esquemas de forma coesa, mas sem acoplamento com contextos externos. Desta forma, os serviços são menos complexos que em outros estilos arquiteturais.
+
+Microserviços formam uma arquitetura distribuída, cada serviço roda em processo próprio em uma máquina específica (mesmo que virtualizada ou em um container).
+
+Componentes:
+
+1.Cliente: um aplicativo móvel e web que permite aos usuários fazer pedidos de comida em um restaurante cadastrado específico.
+
+2.Servidores de aplicação: uma camada de servidores que processa as solicitações dos clientes e se comunica com os outros componentes da arquitetura.
+
+3.Bancos de dados distribuídos: bancos de dados espalhados por vários servidores que armazenam informações de pedidos, cardápios, usuários e outros dados relevantes.
+
+4.API REST.
+Cada serviço será acessado por uma API (Interface de Programação de Aplicações) utilizando mecanismos de acesso a serviços Web - REST (REpresentational State Transfer).
+
+5.Gerenciamento de dados:
+Os dados são armazenados em bancos de dados distribuídos, garantindo a integridade e consistência dos dados em todos os componentes da arquitetura.
+
+6.Segurança:
+O sistema deve ter medidas de segurança adequadas, como autenticação e autorização de usuários, criptografia de senhas, proteção contra ataques de rede e vazamento de informações sensíveis.
+
+7.Escalabilidade:
+A arquitetura de software distribuído é projetada para ser escalável, permitindo que o sistema seja expandido facilmente para lidar com um grande número de usuários.
+
 <span style="color:red">Pré-requisitos: <a href="3-Projeto de Interface.md"> Projeto de Interface</a></span>
 
 Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
