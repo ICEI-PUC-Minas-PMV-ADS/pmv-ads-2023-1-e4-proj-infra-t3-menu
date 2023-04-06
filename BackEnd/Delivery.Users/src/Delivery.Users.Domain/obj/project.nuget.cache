@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "AkBxXfvrxXOb8RXU5ZOVhIxXkvy4GiIJSimeZ6u2YPFdiTf2pFMN/+cGf2WRzVOgwlfbF+qmWVDVrjpE/tk6LA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\colaboradordatum\\Documents\\Persona\\COOKING\\Delivery.Users\\Delivery.Users\\src\\Delivery.Users.Domain\\Delivery.Users.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\colaboradordatum\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Delivery.Users.API</name>
+    </assembly>
+    <members>
+        <member name="T:Delivery.Users.API.Controllers.UsersController">
+            <summary>
+            Controller to manage Users
+            </summary>
+        </member>
+        <member name="M:Delivery.Users.API.Controllers.UsersController.#ctor(Delivery.Users.Domain.Interfaces.IUserServices)">
+            <summary>
+            Initialize the attributes
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:Delivery.Users.API.Controllers.UsersController.Get(System.Int32)">
+            <summary>
+            Get User by Id
+            </summary>
+            <param name="id">The user id to find</param>
+            <returns>User entity</returns>
+            <response code="200">User found</response>
+            <response code="404">User not found</response>
+            <response code="500">Server Error</response>
+        </member>
+        <member name="M:Delivery.Users.API.Controllers.UsersController.Post(Delivery.Users.Domain.Models.User)">
+            <summary>
+            Create new User
+            </summary>
+            <param name="user">The user object to create</param>
+            <returns>The User created</returns>
+        </member>
+        <member name="M:Delivery.Users.API.Controllers.UsersController.Put(Delivery.Users.Domain.Models.User)">
+            <summary>
+            Update User by Id
+            </summary>
+            <param name="user">The user object to update</param>
+            <returns>The User updated</returns>
+        </member>
+        <member name="M:Delivery.Users.API.Controllers.UsersController.Delete(System.Int32)">
+            <summary>
+            Delete User by Id
+            </summary>
+            <param name="id">The user id to delete</param>
+        </member>
+        <member name="T:Delivery.Users.API.Extensions.ResponseExtension">
+            <summary>
+            Extensions to handle with the responses
+            </summary>
+        </member>
+        <member name="M:Delivery.Users.API.Extensions.ResponseExtension.ToValidationErrorReponse(FluentValidation.Results.ValidationResult)">
+            <summary>
+            Handle with validation objects
+            </summary>
+            <param name="validationResult">The validation result</param>
+            <returns>The default validation response</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Delivery.Users.API.Extensions.ResponseExtension.ToNotFoundReponse(Microsoft.AspNetCore.Mvc.NotFoundResult,System.String)" -->
+        <member name="M:Delivery.Users.API.Extensions.ResponseExtension.ToErrorReponse(System.Exception)">
+            <summary>
+            Handle the exceptions to a readable format
+            </summary>
+            <param name="exception">The exception object</param>
+            <returns>The exception default response</returns>
+        </member>
+    </members>
+</doc>
