@@ -1,0 +1,79 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "API REST Delivery",
+      "description": "API de acesso aos backends do projeto Delivery",
+      "version": "1.0.0"
+    },
+    "servers": [
+      {
+        "url": "http://localhost:3000"
+      }
+    ],
+    "paths": {
+      "/users": {
+        "get": {
+          "summary": "Lista de usuários",
+          "description": "Retorna uma lista de usuários cadastrados",
+          "responses": {
+            "200": {
+              "description": "Lista de usuários",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "email": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "post": {
+          "summary": "Cria um usuário",
+          "description": "Cria um novo usuário",
+          "requestBody": {
+            "description": "Dados do usuário",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "Usuário criado com sucesso"
+            },
+            "400": {
+              "description": "Erro na validação dos dados"
+            }
+          }
+        }
+      }
+    }
+  }
+  

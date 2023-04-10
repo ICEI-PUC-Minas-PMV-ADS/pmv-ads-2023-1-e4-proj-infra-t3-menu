@@ -1,0 +1,12 @@
+O projeto da API REST foi desenvolvido em nodejs no vscode.
+Para rodar essa api, execute o comando abaixo no terminal do vscode. na pasta do projeto:
+node index.js
+Será exibida a mensagem: Servidor está funcionando
+Para testar acesse no navegador:
+http://localhost:3000/
+
+
+
+
+
+
