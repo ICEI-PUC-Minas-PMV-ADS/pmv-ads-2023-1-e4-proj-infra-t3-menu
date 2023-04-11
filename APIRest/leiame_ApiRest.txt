@@ -6,6 +6,21 @@ Para testar acesse no navegador:
 http://localhost:3000/
 
 
+Documentação oficial da especificação swagger:
+https://swagger.io/specification/
+
+Como configurar as rotas:
+https://blog.4linux.com.br/como-organizar-e-manipular-rotas-com-node-js-e-express/
+
+Vídeo para incluir o swagger nesse projeto:
+https://www.youtube.com/watch?v=WhFx2heoFrA
+
+Para acessar a documentação swagger dessa API REST, acesse:
+http://localhost:3000/api-docs/
+
+
+
+
 
 
 

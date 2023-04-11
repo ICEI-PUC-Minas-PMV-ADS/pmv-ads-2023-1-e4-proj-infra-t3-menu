@@ -21,19 +21,19 @@ exports.getOne = (req, res) => {
   });
 };
 
-// Usuarios - MÉTODO POST - Login
-exports.Login = (req, res) => { 
+// Usuarios - MÉTODO POST - login
+exports.login = (req, res) => { 
     sPORT = PORTA_BACKEND_USU;
     const path = sPATH+'Users/'+'authenticate';
-    const bodyData = req.body;        
-
+    const bodyData = req.body; 
+    
     httpsRequest(req.headers.authorization, 'POST', path, bodyData, (data, statusCode) => {
         sendResRequestPost(res, data, statusCode)
     });        
 };
 
 // Usuarios - MÉTODO DELETE
-exports.delete = (req, res) => {
+exports.deleteOne = (req, res) => {
     sPORT = PORTA_BACKEND_USU;
     const id = req.params.id;    
     const path = sPATH + 'Users/' + id;
@@ -45,7 +45,7 @@ exports.delete = (req, res) => {
 };
 
 // Usuarios - MÉTODO POST
-exports.Create = (req, res) => {    
+exports.createOne = (req, res) => {    
     sPORT = PORTA_BACKEND_USU;    
     const path = sPATH + 'Users/Create';
     const bodyData = req.body;        
@@ -56,7 +56,7 @@ exports.Create = (req, res) => {
 };
 
 // Usuarios - MÉTODO PUT
-exports.Update = (req, res) => {    
+exports.updateOne = (req, res) => {    
     sPORT = PORTA_BACKEND_USU;    
     const path = sPATH + 'Users/Put';
     const bodyData = req.body;        

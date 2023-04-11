@@ -1,20 +1,24 @@
 {
     "openapi": "3.0.0",
     "info": {
-      "title": "API REST Delivery",
-      "description": "API de acesso aos backends do projeto Delivery",
+      "title": "API REST Cooking Digital",
+      "description": "API de acesso aos backends do projeto Cooking Digital",
+      "contact": {
+        "email": "poletto.jaque@gmail.com"
+      },
       "version": "1.0.0"
     },
     "servers": [
       {
-        "url": "http://localhost:3000"
+        "url": "http://localhost:3000/api"
       }
     ],
     "paths": {
-      "/users": {
+      "/usuario": {
         "get": {
-          "summary": "Lista de usuários",
-          "description": "Retorna uma lista de usuários cadastrados",
+          "summary": "Listagem de usuários",
+          "description": "Retorna a lista de usuários cadastrados",
+          "tags": ["Usuarios"],
           "responses": {
             "200": {
               "description": "Lista de usuários",
@@ -43,8 +47,9 @@
           }
         },
         "post": {
-          "summary": "Cria um usuário",
-          "description": "Cria um novo usuário",
+          "summary": "Criação de usuário",
+          "description": "Cria um usuário",
+          "tags": ["Usuarios"],
           "requestBody": {
             "description": "Dados do usuário",
             "required": true,
@@ -56,9 +61,18 @@
                     "name": {
                       "type": "string"
                     },
+                    "surname": {
+                      "type": "string"
+                    },
                     "email": {
                       "type": "string"
-                    }
+                    },
+                    "perfil": {
+                      "type": "integer"
+                    },
+                    "password": {
+                      "type": "string"
+                    }                    
                   }
                 }
               }
@@ -72,8 +86,190 @@
               "description": "Erro na validação dos dados"
             }
           }
+        }              
+      },
+
+      "/usuario/{id}": {
+        "get": {
+          "summary": "Pesquisa de usuário",
+          "description": "Busca o usuário pelo identificador",
+          "tags": ["Usuarios"],
+          "parameters": [
+            {
+              "name": "id",              
+              "in": "path",
+              "description": "Id do usuário",
+              "required": true,
+              "schema": {
+                "type": "integer"
+             }              
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Dados de usuários",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "email": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Erro na requisição get"
+            }, 
+            "401": {
+              "description": "Erro 401 na requisição get"
+            },
+            "404": {
+              "description": "Código não encontrado"
+            },                                 
+            "500": {
+              "description": "Erro 500 na requisição get"
+            }            
+          }
+        },       
+      
+        "delete": {
+          "summary": "Exclusão de usuário",
+          "description": "Exclui o usuário pelo identificador",
+          "tags": ["Usuarios"],
+          "parameters": [
+            {
+              "name": "id",              
+              "in": "path",
+              "description": "Id do usuário",
+              "required": true,
+              "schema": {
+                "type": "integer"
+             }              
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Registro excluído"
+            }, 
+            "400": {
+              "description": "Erro na requisição get"
+            }, 
+            "401": {
+              "description": "Erro 401 na requisição get"
+            },
+            "404": {
+              "description": "Código não encontrado"
+            },                                 
+            "500": {
+              "description": "Erro 500 na requisição get"
+            }            
+          }
+        }, 
+       
+        "put": {
+          "summary": "Atualização de usuário",
+          "description": "Atualização de usuário",
+          "tags": ["Usuarios"],
+          "requestBody": {
+            "description": "Dados do usuário",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "surname": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "perfil": {
+                      "type": "integer"
+                    },
+                    "password": {
+                      "type": "string"
+                    }                    
+                  }
+                }
+              }
+            }
+          },
+          "parameters": [
+            {
+              "name": "id",              
+              "in": "path",
+              "description": "Id do usuário",
+              "required": true,
+              "schema": {
+                "type": "integer"
+             }              
+            }
+          ],          
+          "responses": {
+            "201": {
+              "description": "Usuário atualizado com sucesso"
+            },
+            "400": {
+              "description": "Erro na validação dos dados"
+            }
+          }
+        }          
+        
+      },
+
+      "/usuario/login": {
+        "post": {
+        "summary": "Login de usuário",
+        "description": "Realiza a autenticação de usuário",
+        "tags": ["Usuarios"],
+        "requestBody": {
+          "description": "Dados do usuário",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "password": {
+                    "type": "string"
+                  }                    
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Usuário criado com sucesso"
+          },
+          "400": {
+            "description": "Erro na validação dos dados"
+          }
         }
-      }
+      } 
     }
   }
+  }
+  
+
   

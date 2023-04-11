@@ -29,7 +29,7 @@ function httpsRequest(token, method, path, data, callback) {
         headers: {
             'Content-Type': 'application/json',
             'Content-Length': Buffer.byteLength(JSON.stringify(data)),
-            Authorization: token,
+            //Authorization: token, //jaque: voltar com esse Authorization
         }, 
         port: sPORT,       
     }); 
@@ -37,7 +37,7 @@ function httpsRequest(token, method, path, data, callback) {
     // Converte os dados em JSON
     const requestData = JSON.stringify(data);
 
-    // Envia a solicitação HTTPS
+    // Envia a requisição HTTPS
     const request = https.request(options, (response) => {
         let responseData = '';
         response.on('data', (chunk) => {
