@@ -1,0 +1,279 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Projects\\API_Delivery\\Delivery.Products\\src\\Delivery.Products.Api\\Delivery.Products.Api.csproj": {}
+  },
+  "projects": {
+    "D:\\Projects\\API_Delivery\\Delivery.Products\\src\\Delivery.Products.Api\\Delivery.Products.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\API_Delivery\\Delivery.Products\\src\\Delivery.Products.Api\\Delivery.Products.Api.csproj",
+        "projectName": "Delivery.Products.Api",
+        "projectPath": "D:\\Projects\\API_Delivery\\Delivery.Products\\src\\Delivery.Products.Api\\Delivery.Products.Api.csproj",
+        "packagesPath": "C:\\Users\\rodri\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\API_Delivery\\Delivery.Products\\src\\Delivery.Products.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\rodri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Projects\\API_Delivery\\Delivery.Products\\src\\Delivery.Products.Infrastructure\\Delivery.Products.Infrastructure.csproj": {
+                "projectPath": "D:\\Projects\\API_Delivery\\Delivery.Products\\src\\Delivery.Products.Infrastructure\\Delivery.Products.Infrastructure.csproj"
+              },
+              "D:\\Projects\\API_Delivery\\Delivery.Products\\src\\Delivery.Products.Services\\Delivery.Products.Services.csproj": {
+                "projectPath": "D:\\Projects\\API_Delivery\\Delivery.Products\\src\\Delivery.Products.Services\\Delivery.Products.Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projects\\API_Delivery\\Delivery.Products\\src\\Delivery.Products.Domain\\Delivery.Products.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\API_Delivery\\Delivery.Products\\src\\Delivery.Products.Domain\\Delivery.Products.Domain.csproj",
+        "projectName": "Delivery.Products.Domain",
+        "projectPath": "D:\\Projects\\API_Delivery\\Delivery.Products\\src\\Delivery.Products.Domain\\Delivery.Products.Domain.csproj",
+        "packagesPath": "C:\\Users\\rodri\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\API_Delivery\\Delivery.Products\\src\\Delivery.Products.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\rodri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.5.1, )"
+            },
+            "MongoDB.Bson": {
+              "target": "Package",
+              "version": "[2.19.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projects\\API_Delivery\\Delivery.Products\\src\\Delivery.Products.Infrastructure\\Delivery.Products.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\API_Delivery\\Delivery.Products\\src\\Delivery.Products.Infrastructure\\Delivery.Products.Infrastructure.csproj",
+        "projectName": "Delivery.Products.Infrastructure",
+        "projectPath": "D:\\Projects\\API_Delivery\\Delivery.Products\\src\\Delivery.Products.Infrastructure\\Delivery.Products.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\rodri\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\API_Delivery\\Delivery.Products\\src\\Delivery.Products.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\rodri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Projects\\API_Delivery\\Delivery.Products\\src\\Delivery.Products.Domain\\Delivery.Products.Domain.csproj": {
+                "projectPath": "D:\\Projects\\API_Delivery\\Delivery.Products\\src\\Delivery.Products.Domain\\Delivery.Products.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.19.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projects\\API_Delivery\\Delivery.Products\\src\\Delivery.Products.Services\\Delivery.Products.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\API_Delivery\\Delivery.Products\\src\\Delivery.Products.Services\\Delivery.Products.Services.csproj",
+        "projectName": "Delivery.Products.Services",
+        "projectPath": "D:\\Projects\\API_Delivery\\Delivery.Products\\src\\Delivery.Products.Services\\Delivery.Products.Services.csproj",
+        "packagesPath": "C:\\Users\\rodri\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\API_Delivery\\Delivery.Products\\src\\Delivery.Products.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\rodri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Projects\\API_Delivery\\Delivery.Products\\src\\Delivery.Products.Domain\\Delivery.Products.Domain.csproj": {
+                "projectPath": "D:\\Projects\\API_Delivery\\Delivery.Products\\src\\Delivery.Products.Domain\\Delivery.Products.Domain.csproj"
+              },
+              "D:\\Projects\\API_Delivery\\Delivery.Products\\src\\Delivery.Products.Infrastructure\\Delivery.Products.Infrastructure.csproj": {
+                "projectPath": "D:\\Projects\\API_Delivery\\Delivery.Products\\src\\Delivery.Products.Infrastructure\\Delivery.Products.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
