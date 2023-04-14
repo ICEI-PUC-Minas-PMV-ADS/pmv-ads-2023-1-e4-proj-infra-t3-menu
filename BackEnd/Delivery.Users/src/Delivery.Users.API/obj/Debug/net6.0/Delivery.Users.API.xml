@@ -25,10 +25,11 @@
             <response code="404">User not found</response>
             <response code="500">Server Error</response>
         </member>
-        <member name="M:Delivery.Users.API.Controllers.UsersController.Post(Delivery.Users.Domain.Models.User)">
+        <member name="M:Delivery.Users.API.Controllers.UsersController.Post(Delivery.Users.Domain.Models.UserDto)">
             <summary>
             Create new User
             </summary>
+            <param name="model"></param>
             <param name="user">The user object to create</param>
             <returns>The User created</returns>
         </member>

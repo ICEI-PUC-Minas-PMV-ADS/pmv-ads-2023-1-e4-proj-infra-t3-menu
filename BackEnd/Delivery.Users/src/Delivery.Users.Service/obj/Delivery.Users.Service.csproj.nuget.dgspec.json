@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\colaboradordatum\\Documents\\Persona\\COOKING\\Delivery.Users\\Delivery.Users\\src\\Delivery.Users.Service\\Delivery.Users.Service.csproj": {}
+    "D:\\ProjetosPuc\\pmv-ads-2023-1-e4-proj-infra-t3-menu\\BackEnd\\Delivery.Users\\src\\Delivery.Users.Service\\Delivery.Users.Service.csproj": {}
   },
   "projects": {
-    "C:\\Users\\colaboradordatum\\Documents\\Persona\\COOKING\\Delivery.Users\\Delivery.Users\\src\\Delivery.Users.Domain\\Delivery.Users.Domain.csproj": {
+    "D:\\ProjetosPuc\\pmv-ads-2023-1-e4-proj-infra-t3-menu\\BackEnd\\Delivery.Users\\src\\Delivery.Users.Domain\\Delivery.Users.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\colaboradordatum\\Documents\\Persona\\COOKING\\Delivery.Users\\Delivery.Users\\src\\Delivery.Users.Domain\\Delivery.Users.Domain.csproj",
+        "projectUniqueName": "D:\\ProjetosPuc\\pmv-ads-2023-1-e4-proj-infra-t3-menu\\BackEnd\\Delivery.Users\\src\\Delivery.Users.Domain\\Delivery.Users.Domain.csproj",
         "projectName": "Delivery.Users.Domain",
-        "projectPath": "C:\\Users\\colaboradordatum\\Documents\\Persona\\COOKING\\Delivery.Users\\Delivery.Users\\src\\Delivery.Users.Domain\\Delivery.Users.Domain.csproj",
-        "packagesPath": "C:\\Users\\colaboradordatum\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\colaboradordatum\\Documents\\Persona\\COOKING\\Delivery.Users\\Delivery.Users\\src\\Delivery.Users.Domain\\obj\\",
+        "projectPath": "D:\\ProjetosPuc\\pmv-ads-2023-1-e4-proj-infra-t3-menu\\BackEnd\\Delivery.Users\\src\\Delivery.Users.Domain\\Delivery.Users.Domain.csproj",
+        "packagesPath": "C:\\Users\\polet\\.nuget\\packages\\",
+        "outputPath": "D:\\ProjetosPuc\\pmv-ads-2023-1-e4-proj-infra-t3-menu\\BackEnd\\Delivery.Users\\src\\Delivery.Users.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\colaboradordatum\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\polet\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,9 +40,17 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
             "FluentValidation": {
               "target": "Package",
               "version": "[11.5.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.15, )"
             }
           },
           "imports": [
@@ -61,21 +69,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\colaboradordatum\\Documents\\Persona\\COOKING\\Delivery.Users\\Delivery.Users\\src\\Delivery.Users.Infrastructure\\Delivery.Users.Infrastructure.csproj": {
+    "D:\\ProjetosPuc\\pmv-ads-2023-1-e4-proj-infra-t3-menu\\BackEnd\\Delivery.Users\\src\\Delivery.Users.Infrastructure\\Delivery.Users.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\colaboradordatum\\Documents\\Persona\\COOKING\\Delivery.Users\\Delivery.Users\\src\\Delivery.Users.Infrastructure\\Delivery.Users.Infrastructure.csproj",
+        "projectUniqueName": "D:\\ProjetosPuc\\pmv-ads-2023-1-e4-proj-infra-t3-menu\\BackEnd\\Delivery.Users\\src\\Delivery.Users.Infrastructure\\Delivery.Users.Infrastructure.csproj",
         "projectName": "Delivery.Users.Infrastructure",
-        "projectPath": "C:\\Users\\colaboradordatum\\Documents\\Persona\\COOKING\\Delivery.Users\\Delivery.Users\\src\\Delivery.Users.Infrastructure\\Delivery.Users.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\colaboradordatum\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\colaboradordatum\\Documents\\Persona\\COOKING\\Delivery.Users\\Delivery.Users\\src\\Delivery.Users.Infrastructure\\obj\\",
+        "projectPath": "D:\\ProjetosPuc\\pmv-ads-2023-1-e4-proj-infra-t3-menu\\BackEnd\\Delivery.Users\\src\\Delivery.Users.Infrastructure\\Delivery.Users.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\polet\\.nuget\\packages\\",
+        "outputPath": "D:\\ProjetosPuc\\pmv-ads-2023-1-e4-proj-infra-t3-menu\\BackEnd\\Delivery.Users\\src\\Delivery.Users.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\colaboradordatum\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\polet\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -89,8 +97,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\colaboradordatum\\Documents\\Persona\\COOKING\\Delivery.Users\\Delivery.Users\\src\\Delivery.Users.Domain\\Delivery.Users.Domain.csproj": {
-                "projectPath": "C:\\Users\\colaboradordatum\\Documents\\Persona\\COOKING\\Delivery.Users\\Delivery.Users\\src\\Delivery.Users.Domain\\Delivery.Users.Domain.csproj"
+              "D:\\ProjetosPuc\\pmv-ads-2023-1-e4-proj-infra-t3-menu\\BackEnd\\Delivery.Users\\src\\Delivery.Users.Domain\\Delivery.Users.Domain.csproj": {
+                "projectPath": "D:\\ProjetosPuc\\pmv-ads-2023-1-e4-proj-infra-t3-menu\\BackEnd\\Delivery.Users\\src\\Delivery.Users.Domain\\Delivery.Users.Domain.csproj"
               }
             }
           }
@@ -105,6 +113,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.15, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.4, )"
@@ -130,21 +146,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\colaboradordatum\\Documents\\Persona\\COOKING\\Delivery.Users\\Delivery.Users\\src\\Delivery.Users.Service\\Delivery.Users.Service.csproj": {
+    "D:\\ProjetosPuc\\pmv-ads-2023-1-e4-proj-infra-t3-menu\\BackEnd\\Delivery.Users\\src\\Delivery.Users.Service\\Delivery.Users.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\colaboradordatum\\Documents\\Persona\\COOKING\\Delivery.Users\\Delivery.Users\\src\\Delivery.Users.Service\\Delivery.Users.Service.csproj",
+        "projectUniqueName": "D:\\ProjetosPuc\\pmv-ads-2023-1-e4-proj-infra-t3-menu\\BackEnd\\Delivery.Users\\src\\Delivery.Users.Service\\Delivery.Users.Service.csproj",
         "projectName": "Delivery.Users.Service",
-        "projectPath": "C:\\Users\\colaboradordatum\\Documents\\Persona\\COOKING\\Delivery.Users\\Delivery.Users\\src\\Delivery.Users.Service\\Delivery.Users.Service.csproj",
-        "packagesPath": "C:\\Users\\colaboradordatum\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\colaboradordatum\\Documents\\Persona\\COOKING\\Delivery.Users\\Delivery.Users\\src\\Delivery.Users.Service\\obj\\",
+        "projectPath": "D:\\ProjetosPuc\\pmv-ads-2023-1-e4-proj-infra-t3-menu\\BackEnd\\Delivery.Users\\src\\Delivery.Users.Service\\Delivery.Users.Service.csproj",
+        "packagesPath": "C:\\Users\\polet\\.nuget\\packages\\",
+        "outputPath": "D:\\ProjetosPuc\\pmv-ads-2023-1-e4-proj-infra-t3-menu\\BackEnd\\Delivery.Users\\src\\Delivery.Users.Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\colaboradordatum\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\polet\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -158,11 +174,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\colaboradordatum\\Documents\\Persona\\COOKING\\Delivery.Users\\Delivery.Users\\src\\Delivery.Users.Domain\\Delivery.Users.Domain.csproj": {
-                "projectPath": "C:\\Users\\colaboradordatum\\Documents\\Persona\\COOKING\\Delivery.Users\\Delivery.Users\\src\\Delivery.Users.Domain\\Delivery.Users.Domain.csproj"
+              "D:\\ProjetosPuc\\pmv-ads-2023-1-e4-proj-infra-t3-menu\\BackEnd\\Delivery.Users\\src\\Delivery.Users.Domain\\Delivery.Users.Domain.csproj": {
+                "projectPath": "D:\\ProjetosPuc\\pmv-ads-2023-1-e4-proj-infra-t3-menu\\BackEnd\\Delivery.Users\\src\\Delivery.Users.Domain\\Delivery.Users.Domain.csproj"
               },
-              "C:\\Users\\colaboradordatum\\Documents\\Persona\\COOKING\\Delivery.Users\\Delivery.Users\\src\\Delivery.Users.Infrastructure\\Delivery.Users.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\colaboradordatum\\Documents\\Persona\\COOKING\\Delivery.Users\\Delivery.Users\\src\\Delivery.Users.Infrastructure\\Delivery.Users.Infrastructure.csproj"
+              "D:\\ProjetosPuc\\pmv-ads-2023-1-e4-proj-infra-t3-menu\\BackEnd\\Delivery.Users\\src\\Delivery.Users.Infrastructure\\Delivery.Users.Infrastructure.csproj": {
+                "projectPath": "D:\\ProjetosPuc\\pmv-ads-2023-1-e4-proj-infra-t3-menu\\BackEnd\\Delivery.Users\\src\\Delivery.Users.Infrastructure\\Delivery.Users.Infrastructure.csproj"
               }
             }
           }
@@ -177,6 +193,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.15, )"
+            },
             "Microsoft.Extensions.Logging.Abstractions": {
               "target": "Package",
               "version": "[7.0.0, )"
@@ -198,7 +222,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

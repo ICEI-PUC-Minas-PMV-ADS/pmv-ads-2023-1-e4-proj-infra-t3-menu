@@ -1,6 +1,7 @@
 ﻿using Delivery.Users.Domain.Interfaces;
 using Delivery.Users.Domain.Models;
 using Delivery.Users.Infrastructure;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
 namespace Delivery.Users.Service
@@ -27,7 +28,7 @@ namespace Delivery.Users.Service
         public async Task<User?> GetUser(int id)
         {
             try
-            {
+            {                
                 return await _context.Users.FindAsync(id) ?? throw new KeyNotFoundException();
             }
             catch (Exception)
@@ -79,6 +80,20 @@ namespace Delivery.Users.Service
 
                 _context.Users.Remove(user);
                 _context.SaveChanges();                
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        /// <inheritdoc/>
+        public async Task Authenticate(AuthenticateDto model)
+        {
+            try
+            {
+                var user = await _context.Users.FindAsync(model.Id) ?? throw new KeyNotFoundException();
+                            
             }
             catch (Exception)
             {

@@ -34,3 +34,15 @@ C:\Users\colaboradordatum\Documents\Persona\COOKING\Delivery.Users\Delivery.User
 C:\Users\colaboradordatum\Documents\Persona\COOKING\Delivery.Users\Delivery.Users\src\Delivery.Users.Domain\obj\Debug\net6.0\refint\Delivery.Users.Domain.dll
 C:\Users\colaboradordatum\Documents\Persona\COOKING\Delivery.Users\Delivery.Users\src\Delivery.Users.Domain\obj\Debug\net6.0\Delivery.Users.Domain.pdb
 C:\Users\colaboradordatum\Documents\Persona\COOKING\Delivery.Users\Delivery.Users\src\Delivery.Users.Domain\obj\Debug\net6.0\ref\Delivery.Users.Domain.dll
+D:\ProjetosPuc\pmv-ads-2023-1-e4-proj-infra-t3-menu\BackEnd\Delivery.Users\src\Delivery.Users.Domain\bin\Debug\net6.0\Delivery.Users.Domain.deps.json
+D:\ProjetosPuc\pmv-ads-2023-1-e4-proj-infra-t3-menu\BackEnd\Delivery.Users\src\Delivery.Users.Domain\bin\Debug\net6.0\Delivery.Users.Domain.dll
+D:\ProjetosPuc\pmv-ads-2023-1-e4-proj-infra-t3-menu\BackEnd\Delivery.Users\src\Delivery.Users.Domain\bin\Debug\net6.0\Delivery.Users.Domain.pdb
+D:\ProjetosPuc\pmv-ads-2023-1-e4-proj-infra-t3-menu\BackEnd\Delivery.Users\src\Delivery.Users.Domain\obj\Debug\net6.0\Delivery.Users.Domain.csproj.AssemblyReference.cache
+D:\ProjetosPuc\pmv-ads-2023-1-e4-proj-infra-t3-menu\BackEnd\Delivery.Users\src\Delivery.Users.Domain\obj\Debug\net6.0\Delivery.Users.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\ProjetosPuc\pmv-ads-2023-1-e4-proj-infra-t3-menu\BackEnd\Delivery.Users\src\Delivery.Users.Domain\obj\Debug\net6.0\Delivery.Users.Domain.AssemblyInfoInputs.cache
+D:\ProjetosPuc\pmv-ads-2023-1-e4-proj-infra-t3-menu\BackEnd\Delivery.Users\src\Delivery.Users.Domain\obj\Debug\net6.0\Delivery.Users.Domain.AssemblyInfo.cs
+D:\ProjetosPuc\pmv-ads-2023-1-e4-proj-infra-t3-menu\BackEnd\Delivery.Users\src\Delivery.Users.Domain\obj\Debug\net6.0\Delivery.Users.Domain.csproj.CoreCompileInputs.cache
+D:\ProjetosPuc\pmv-ads-2023-1-e4-proj-infra-t3-menu\BackEnd\Delivery.Users\src\Delivery.Users.Domain\obj\Debug\net6.0\Delivery.Users.Domain.dll
+D:\ProjetosPuc\pmv-ads-2023-1-e4-proj-infra-t3-menu\BackEnd\Delivery.Users\src\Delivery.Users.Domain\obj\Debug\net6.0\refint\Delivery.Users.Domain.dll
+D:\ProjetosPuc\pmv-ads-2023-1-e4-proj-infra-t3-menu\BackEnd\Delivery.Users\src\Delivery.Users.Domain\obj\Debug\net6.0\Delivery.Users.Domain.pdb
+D:\ProjetosPuc\pmv-ads-2023-1-e4-proj-infra-t3-menu\BackEnd\Delivery.Users\src\Delivery.Users.Domain\obj\Debug\net6.0\ref\Delivery.Users.Domain.dll

@@ -28,6 +28,10 @@ namespace Delivery.Users.Domain.Validations
             RuleFor(x => x.Password)
                 .NotEmpty()
                 .WithMessage("Password cannot be empty");
+
+            RuleFor(x => x.Perfil)
+                .NotEmpty()
+                .WithMessage("Perfil cannot be empty");
         }
     }
 }

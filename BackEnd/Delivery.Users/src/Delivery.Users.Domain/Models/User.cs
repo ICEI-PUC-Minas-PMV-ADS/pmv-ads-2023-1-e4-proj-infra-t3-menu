@@ -1,5 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace Delivery.Users.Domain.Models
 {
@@ -14,6 +16,18 @@ namespace Delivery.Users.Domain.Models
         public string? Email { get; set; }
         public string? Name { get; set; }
         public string? Surname { get; set; }
+        [JsonIgnore]
         public string? Password { get; set; }
+
+        public Perfil Perfil { get; set; }
+    }
+    public enum Perfil
+    {
+        [Description("Administrador")]
+        Administrador,
+        [Description("Empregado")]
+        Empregado,
+        [Description("Cliente")]
+        Cliente
     }
 }

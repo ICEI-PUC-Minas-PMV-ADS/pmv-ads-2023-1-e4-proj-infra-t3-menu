@@ -3,9 +3,17 @@ using Delivery.Users.API.Extensions;
 using Delivery.Users.Domain.Interfaces;
 using Delivery.Users.Domain.Models;
 using Delivery.Users.Domain.Validations;
+using Delivery.Users.Infrastructure;
+using FluentValidation;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using System;
+using System.IdentityModel.Tokens.Jwt;
 using System.Net;
+using System.Security.Claims;
+using System.Text;
 using System.Web;
 using static Microsoft.AspNetCore.Http.StatusCodes;
 
@@ -17,9 +25,10 @@ namespace Delivery.Users.API.Controllers
     [ApiController]
     [ApiVersion("1.0")]
     [Route("api/v{version:apiVersion}/[controller]")]
+    //[Authorize]
     public class UsersController : ControllerBase
-    {
-        private readonly IUserServices _services;
+    {        
+        private readonly IUserServices _services;               
 
         /// <summary>
         /// Initialize the attributes
@@ -68,23 +77,33 @@ namespace Delivery.Users.API.Controllers
         /// <summary>
         /// Create new User
         /// </summary>
+        /// <param name="model"></param>
         /// <param name="user">The user object to create</param>
         /// <returns>The User created</returns>
         [HttpPost("Create")]
         [ProducesResponseType(Status200OK, Type = typeof(User))]
         [ProducesResponseType(Status400BadRequest, Type = typeof(ValidationErrorResponse))]
         [ProducesResponseType(Status500InternalServerError, Type = typeof(ErrorResponse))]
-        public async Task<ActionResult> Post([FromBody] User user)
+        public async Task<ActionResult> Post([FromBody] UserDto model)
         {
             try
-            {
+            {                
+                User novo = new User()
+                {
+                    Name = model.Name,
+                    Email = model.Email,
+                    Surname = model.Surname,
+                    Password = BCrypt.Net.BCrypt.HashPassword(model.Password),
+                    Perfil = model.Perfil
+                };
+
                 var userValidator = new UserPostValidator();
-                var validationResult = userValidator.Validate(user);
+                var validationResult = userValidator.Validate(novo);
 
                 if (!validationResult.IsValid)
                     return StatusCode(Status400BadRequest, validationResult.ToValidationErrorReponse());
 
-                var userCreated = await _services.CreateUser(user);
+                var userCreated = await _services.CreateUser(novo);
 
                 return Ok(userCreated);
             }
@@ -160,5 +179,42 @@ namespace Delivery.Users.API.Controllers
                 return StatusCode(Status500InternalServerError, exception.ToErrorReponse());
             }
         }
+
+        private string GenerateJwtToken(User model)
+        {
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var key = Encoding.ASCII.GetBytes("Ry74cBQva5dThwbwchR9jhbtRFnJxWSZ");
+            var claims = new ClaimsIdentity(new Claim[]
+            {
+                new Claim(ClaimTypes.NameIdentifier, model.Id.ToString()),                
+                new Claim(ClaimTypes.Role, model.Perfil.ToString())
+            });
+
+            var tokenDescriptor = new SecurityTokenDescriptor
+            {
+                Subject = claims,
+                Expires = DateTime.UtcNow.AddHours(8),
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key),
+                SecurityAlgorithms.HmacSha256Signature)
+            };
+            var token = tokenHandler.CreateToken(tokenDescriptor);
+            return tokenHandler.WriteToken(token);
+        }
+
+        [AllowAnonymous]
+        [HttpPost("authenticate")]
+        public async Task<ActionResult> Authenticate(AuthenticateDto model)
+        {
+            var usuarioDb = await _services.GetUser(model.Id);
+
+            if (usuarioDb == null || !BCrypt.Net.BCrypt.Verify(model.Password, usuarioDb.Password))
+                return Unauthorized();
+
+            var jwt = GenerateJwtToken(usuarioDb);
+
+            return Ok(new { jwtToken = jwt });            
+        }
     }
+
+
 }

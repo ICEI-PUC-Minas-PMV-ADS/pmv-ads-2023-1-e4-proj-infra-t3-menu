@@ -30,5 +30,13 @@ namespace Delivery.Users.Domain.Interfaces
         /// </summary>
         /// <param name="id">The User id to be deleted</param>
         Task DeleteUser(int id);
+
+        /// <summary>
+        /// Login de Usuário
+        /// </summary>
+        /// <param name="id">User id</param>
+        /// <param password="password">User id</param>
+        /// <returns>Jwt Token</returns>
+        Task Authenticate(AuthenticateDto model);
     }
 }
