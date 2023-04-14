@@ -1,10 +1,12 @@
 O projeto da API REST foi desenvolvido em nodejs no vscode.
-Para rodar essa api, execute o comando abaixo no terminal do vscode. na pasta do projeto:
+Para rodar essa api, execute o comando abaixo no terminal do vscode, na pasta do projeto:
 node index.js
-Será exibida a mensagem: Servidor está funcionando
+Será exibida a mensagem: Servidor está escutando na porta 3000
 Para testar acesse no navegador:
 http://localhost:3000/
 
+Para executar os endpoints dessa api, poderá ser utilizado o postman ou o navegador acessando o link:
+http://localhost:3000/api-docs/
 
 Documentação oficial da especificação swagger:
 https://swagger.io/specification/
