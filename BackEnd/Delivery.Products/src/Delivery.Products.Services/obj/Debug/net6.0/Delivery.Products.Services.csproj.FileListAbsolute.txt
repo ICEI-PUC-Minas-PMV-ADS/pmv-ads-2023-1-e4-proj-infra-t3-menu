@@ -1,0 +1,17 @@
+D:\Projects\API_Delivery\Delivery.Products\Delivery.Products.Services\bin\Debug\net6.0\Delivery.Products.Services.deps.json
+D:\Projects\API_Delivery\Delivery.Products\Delivery.Products.Services\bin\Debug\net6.0\Delivery.Products.Services.dll
+D:\Projects\API_Delivery\Delivery.Products\Delivery.Products.Services\bin\Debug\net6.0\Delivery.Products.Services.pdb
+D:\Projects\API_Delivery\Delivery.Products\Delivery.Products.Services\bin\Debug\net6.0\Delivery.Products.Domain.dll
+D:\Projects\API_Delivery\Delivery.Products\Delivery.Products.Services\bin\Debug\net6.0\Delivery.Products.Infrastructure.dll
+D:\Projects\API_Delivery\Delivery.Products\Delivery.Products.Services\bin\Debug\net6.0\Delivery.Products.Domain.pdb
+D:\Projects\API_Delivery\Delivery.Products\Delivery.Products.Services\bin\Debug\net6.0\Delivery.Products.Infrastructure.pdb
+D:\Projects\API_Delivery\Delivery.Products\Delivery.Products.Services\obj\Debug\net6.0\Delivery.Products.Services.csproj.AssemblyReference.cache
+D:\Projects\API_Delivery\Delivery.Products\Delivery.Products.Services\obj\Debug\net6.0\Delivery.Products.Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\API_Delivery\Delivery.Products\Delivery.Products.Services\obj\Debug\net6.0\Delivery.Products.Services.AssemblyInfoInputs.cache
+D:\Projects\API_Delivery\Delivery.Products\Delivery.Products.Services\obj\Debug\net6.0\Delivery.Products.Services.AssemblyInfo.cs
+D:\Projects\API_Delivery\Delivery.Products\Delivery.Products.Services\obj\Debug\net6.0\Delivery.Products.Services.csproj.CoreCompileInputs.cache
+D:\Projects\API_Delivery\Delivery.Products\Delivery.Products.Services\obj\Debug\net6.0\Delivery.Products.Services.csproj.CopyComplete
+D:\Projects\API_Delivery\Delivery.Products\Delivery.Products.Services\obj\Debug\net6.0\Delivery.Products.Services.dll
+D:\Projects\API_Delivery\Delivery.Products\Delivery.Products.Services\obj\Debug\net6.0\refint\Delivery.Products.Services.dll
+D:\Projects\API_Delivery\Delivery.Products\Delivery.Products.Services\obj\Debug\net6.0\Delivery.Products.Services.pdb
+D:\Projects\API_Delivery\Delivery.Products\Delivery.Products.Services\obj\Debug\net6.0\ref\Delivery.Products.Services.dll
