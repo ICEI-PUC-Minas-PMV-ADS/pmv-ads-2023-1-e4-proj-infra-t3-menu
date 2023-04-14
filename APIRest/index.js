@@ -15,6 +15,8 @@ require('dotenv').config();
 const https = require('https');
 const express = require('express');
 const userRouter = require('./routes/userRoutes');
+const productRouter = require('./routes/productRoutes');
+const orderRouter = require('./routes/orderRoutes');
 
 const bodyParser = require('body-parser');
 
@@ -25,6 +27,8 @@ const app = express();
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(userRouter);
+app.use(productRouter);
+app.use(orderRouter);
 
 // Configurando o Swagger  
 app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerDocs));

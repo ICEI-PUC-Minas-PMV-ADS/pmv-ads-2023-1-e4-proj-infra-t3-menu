@@ -3,7 +3,7 @@
   "openapi": "3.0.0",
   "info": {
     "title": "API REST Cooking Digital",
-    "description": "API de acesso aos backends do projeto Cooking Digital. Para as rotas autenticadas, faça o login e informe o token no botão Authorize do lado direito dessa tela.",
+    "description": "API de acesso aos backends do projeto Cooking Digital. <br> <br> Para as rotas autenticadas, faça o login e informe o token no botão Authorize do lado direito dessa tela.",
     "contact": {
       "email": "poletto.jaque@gmail.com"
     },
@@ -42,22 +42,27 @@
           }
         },
         "responses": {
-          "201": {
-            "description": "Usuário criado com sucesso"
+          "200": {
+            "description": "Sucesso"
           },
-          "400": {
-            "description": "Erro na validação dos dados"
+          "401": {
+            "description": "Não autorizado"
           }
         }
       }
     },
-
     "/usuario": {
       "get": {
         "summary": "Listagem de usuários",
         "description": "Retorna a lista de usuários cadastrados",
-        "tags": ["Usuarios"],
-        "security": [{"BearerAuth": []}],
+        "tags": [
+          "Usuarios"
+        ],
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
         "responses": {
           "200": {
             "description": "Lista de usuários",
@@ -88,8 +93,14 @@
       "post": {
         "summary": "Criação de usuário",
         "description": "Cria um usuário",
-        "tags": ["Usuarios"],
-        "security": [{"BearerAuth": []}],
+        "tags": [
+          "Usuarios"
+        ],
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
         "requestBody": {
           "description": "Dados do usuário",
           "required": true,
@@ -111,13 +122,18 @@
         }
       }
     },
-
     "/usuario/{id}": {
       "get": {
         "summary": "Pesquisa de usuário",
         "description": "Busca o usuário pelo identificador",
-        "tags": ["Usuarios"],
-        "security": [{"BearerAuth": []}],
+        "tags": [
+          "Usuarios"
+        ],
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
         "parameters": [
           {
             "name": "id",
@@ -166,13 +182,19 @@
           "500": {
             "description": "Erro 500 na requisição get"
           }
-        }      
+        }
       },
       "delete": {
         "summary": "Exclusão de usuário",
         "description": "Exclui o usuário pelo identificador",
-        "tags": ["Usuarios"],
-        "security": [{"BearerAuth": []}],
+        "tags": [
+          "Usuarios"
+        ],
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
         "parameters": [
           {
             "name": "id",
@@ -187,26 +209,26 @@
         "responses": {
           "200": {
             "description": "Registro excluído"
-          },
-          "400": {
-            "description": "Erro na requisição get"
-          },
+          },          
           "401": {
-            "description": "Erro 401 na requisição get"
+            "description": "Não autorizado"
           },
           "404": {
             "description": "Código não encontrado"
-          },
-          "500": {
-            "description": "Erro 500 na requisição get"
-          }
+          }          
         }
       },
       "put": {
         "summary": "Atualização de usuário",
         "description": "Atualização de usuário",
-        "tags": ["Usuarios"],
-        "security": [{"BearerAuth": []}],        
+        "tags": [
+          "Usuarios"
+        ],
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
         "requestBody": {
           "description": "Dados do usuário",
           "required": true,
@@ -255,7 +277,391 @@
           }
         }
       }
-    }   
+    },
+    "/produto": {
+      "get": {
+        "summary": "Listagem de produtos",
+        "description": "Retorna a lista de produtos cadastrados",
+        "tags": [
+          "Produtos"
+        ],
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Lista de produtos",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "category": {
+                        "type": "string"
+                      },
+                      "isAvailable": {
+                        "type": "boolean"
+                      },
+                      "price": {
+                        "type": "number"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Criação de produtos",
+        "description": "Cria um produto",
+        "tags": [
+          "Produtos"
+        ],
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "requestBody": {
+          "description": "Dados do produto",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Product"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Produto criado com sucesso"
+          },
+          "400": {
+            "description": "Erro na validação dos dados"
+          }
+        }
+      }
+    },
+    "/produto/{id}": {
+      "get": {
+        "summary": "Pesquisa de produto",
+        "description": "Busca o produto pelo identificador",
+        "tags": [
+          "Produtos"
+        ],
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id do produto",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Dados dos produtos",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Product"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Não autorizado"
+          },
+          "404": {
+            "description": "Código não encontrado"
+          }      
+        }
+      },
+      "delete": {
+        "summary": "Exclusão de produto",
+        "description": "Exclui o produto pelo identificador",
+        "tags": [
+          "Produtos"
+        ],
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id do produto",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Registro excluído"
+          },
+          "400": {
+            "description": "Erro na requisição get"
+          },
+          "401": {
+            "description": "Erro 401 na requisição get"
+          },
+          "404": {
+            "description": "Código não encontrado"
+          },
+          "500": {
+            "description": "Erro 500 na requisição get"
+          }
+        }
+      },
+      "put": {
+        "summary": "Atualização de produto",
+        "description": "Atualização de produto",
+        "tags": [
+          "Produtos"
+        ],
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "requestBody": {
+          "description": "Dados do produto",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Product"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id do produto",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Produto atualizado com sucesso"
+          },
+          "401": {
+            "description": "Não autorizado"
+          }
+        }
+      }
+    },
+    "/pedido": {
+      "get": {
+        "summary": "Listagem de pedidos",
+        "description": "Retorna a lista de pedidos cadastrados",
+        "tags": [
+          "Pedidos"
+        ],
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Lista de pedidos",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Order"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Criação do pedido",
+        "description": "Cria um pedido",
+        "tags": [
+          "Pedidos"
+        ],
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "requestBody": {
+          "description": "Dados do pedido",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Order"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Pedido criado com sucesso"
+          },
+          "400": {
+            "description": "Erro na validação dos dados"
+          }
+        }
+      }
+    },
+    "/pedido/{id}": {
+      "get": {
+        "summary": "Pesquisa de produto",
+        "description": "Busca o produto pelo identificador",
+        "tags": [
+          "Produtos"
+        ],
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id do produto",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Dados dos produtos",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Product"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Não autorizado"
+          },
+          "404": {
+            "description": "Código não encontrado"
+          }      
+        }
+      },
+      "delete": {
+        "summary": "Exclusão de produto",
+        "description": "Exclui o produto pelo identificador",
+        "tags": [
+          "Produtos"
+        ],
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id do produto",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Registro excluído"
+          },
+          "400": {
+            "description": "Erro na requisição get"
+          },
+          "401": {
+            "description": "Erro 401 na requisição get"
+          },
+          "404": {
+            "description": "Código não encontrado"
+          },
+          "500": {
+            "description": "Erro 500 na requisição get"
+          }
+        }
+      },
+      "put": {
+        "summary": "Atualização de produto",
+        "description": "Atualização de produto",
+        "tags": [
+          "Produtos"
+        ],
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "requestBody": {
+          "description": "Dados do produto",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Product"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id do produto",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Produto atualizado com sucesso"
+          },
+          "401": {
+            "description": "Não autorizado"
+          }
+        }
+      }
+    }
   },
 
   "components": {
@@ -277,6 +683,58 @@
           },
           "password": {
             "type": "string"
+          }
+        }
+      },
+      "Product": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "isAvailable": {
+            "type": "boolean"
+          },
+          "price": {
+            "type": "number"
+          }
+        }
+      },
+      "Order" : {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          }, 
+          "orderingDate": {
+             "type": "string", 
+             "format": "date-time"
+          },
+          "user" : {
+            "type": "object",
+            "properties": {
+              "id": {"type": "string"},
+              "name" : {"type": "string"},
+              "email": {"type": "string"}
+            }
+          },          
+          "products": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {"type": "string"},
+                    "name": {"type": "string"},
+                    "quantity": {"type": "integer"},
+                    "price": {"type": "number"}
+              }
+            }
+          },
+          "totalValue": {
+            "type": "number"
           }
         }
       }

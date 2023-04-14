@@ -1,0 +1,18 @@
+const express = require('express');
+
+const productController = require('./../controllers/productController');
+
+const router = express.Router();
+
+router
+    .route('/api/produto')
+    .get(productController.getAll)
+    .post(productController.createOne);    
+
+router
+    .route('/api/produto/:id')
+    .get(productController.getOne)
+    .patch(productController.updateOne)
+    .delete(productController.deleteOne);
+  
+module.exports = router;   

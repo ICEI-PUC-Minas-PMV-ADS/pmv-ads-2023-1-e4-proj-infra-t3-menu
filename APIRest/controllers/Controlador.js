@@ -3,15 +3,9 @@ const https = require('https');
 const sURL = process.env.DB_HOST;
 const sPATH = process.env.DB_PATH;
 
-const PORTA_BACKEND_USU      = process.env.PORTA_BACKEND_USU;
-const PORTA_BACKEND_PRODUTOS = process.env.PORTA_BACKEND_PRODUTOS;
-
-var sPORT = PORTA_BACKEND_USU;
-
 const defaultOptions = {
     hostname: sURL,
-    path: sPATH,
-    port: sPORT,
+    path: sPATH,    
     //requestCert: false,
     rejectUnauthorized: false,    
     headers: {        
@@ -19,7 +13,7 @@ const defaultOptions = {
     }
 };
 
-function httpsRequestLogin(path, data, callback) {
+function httpsRequestLogin(porta, path, data, callback) {
     // Cria as opções da requisição HTTPS      
     const options = Object.assign({}, defaultOptions, {
         method: 'POST',
@@ -29,7 +23,7 @@ function httpsRequestLogin(path, data, callback) {
             'Content-Type': 'application/json',
             'Content-Length': Buffer.byteLength(JSON.stringify(data)),                
         }, 
-        port: sPORT,       
+        port: porta,       
     })        
  
     // Converte os dados em JSON
@@ -64,7 +58,7 @@ function httpsRequestLogin(path, data, callback) {
 }
 
 // função genérica para fazer requisições HTTPS com diferentes métodos (GET, POST, PUT, etc.)
-function httpsRequest(token, method, path, data, callback) {
+function httpsRequest(porta, token, method, path, data, callback) {
 
     if(token == undefined) {
         callback(null, 401);
@@ -80,7 +74,7 @@ function httpsRequest(token, method, path, data, callback) {
             'Content-Length': Buffer.byteLength(JSON.stringify(data)),
             Authorization: token,
         }, 
-        port: sPORT,       
+        port: porta,       
     });              
 
     // Converte os dados em JSON
@@ -132,8 +126,7 @@ function httpsRequest(token, method, path, data, callback) {
     request.end();
 }
 
-function sendResRequestGet(res, data, statusCode) {
-    console.log(data);
+function sendResRequestGet(res, data, statusCode) {    
     if (statusCode === 200) {
         res.send(data);
     } else if (statusCode === 404) {

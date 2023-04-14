@@ -28,8 +28,8 @@ namespace Delivery.Users.Service
         public async Task<User?> GetUser(int id)
         {
             try
-            {                
-                return await _context.Users.FindAsync(id) ?? throw new KeyNotFoundException();
+            {
+                return await _context.Users.FindAsync(id);
             }
             catch (Exception)
             {
