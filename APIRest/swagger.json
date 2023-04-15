@@ -485,7 +485,7 @@
         "summary": "Listagem de pedidos",
         "description": "Retorna a lista de pedidos cadastrados",
         "tags": [
-          "Pedidos"
+          "Pedido"
         ],
         "security": [
           {
@@ -509,7 +509,7 @@
         "summary": "Criação do pedido",
         "description": "Cria um pedido",
         "tags": [
-          "Pedidos"
+          "Pedido"
         ],
         "security": [
           {
@@ -539,10 +539,10 @@
     },
     "/pedido/{id}": {
       "get": {
-        "summary": "Pesquisa de produto",
-        "description": "Busca o produto pelo identificador",
+        "summary": "Pesquisa de pedido",
+        "description": "Busca o pedido pelo identificador",
         "tags": [
-          "Produtos"
+          "Pedido"
         ],
         "security": [
           {
@@ -553,7 +553,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id do produto",
+            "description": "Id do pedido",
             "required": true,
             "schema": {
               "type": "integer"
@@ -562,11 +562,11 @@
         ],
         "responses": {
           "200": {
-            "description": "Dados dos produtos",
+            "description": "Dados dos pedido",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Product"
+                  "$ref": "#/components/schemas/Order"
                 }
               }
             }
@@ -580,10 +580,10 @@
         }
       },
       "delete": {
-        "summary": "Exclusão de produto",
-        "description": "Exclui o produto pelo identificador",
+        "summary": "Exclusão de pedido",
+        "description": "Exclui o pedido pelo identificador",
         "tags": [
-          "Produtos"
+          "Pedido"
         ],
         "security": [
           {
@@ -594,7 +594,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id do produto",
+            "description": "Id do pedido",
             "required": true,
             "schema": {
               "type": "integer"
@@ -620,10 +620,10 @@
         }
       },
       "put": {
-        "summary": "Atualização de produto",
-        "description": "Atualização de produto",
+        "summary": "Atualização de pedido",
+        "description": "Atualização de pedido",
         "tags": [
-          "Produtos"
+          "Pedido"
         ],
         "security": [
           {
@@ -631,12 +631,12 @@
           }
         ],
         "requestBody": {
-          "description": "Dados do produto",
+          "description": "Dados do pedido",
           "required": true,
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Product"
+                "$ref": "#/components/schemas/Order"
               }
             }
           }
@@ -645,7 +645,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id do produto",
+            "description": "Id do pedido",
             "required": true,
             "schema": {
               "type": "integer"
@@ -654,11 +654,54 @@
         ],
         "responses": {
           "201": {
-            "description": "Produto atualizado com sucesso"
+            "description": "Pedido atualizado com sucesso"
           },
           "401": {
             "description": "Não autorizado"
           }
+        }
+      }
+    },
+    "/pedido/allByUser/{userId}": {
+      "get": {
+        "summary": "Pesquisa de pedidos",
+        "description": "Busca todos os pedidos do usuário",
+        "tags": [
+          "Pedido"
+        ],
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "description": "Id do usuário",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Dados dos pedido",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Order"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Não autorizado"
+          },
+          "404": {
+            "description": "Código não encontrado"
+          }      
         }
       }
     }

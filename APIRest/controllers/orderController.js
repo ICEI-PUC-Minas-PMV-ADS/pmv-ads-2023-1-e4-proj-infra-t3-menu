@@ -4,27 +4,38 @@ const PORTA_BACKEND_PEDIDOS      = process.env.PORTA_BACKEND_PEDIDOS;
 
 const operacoes = require('./Controlador');
 const httpsRequest = operacoes.httpsRequest;
-const sendResRequestGet = operacoes.sendResRequestGet;
-const sendResRequestPost = operacoes.sendResRequestPost;
-const sendResRequestPut = operacoes.sendResRequestPut;
-const sendResRequestDelete = operacoes.sendResRequestDelete;
+const sendResAnyRequest = operacoes.sendResAnyRequest;
 
 // Pedidos - GetById
 exports.getOne = (req, res) => {        
     const path = sPATH + 'Order/' + req.params.id; 
 
-    httpsRequest(PORTA_BACKEND_PEDIDOS, req.headers.authorization, 'GET', path, null, (data, statusCode) => {
-        sendResRequestGet(res, data, statusCode);
-    });
+    httpsRequest({
+        porta: PORTA_BACKEND_PEDIDOS,
+        token: req.headers.authorization,
+        method: 'GET',
+        path: path
+    },
+    null, (data, statusCode) => {
+        sendResAnyRequest(res, data, statusCode);
+    }
+   );
 };
 
-// Pedidos - GetAll
-exports.getAll = (req, res) => {        
-    const path = sPATH + 'Order'; 
+// Pedidos - getAllByUser
+exports.getAllByUser = (req, res) => {            
+    const path = sPATH + 'Order/allByUser/' + req.params.userId;
 
-    httpsRequest(PORTA_BACKEND_PEDIDOS, req.headers.authorization, 'GET', path, null, (data, statusCode) => {
-        sendResRequestGet(res, data, statusCode);
-    });
+    httpsRequest({
+        porta: PORTA_BACKEND_PEDIDOS,
+        token: req.headers.authorization,
+        method: 'GET',
+        path: path
+    },
+    null, (data, statusCode) => {
+        sendResAnyRequest(res, data, statusCode);
+    }
+   );
 };
 
 // Pedidos - MÉTODO POST
@@ -32,9 +43,16 @@ exports.createOne = (req, res) => {
     const path = sPATH + 'Order/';
     const bodyData = req.body;
 
-    httpsRequest(PORTA_BACKEND_PEDIDOS, req.headers.authorization, 'POST', path, bodyData, (data, statusCode) => {
-        sendResRequestPost(res, data, statusCode)
-    });
+    httpsRequest({
+        porta: PORTA_BACKEND_PEDIDOS,
+        token: req.headers.authorization,
+        method: 'POST',
+        path: path
+    },
+    bodyData, (data, statusCode) => {
+        sendResAnyRequest(res, data, statusCode);
+    }
+   );    
 };
 
 // Pedidos - MÉTODO PUT
@@ -43,19 +61,32 @@ exports.updateOne = (req, res) => {
     const path = sPATH + 'Order/' + id;
     const bodyData = req.body;    
 
-    httpsRequest(PORTA_BACKEND_PEDIDOS, req.headers.authorization, 'PUT', path, bodyData, (data, statusCode) => {
-        sendResRequestPut(res, data, statusCode)
-    });
+    httpsRequest({
+        porta: PORTA_BACKEND_PEDIDOS,
+        token: req.headers.authorization,
+        method: 'PUT',
+        path: path
+    },
+    bodyData, (data, statusCode) => {
+        sendResAnyRequest(res, data, statusCode);
+    }
+   );
 };
 
 
 // Pedidos - MÉTODO DELETE
 exports.deleteOne = (req, res) => {    
     const id = req.params.id;
-    const path = sPATH + 'Order/' + id;
-    const bodyData = req.body;
+    const path = sPATH + 'Order/' + id;   
 
-    httpsRequest(PORTA_BACKEND_PEDIDOS, req.headers.authorization, 'DELETE', path, bodyData, (data, statusCode) => {
-        sendResRequestDelete(res, data, statusCode)
-    });
+    httpsRequest({
+        porta: PORTA_BACKEND_PEDIDOS,
+        token: req.headers.authorization,
+        method: 'DELETE',
+        path: path
+    },
+    null, (data, statusCode) => {
+        sendResAnyRequest(res, data, statusCode);
+    }
+   );
 };
