@@ -129,19 +129,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\colaboradordatum\\.nuget\\packages\\": {}
+    "C:\\Users\\polet\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\colaboradordatum\\Documents\\Persona\\COOKING\\Delivery.Order\\Delivery.Order\\src\\Delivery.Order.Domain\\Delivery.Order.Domain.csproj",
+      "projectUniqueName": "D:\\ProjetosPuc\\pmv-ads-2023-1-e4-proj-infra-t3-menu\\BackEnd\\Delivery.Order\\Delivery.Order\\src\\Delivery.Order.Domain\\Delivery.Order.Domain.csproj",
       "projectName": "Delivery.Order.Domain",
-      "projectPath": "C:\\Users\\colaboradordatum\\Documents\\Persona\\COOKING\\Delivery.Order\\Delivery.Order\\src\\Delivery.Order.Domain\\Delivery.Order.Domain.csproj",
-      "packagesPath": "C:\\Users\\colaboradordatum\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\colaboradordatum\\Documents\\Persona\\COOKING\\Delivery.Order\\Delivery.Order\\src\\Delivery.Order.Domain\\obj\\",
+      "projectPath": "D:\\ProjetosPuc\\pmv-ads-2023-1-e4-proj-infra-t3-menu\\BackEnd\\Delivery.Order\\Delivery.Order\\src\\Delivery.Order.Domain\\Delivery.Order.Domain.csproj",
+      "packagesPath": "C:\\Users\\polet\\.nuget\\packages\\",
+      "outputPath": "D:\\ProjetosPuc\\pmv-ads-2023-1-e4-proj-infra-t3-menu\\BackEnd\\Delivery.Order\\Delivery.Order\\src\\Delivery.Order.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\colaboradordatum\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\polet\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -192,7 +192,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

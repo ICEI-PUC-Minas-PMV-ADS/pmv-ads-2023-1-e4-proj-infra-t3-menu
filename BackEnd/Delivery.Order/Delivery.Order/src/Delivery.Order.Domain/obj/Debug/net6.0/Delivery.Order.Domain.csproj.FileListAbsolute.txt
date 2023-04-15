@@ -1,0 +1,12 @@
+D:\ProjetosPuc\pmv-ads-2023-1-e4-proj-infra-t3-menu\BackEnd\Delivery.Order\Delivery.Order\src\Delivery.Order.Domain\bin\Debug\net6.0\Delivery.Order.Domain.deps.json
+D:\ProjetosPuc\pmv-ads-2023-1-e4-proj-infra-t3-menu\BackEnd\Delivery.Order\Delivery.Order\src\Delivery.Order.Domain\bin\Debug\net6.0\Delivery.Order.Domain.dll
+D:\ProjetosPuc\pmv-ads-2023-1-e4-proj-infra-t3-menu\BackEnd\Delivery.Order\Delivery.Order\src\Delivery.Order.Domain\bin\Debug\net6.0\Delivery.Order.Domain.pdb
+D:\ProjetosPuc\pmv-ads-2023-1-e4-proj-infra-t3-menu\BackEnd\Delivery.Order\Delivery.Order\src\Delivery.Order.Domain\obj\Debug\net6.0\Delivery.Order.Domain.csproj.AssemblyReference.cache
+D:\ProjetosPuc\pmv-ads-2023-1-e4-proj-infra-t3-menu\BackEnd\Delivery.Order\Delivery.Order\src\Delivery.Order.Domain\obj\Debug\net6.0\Delivery.Order.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\ProjetosPuc\pmv-ads-2023-1-e4-proj-infra-t3-menu\BackEnd\Delivery.Order\Delivery.Order\src\Delivery.Order.Domain\obj\Debug\net6.0\Delivery.Order.Domain.AssemblyInfoInputs.cache
+D:\ProjetosPuc\pmv-ads-2023-1-e4-proj-infra-t3-menu\BackEnd\Delivery.Order\Delivery.Order\src\Delivery.Order.Domain\obj\Debug\net6.0\Delivery.Order.Domain.AssemblyInfo.cs
+D:\ProjetosPuc\pmv-ads-2023-1-e4-proj-infra-t3-menu\BackEnd\Delivery.Order\Delivery.Order\src\Delivery.Order.Domain\obj\Debug\net6.0\Delivery.Order.Domain.csproj.CoreCompileInputs.cache
+D:\ProjetosPuc\pmv-ads-2023-1-e4-proj-infra-t3-menu\BackEnd\Delivery.Order\Delivery.Order\src\Delivery.Order.Domain\obj\Debug\net6.0\Delivery.Order.Domain.dll
+D:\ProjetosPuc\pmv-ads-2023-1-e4-proj-infra-t3-menu\BackEnd\Delivery.Order\Delivery.Order\src\Delivery.Order.Domain\obj\Debug\net6.0\refint\Delivery.Order.Domain.dll
+D:\ProjetosPuc\pmv-ads-2023-1-e4-proj-infra-t3-menu\BackEnd\Delivery.Order\Delivery.Order\src\Delivery.Order.Domain\obj\Debug\net6.0\Delivery.Order.Domain.pdb
+D:\ProjetosPuc\pmv-ads-2023-1-e4-proj-infra-t3-menu\BackEnd\Delivery.Order\Delivery.Order\src\Delivery.Order.Domain\obj\Debug\net6.0\ref\Delivery.Order.Domain.dll

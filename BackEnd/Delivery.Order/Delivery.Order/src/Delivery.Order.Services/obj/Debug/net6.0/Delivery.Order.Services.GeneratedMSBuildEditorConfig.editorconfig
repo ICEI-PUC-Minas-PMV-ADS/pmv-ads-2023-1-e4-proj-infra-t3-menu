@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Delivery.Order.Services
-build_property.ProjectDir = C:\Users\colaboradordatum\Documents\Persona\COOKING\Delivery.Order\Delivery.Order\src\Delivery.Order.Services\
+build_property.ProjectDir = D:\ProjetosPuc\pmv-ads-2023-1-e4-proj-infra-t3-menu\BackEnd\Delivery.Order\Delivery.Order\src\Delivery.Order.Services\

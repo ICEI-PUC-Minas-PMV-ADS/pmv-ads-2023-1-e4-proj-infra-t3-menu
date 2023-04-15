@@ -3,6 +3,7 @@ using Delivery.Products.API.Extensions;
 using Delivery.Products.Domain.Interfaces;
 using Delivery.Products.Domain.Models;
 using Delivery.Users.Domain.Validations;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using static Microsoft.AspNetCore.Http.StatusCodes;
 
@@ -14,6 +15,7 @@ namespace Delivery.Products.Api.Controllers
     [ApiController]
     [ApiVersion("1.0")]
     [Route("api/v{version:apiVersion}/[controller]")]
+    [Authorize]
     public class ProductController : ControllerBase
     {
         private readonly IProductService _services;

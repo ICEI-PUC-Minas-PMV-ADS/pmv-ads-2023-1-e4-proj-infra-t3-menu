@@ -25,7 +25,7 @@ namespace Delivery.Users.API.Controllers
     [ApiController]
     [ApiVersion("1.0")]
     [Route("api/v{version:apiVersion}/[controller]")]
-    //[Authorize]
+    [Authorize]
     public class UsersController : ControllerBase
     {        
         private readonly IUserServices _services;               

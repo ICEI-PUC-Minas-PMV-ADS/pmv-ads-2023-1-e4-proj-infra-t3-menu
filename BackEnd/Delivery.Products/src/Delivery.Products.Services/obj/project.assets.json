@@ -963,19 +963,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rodri\\.nuget\\packages\\": {}
+    "C:\\Users\\polet\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\API_Delivery\\Delivery.Products\\src\\Delivery.Products.Services\\Delivery.Products.Services.csproj",
+      "projectUniqueName": "D:\\ProjetosPuc\\pmv-ads-2023-1-e4-proj-infra-t3-menu\\BackEnd\\Delivery.Products\\src\\Delivery.Products.Services\\Delivery.Products.Services.csproj",
       "projectName": "Delivery.Products.Services",
-      "projectPath": "D:\\Projects\\API_Delivery\\Delivery.Products\\src\\Delivery.Products.Services\\Delivery.Products.Services.csproj",
-      "packagesPath": "C:\\Users\\rodri\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\API_Delivery\\Delivery.Products\\src\\Delivery.Products.Services\\obj\\",
+      "projectPath": "D:\\ProjetosPuc\\pmv-ads-2023-1-e4-proj-infra-t3-menu\\BackEnd\\Delivery.Products\\src\\Delivery.Products.Services\\Delivery.Products.Services.csproj",
+      "packagesPath": "C:\\Users\\polet\\.nuget\\packages\\",
+      "outputPath": "D:\\ProjetosPuc\\pmv-ads-2023-1-e4-proj-infra-t3-menu\\BackEnd\\Delivery.Products\\src\\Delivery.Products.Services\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\rodri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\polet\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -989,11 +989,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Projects\\API_Delivery\\Delivery.Products\\src\\Delivery.Products.Domain\\Delivery.Products.Domain.csproj": {
-              "projectPath": "D:\\Projects\\API_Delivery\\Delivery.Products\\src\\Delivery.Products.Domain\\Delivery.Products.Domain.csproj"
+            "D:\\ProjetosPuc\\pmv-ads-2023-1-e4-proj-infra-t3-menu\\BackEnd\\Delivery.Products\\src\\Delivery.Products.Domain\\Delivery.Products.Domain.csproj": {
+              "projectPath": "D:\\ProjetosPuc\\pmv-ads-2023-1-e4-proj-infra-t3-menu\\BackEnd\\Delivery.Products\\src\\Delivery.Products.Domain\\Delivery.Products.Domain.csproj"
             },
-            "D:\\Projects\\API_Delivery\\Delivery.Products\\src\\Delivery.Products.Infrastructure\\Delivery.Products.Infrastructure.csproj": {
-              "projectPath": "D:\\Projects\\API_Delivery\\Delivery.Products\\src\\Delivery.Products.Infrastructure\\Delivery.Products.Infrastructure.csproj"
+            "D:\\ProjetosPuc\\pmv-ads-2023-1-e4-proj-infra-t3-menu\\BackEnd\\Delivery.Products\\src\\Delivery.Products.Infrastructure\\Delivery.Products.Infrastructure.csproj": {
+              "projectPath": "D:\\ProjetosPuc\\pmv-ads-2023-1-e4-proj-infra-t3-menu\\BackEnd\\Delivery.Products\\src\\Delivery.Products.Infrastructure\\Delivery.Products.Infrastructure.csproj"
             }
           }
         }
@@ -1023,7 +1023,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

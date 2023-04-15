@@ -3,6 +3,7 @@ using Delivery.Order.API.Extensions;
 using Delivery.Order.Domain.Interfaces;
 using Delivery.Order.Domain.Models;
 using Delivery.Order.Domain.Validations;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using static Microsoft.AspNetCore.Http.StatusCodes;
 using OrderModel = Delivery.Order.Domain.Models.Order;
@@ -15,6 +16,7 @@ namespace Delivery.Order.Api.Controllers
     [ApiController]
     [ApiVersion("1.0")]
     [Route("api/v{version:apiVersion}/[controller]")]
+    [Authorize]
     public class OrderController : ControllerBase
     {
         private readonly IOrderService _service;
