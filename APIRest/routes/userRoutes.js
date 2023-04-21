@@ -12,7 +12,7 @@ router
 router
     .route('/api/usuario/:id')
     .get(userController.getOne)
-    .patch(userController.updateOne)
+    .put(userController.updateOne)
     .delete(userController.deleteOne);
 
 router

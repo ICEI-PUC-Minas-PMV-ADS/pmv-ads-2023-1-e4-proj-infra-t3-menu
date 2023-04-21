@@ -47,6 +47,9 @@
           },
           "401": {
             "description": "Não autorizado"
+          },
+          "500": {
+            "description": "Erro interno no servidor"
           }
         }
       }
@@ -454,7 +457,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Product"
+                "$ref": "#/components/schemas/ProductAllFields"
               }
             }
           }
@@ -481,30 +484,6 @@
       }
     },
     "/pedido": {
-      "get": {
-        "summary": "Listagem de pedidos",
-        "description": "Retorna a lista de pedidos cadastrados",
-        "tags": [
-          "Pedido"
-        ],
-        "security": [
-          {
-            "BearerAuth": []
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Lista de pedidos",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Order"
-                }
-              }
-            }
-          }
-        }
-      },
       "post": {
         "summary": "Criação do pedido",
         "description": "Cria um pedido",
@@ -704,6 +683,110 @@
           }      
         }
       }
+    },
+
+    "/pedido/addProduct/{orderId}": {
+      "post": {
+        "summary": "Inclusão de produtos no pedido",
+        "description": "Adiciona um produto no pedido",
+        "tags": [
+          "Pedido"
+        ],
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "orderId",
+            "in": "path",
+            "description": "Id do Pedido",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Dados do produto",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductInOrder"
+              }
+            }
+          }
+        },        
+        "responses": {
+          "200": {
+            "description": "Dados dos pedido",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Order"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Não autorizado"
+          },
+          "404": {
+            "description": "Código não encontrado"
+          }      
+        }
+      }
+    },
+
+    "/pedido/deleteProduct/{orderId}/{productId}": {
+      "delete": {
+        "summary": "Exclusão de produtos do pedido",
+        "description": "Exclui um produto do pedido",
+        "tags": [
+          "Pedido"
+        ],
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "orderId",
+            "in": "path",
+            "description": "Id do Pedido",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "productId",
+            "in": "path",
+            "description": "Id do Produto",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }          
+        ],       
+        "responses": {
+          "200": {
+            "description": "Produto excluído do pedido"
+          },
+          "400": {
+            "description": "Produto não é válido"
+          },          
+          "401": {
+            "description": "Não autorizado"
+          },
+          "404": {
+            "description": "Código não encontrado"
+          }      
+        }
+      }
     }
   },
 
@@ -729,9 +812,12 @@
           }
         }
       },
-      "Product": {
+      "ProductAllFields": {
         "type": "object",
         "properties": {
+          "id": {
+            "type": "string"
+          },          
           "name": {
             "type": "string"
           },
@@ -746,6 +832,32 @@
           }
         }
       },
+      "Product": {
+        "type": "object",
+        "properties": {        
+          "name": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "isAvailable": {
+            "type": "boolean"
+          },
+          "price": {
+            "type": "number"
+          }
+        }
+      }, 
+      "ProductInOrder": {
+        "type": "object",              
+        "properties": {
+            "id": {"type": "string"},
+            "name": {"type": "string"},
+            "quantity": {"type": "integer"},
+            "price": {"type": "number"}
+        }        
+      },     
       "Order" : {
         "type": "object",
         "properties": {

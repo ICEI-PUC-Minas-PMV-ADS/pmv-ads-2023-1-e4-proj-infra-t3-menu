@@ -12,7 +12,7 @@ router
 router
     .route('/api/produto/:id')
     .get(productController.getOne)
-    .patch(productController.updateOne)
+    .put(productController.updateOne)
     .delete(productController.deleteOne);
   
 module.exports = router;   

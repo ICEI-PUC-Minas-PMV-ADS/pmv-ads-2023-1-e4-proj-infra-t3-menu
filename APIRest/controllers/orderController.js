@@ -90,3 +90,34 @@ exports.deleteOne = (req, res) => {
     }
    );
 };
+
+exports.addProductInOrder = (req, res) => {      
+    const path = sPATH + 'Order/addProduct/' + req.params.orderId;
+    const bodyData = req.body;
+
+    httpsRequest({
+        porta: PORTA_BACKEND_PEDIDOS,
+        token: req.headers.authorization,
+        method: 'POST',
+        path: path
+    },
+    bodyData, (data, statusCode) => {
+        sendResAnyRequest(res, data, statusCode);
+    }
+   );
+};
+
+exports.deleteProductFromOrder = (req, res) => {      
+    const path = sPATH + 'Order/deleteProduct/' + req.params.orderId + '/' + req.params.productId;
+    
+    httpsRequest({
+        porta: PORTA_BACKEND_PEDIDOS,
+        token: req.headers.authorization,
+        method: 'DELETE',
+        path: path
+    },
+    null, (data, statusCode) => {
+        sendResAnyRequest(res, data, statusCode);
+    }
+   );
+};

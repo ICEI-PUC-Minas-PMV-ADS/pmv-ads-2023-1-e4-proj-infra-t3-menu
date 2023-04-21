@@ -11,11 +11,19 @@ router
 router
     .route('/api/pedido/:id')
     .get(orderController.getOne)
-    .patch(orderController.updateOne)
+    .put(orderController.updateOne)
     .delete(orderController.deleteOne);
 
 router
      .route('/api/pedido/allByUser/:userId')
      .get(orderController.getAllByUser);    
+
+router
+     .route('/api/pedido/addProduct/:orderId')
+     .post(orderController.addProductInOrder); 
+     
+router
+     .route('/api/pedido/deleteProduct/:orderId/:productId')
+     .delete(orderController.deleteProductFromOrder);      
   
 module.exports = router;   

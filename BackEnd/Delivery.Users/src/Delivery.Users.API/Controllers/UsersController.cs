@@ -84,6 +84,7 @@ namespace Delivery.Users.API.Controllers
         [ProducesResponseType(Status200OK, Type = typeof(User))]
         [ProducesResponseType(Status400BadRequest, Type = typeof(ValidationErrorResponse))]
         [ProducesResponseType(Status500InternalServerError, Type = typeof(ErrorResponse))]
+        [AllowAnonymous]
         public async Task<ActionResult> Post([FromBody] UserDto model)
         {
             try

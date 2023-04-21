@@ -127,6 +127,7 @@ namespace Delivery.Products.Api.Controllers
         /// </summary>
         /// <param name="product">The Product object to update</param>
         /// <returns>The Product updated</returns>
+        /// <param name="id">The Product id to update</param>
         /// <response code="200">Product updated</response>
         /// <response code="400">Product not valid</response>
         /// <response code="404">Product not found</response>
@@ -135,13 +136,15 @@ namespace Delivery.Products.Api.Controllers
         [ProducesResponseType(Status400BadRequest, Type = typeof(ValidationErrorResponse))]
         [ProducesResponseType(Status404NotFound, Type = typeof(NotFoundResponse))]
         [ProducesResponseType(Status500InternalServerError, Type = typeof(ErrorResponse))]
-        [HttpPut]
-        public async Task<ActionResult> Put([FromBody] Product product)
+        [HttpPut("{id}")]
+        public async Task<ActionResult> Put(string? id, [FromBody] Product product)
         {
             try
             {
-                var productValidador = new ProductPutValidator();
-                var validationResult = productValidador.Validate(product);
+                if (id != product.Id) return BadRequest();
+
+                var productValidador = new ProductIdValidator();
+                var validationResult = productValidador.Validate(id);
 
                 if (!validationResult.IsValid)
                     return StatusCode(Status400BadRequest, validationResult.ToValidationErrorReponse());

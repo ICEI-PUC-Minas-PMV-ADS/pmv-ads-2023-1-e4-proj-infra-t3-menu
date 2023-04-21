@@ -33,7 +33,7 @@ exports.login = (req, res) => {
         path: path,
         isAuthenticated: false
     },
-    bodyData, (data, statusCode) => {
+    bodyData, (data, statusCode) => {        
         sendResAnyRequest(res, data, statusCode);
     }
    );

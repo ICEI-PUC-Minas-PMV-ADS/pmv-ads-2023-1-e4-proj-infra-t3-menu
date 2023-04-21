@@ -19,10 +19,11 @@ function httpsRequest(params, data, callback) {
     method = params.method;
     path = params.path;
 
-    console.log(porta);
-    console.log(token);
-    console.log(method);
-    console.log(path);
+    // console.log(porta);
+    // console.log(token);
+    // console.log(method);
+    // console.log(path);    
+    // console.log(data);
 
     let isAuthenticated = params.isAuthenticated !== undefined ? params.isAuthenticated : true;
 
@@ -52,39 +53,38 @@ function httpsRequest(params, data, callback) {
     const requestData = JSON.stringify(data);
 
     // Envia a requisição HTTPS
-    const request = https.request(options, (response) => {
-        let responseData = '';        
-
-        response.on('data', (chunk) => {
-            responseData += chunk;
+        const request = https.request(options, (response) => {
+            let responseData = ''; 
+            
+            response.on('data', (chunk) => {
+                responseData += chunk;
+            });
+            response.on('end', () => {                       
+                let parsedData;
+                try {
+                    parsedData = JSON.parse(responseData);
+                } catch (error) {
+                    parsedData = responseData;
+                }
+                if (response.statusCode >= 400) {
+                    const error = new Error(parsedData.detail || 'Erro desconhecido');
+                    error.statusCode = response.statusCode;                
+                    callback(error, response.statusCode);
+                } else {
+                    callback(parsedData, response.statusCode);
+                }
+            });
+            
         });
-        response.on('end', () => {                       
-            let parsedData;
-            try {
-                parsedData = JSON.parse(responseData);
-            } catch (error) {
-                parsedData = responseData;
-            }
-            if (response.statusCode >= 400) {
-                const error = new Error(parsedData.detail || 'Erro desconhecido');
-                error.statusCode = response.statusCode;                
-                callback(error, response.statusCode);
-            } else {
-                callback(parsedData, response.statusCode);
-            }
+        request.on('error', (error) => {
+            console.error(error);
+            callback(null, 500);
         });
-        
-    });    
-
-    request.on('error', (error) => {
-        console.error(error);
-        callback(null, 500);
-    });
-
-    if (requestData) {
-        request.write(requestData);
-    }
-    request.end();
+    
+        if (requestData) {
+            request.write(requestData);
+        }
+        request.end();         
 }
 
 // 200 - sucesso
@@ -99,8 +99,13 @@ function StatusOk(statusCode) {
 function sendResAnyRequest(res, data, statusCode) { 
     if( StatusOk(statusCode)) 
         res.send(data);
-    else       
-        res.status(statusCode).send(data.message);    
+    else if (data !== null)      
+        res.status(statusCode).send(data.message);
+    else
+    {   
+        // Erro emitido por ex quando o servidor de login está desligado e chega uma requisição de login pela api rest     
+        res.status(statusCode).send('Erro no servidor: '+statusCode); 
+    }
 }
 
 module.exports = {

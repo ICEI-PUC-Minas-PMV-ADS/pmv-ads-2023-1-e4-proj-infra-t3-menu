@@ -5,6 +5,9 @@ Será exibida a mensagem: Servidor está escutando na porta 3000
 Para testar acesse no navegador:
 http://localhost:3000/
 
+Construir uma API REST 
+projeto backend desenvolvido seguindo https://www.youtube.com/watch?v=WejbsEnvvRQ
+
 Para executar os endpoints dessa api, poderá ser utilizado o postman ou o navegador acessando o link:
 http://localhost:3000/api-docs/
 

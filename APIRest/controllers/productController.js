@@ -41,7 +41,7 @@ exports.getAll = (req, res) => {
 // Produtos - MÉTODO POST
 exports.createOne = (req, res) => {        
     const path = sPATH + 'Product/';
-    const bodyData = req.body;
+    const bodyData = req.body;          
 
     httpsRequest({
         porta: PORTA_BACKEND_PRODUTOS,
