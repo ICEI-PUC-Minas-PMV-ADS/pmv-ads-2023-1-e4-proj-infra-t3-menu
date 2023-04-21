@@ -82,7 +82,7 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Esquema Rel
 
 ## Modelo Físico
 
-Entregar um arquivo banco.sql contendo os scripts de criação das tabelas do banco de dados. Este arquivo deverá ser incluído dentro da pasta src\bd.
+O arquivo banco.sql contém os scripts de criação da tabela de usuários, único cadastro do projeto que utiliza banco de dados relacional. Este arquivo está dentro da pasta src\bd.
 
 ## Tecnologias Utilizadas
 
