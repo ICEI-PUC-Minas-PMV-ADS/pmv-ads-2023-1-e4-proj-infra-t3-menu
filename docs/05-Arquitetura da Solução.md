@@ -86,9 +86,27 @@ Entregar um arquivo banco.sql contendo os scripts de criação das tabelas do ba
 
 ## Tecnologias Utilizadas
 
-Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
+Para o desenvolvimento da aplicação será utilizado:
+* Frontend Web >  React
+* Backend > ASP Net Core Web API
+* Frontend Mobile > React Native
+* IDE > Visual Studio 2022 e Vs Code
+* API REST > NodeJs
+* Banco de dados > SQL Server e MongoDB
 
-Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
+### Documentação das API's
+
+O projeto é composto por três backends desenvolvidos com o ASP Net Core:
+* Users API
+* Poducts API
+* Order API e
+* Uma API orquestradora denominada API REST Cooking Digital. <br>
+A documentação swagger da API REST contém a documentação de todos os endpoints de acesso aos demais backends. <br>
+Veja na figura abaixo:
+
+![Arquitetura Distribuída](img/Swagger-API-REST.jpg)
+
+Caso a API REST esteja em execução localmente, o acesso à documentação pode ser realizado pelo navegador no link: http://localhost:3000/api-docs/ 
 
 ## Hospedagem
 
