@@ -12,8 +12,6 @@ CONSTRAINT [PK_Usuarios] PRIMARY KEY CLUSTERED ([User_Id] ASC)
 )
 select * from users
 
-
-======
 ALTER TABLE [dbo].[users] ADD Perfil INT
 
 update users set Perfil=3 where Perfil is null
