@@ -1,0 +1,59 @@
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+h2 {
+    position: relative;
+    margin: 20px;
+}
+
+p {
+    padding-top: 10px;
+}
+
+.container {
+    display: inline-flex;
+    height: 45%;
+    width: 100%;
+    background-color: white;
+}
+
+.content {
+    background-color: rgb(236, 232, 232);
+    text-align: center;
+    border: 2px solid;
+    border-color: red;
+    width: 25%;
+    margin: 5px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.img {
+    height: 15vw;
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-top-left-radius:10px ;
+}
+
+/*   LOGIN E CADASTRO   */
+
+#formulario {
+    background-color: rgba(209, 209, 209, 0.308) ;
+    align-items: end;
+    justify-content: center;
+    text-align: center;
+    border: solid 2px;
+    border-radius: 10px;
+    border-color: red;
+    width: 35%;
+}
+
+
+/* PEDIDOS */
+
+.tabela {
+    margin: 10px;
+}
