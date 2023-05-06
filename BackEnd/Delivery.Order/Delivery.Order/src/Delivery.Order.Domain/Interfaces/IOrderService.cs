@@ -47,5 +47,14 @@ namespace Delivery.Order.Domain.Interfaces
         /// <param name="productId">The Product Id to be deleted</param>
         /// <returns></returns>
         Task DeleteProductFromOrder(string orderId, string productId);
+
+
+        /// <summary>
+        /// Alter status from the Order
+        /// </summary>
+        /// <param name="orderId">The Order Id to be updated</param>
+        /// <param name="statusOrder">Status Order</param>
+        /// <returns></returns>
+        Task updateStatusOrder(string orderId, string statusOrder);
     }
 }

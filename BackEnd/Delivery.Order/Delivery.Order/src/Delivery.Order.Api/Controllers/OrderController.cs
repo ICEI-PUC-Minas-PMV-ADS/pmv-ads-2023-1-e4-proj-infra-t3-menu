@@ -113,6 +113,7 @@ namespace Delivery.Order.Api.Controllers
             try
             {
                 var orderValidator = new OrderValidator();
+                order.StatusOrder = "Aguardando inicio";
                 var orderValidationResult = orderValidator.Validate(order);
 
                 if (!orderValidationResult.IsValid)
@@ -229,7 +230,7 @@ namespace Delivery.Order.Api.Controllers
 
                 var productIdValidationResult = idValidator.Validate(productId);
 
-                if (!productIdValidationResult.IsValid) 
+                if (!productIdValidationResult.IsValid)
                     return StatusCode(Status400BadRequest, productIdValidationResult.ToValidationErrorReponse());
 
                 await _service.DeleteProductFromOrder(orderId!, productId!);
@@ -244,5 +245,47 @@ namespace Delivery.Order.Api.Controllers
                 return StatusCode(Status500InternalServerError, exception.ToErrorReponse());
             }
         }
+
+        /// <summary>
+        /// Update status by Order Id
+        /// </summary>        
+        /// <param name="orderId">Order Id</param>
+        /// <param name="statusOrder">Status Order</param>
+        /// <returns>The order updated</returns>
+        /// <response code="200">Order updated</response>
+        /// <response code="400">Order not valid</response>
+        /// <response code="404">Order not found</response>
+        /// <response code="500">Server Error</response>
+        [ProducesResponseType(Status200OK, Type = typeof(Product))]
+        [ProducesResponseType(Status400BadRequest, Type = typeof(ValidationErrorResponse))]
+        [ProducesResponseType(Status404NotFound, Type = typeof(NotFoundResponse))]
+        [ProducesResponseType(Status500InternalServerError, Type = typeof(ErrorResponse))]        
+        [HttpPatch("updateStatusOrder/{orderId}/{statusOrder}")]        
+
+        public async Task<ActionResult> updateStatusOrder(string? orderId, string? statusOrder)
+        {
+            try
+            {
+                var idValidator = new IdValidator();
+
+                var orderIdValidationResult = idValidator.Validate(orderId);
+
+                if (!orderIdValidationResult.IsValid)
+                    return StatusCode(Status400BadRequest, orderIdValidationResult.ToValidationErrorReponse());
+
+                await _service.updateStatusOrder(orderId, statusOrder);
+
+                return Ok();                
+            }
+            catch (KeyNotFoundException)
+            {
+                return StatusCode(Status404NotFound, new NotFoundResult().ToNotFoundReponse("Order"));
+            }
+            catch (Exception exception)
+            {
+                return StatusCode(Status500InternalServerError, exception.ToErrorReponse());
+            }
+        }
     }
+
 }

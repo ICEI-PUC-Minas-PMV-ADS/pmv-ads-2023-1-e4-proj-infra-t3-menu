@@ -101,5 +101,27 @@ namespace Delivery.Order.Infrastructure
             }
         }
 
+        public async Task updateStatusOrder(string orderId, string statusOrder)
+        {
+            try
+            {
+                var orderFilter = Builders<OrderModel>.Filter.Eq(x => x.Id, orderId);
+
+                var newstatus = statusOrder.Replace('%', ' ');
+
+                var update = Builders<OrderModel>.Update.Set(x => x.StatusOrder, newstatus);
+                var result = await _ordersCollection.UpdateOneAsync(orderFilter, update);
+
+                if (result.ModifiedCount == 0)
+                {
+                    throw new Exception("Pedido não encontrado.");
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
     }
 }

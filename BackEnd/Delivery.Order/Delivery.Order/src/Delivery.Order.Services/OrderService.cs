@@ -113,5 +113,17 @@ namespace Delivery.Order.Services
                 throw;
             }
         }
+
+        public async Task updateStatusOrder(string orderId, string statusOrder)
+        {
+            try
+            { 
+                await _dbRepository.updateStatusOrder(orderId, statusOrder);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }

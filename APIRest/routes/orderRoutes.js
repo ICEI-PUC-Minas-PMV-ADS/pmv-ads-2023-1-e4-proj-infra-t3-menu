@@ -24,6 +24,10 @@ router
      
 router
      .route('/api/pedido/deleteProduct/:orderId/:productId')
-     .delete(orderController.deleteProductFromOrder);      
+     .delete(orderController.deleteProductFromOrder); 
+     
+router
+     .route('/api/pedido/updateStatusOrder/:orderId/:statusOrder')
+     .patch(orderController.updateStatusOrder);      
   
 module.exports = router;   

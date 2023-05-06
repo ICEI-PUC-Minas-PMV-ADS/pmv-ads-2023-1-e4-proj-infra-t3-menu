@@ -32,5 +32,9 @@ namespace Delivery.Order.Domain.Models
         /// Order total
         /// </summary>
         public double TotalValue { get; set; }
+        /// <summary>
+        /// Status Order
+        /// </summary>
+        public string? StatusOrder { get; set; }
     }
 }

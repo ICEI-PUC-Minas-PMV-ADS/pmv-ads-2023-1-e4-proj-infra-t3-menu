@@ -787,6 +787,55 @@
           }      
         }
       }
+    },
+
+    "/pedido/updateStatusOrder/{orderId}/{statusOrder}": {
+      "patch": {
+        "summary": "Atualização do status do pedido",
+        "description": "Atualização do status do pedido",
+        "tags": [
+          "Pedido"
+        ],
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "orderId",
+            "in": "path",
+            "description": "Id do Pedido",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "statusOrder",
+            "in": "path",
+            "description": "Status",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }          
+        ],       
+        "responses": {
+          "200": {
+            "description": "Status atualizado"
+          },
+          "400": {
+            "description": "Pedido não é válido"
+          },          
+          "401": {
+            "description": "Não autorizado"
+          },
+          "404": {
+            "description": "Pedido não encontrado"
+          }      
+        }
+      }
     }
   },
 

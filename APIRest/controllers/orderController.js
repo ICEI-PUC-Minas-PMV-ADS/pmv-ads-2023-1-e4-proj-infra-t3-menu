@@ -121,3 +121,24 @@ exports.deleteProductFromOrder = (req, res) => {
     }
    );
 };
+
+// Pedidos - MÉTODO PATCH
+exports.updateStatusOrder = (req, res) => {    
+    const orderId = req.params.orderId;
+    let statusOrder = req.params.statusOrder;
+
+    statusOrder = statusOrder.replace(' ', '%');
+
+    const path = sPATH + 'Order/updateStatusOrder/' + orderId + '/' +statusOrder;      
+
+    httpsRequest({
+        porta: PORTA_BACKEND_PEDIDOS,
+        token: req.headers.authorization,
+        method: 'PATCH',
+        path: path
+    },
+    null, (data, statusCode) => {
+        sendResAnyRequest(res, data, statusCode);
+    }
+   );
+};
