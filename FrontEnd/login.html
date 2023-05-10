@@ -15,7 +15,7 @@
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
-                    <img src="img/logoteste.png" alt="Logo" width="30" height="24"
+                    <img src="img/logoteste.png" alt="Logo" width="60" height="60"
                         class="d-inline-block align-text-top">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -31,6 +31,16 @@
                         <li class="nav-item">
                             <a class="nav-link active link-danger fw-bold" href="pedidos.html">Meus Pedidos</a>
                         </li>
+
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Procurar" aria-label="Search">
+                            <button class="btn btn-danger" type="submit">Buscar</button>
+                        </form>
+                    </ul>
+                    <form class="d-flex" role="search">
+                       <a href="login.html"><button class="btn btn-outline-danger" id="navButton" type="button">Entrar</button></a>
+                       <a href="cadastro.html"><button class="btn btn-outline-danger" id="navButton" type="button">Registrar</button></a>
+                      </form>
                 </div>
             </div>
         </nav>
@@ -50,7 +60,7 @@
                 <button type="submit" class="btn btn-danger">Confirmar</button>
             </div>
             <div>
-                <a href="cadastro.html">Não possuo uma conta.</a>
+                <a href="cadastro.html">Não tenho uma conta.</a>
             </div>
         </form>
     </main>

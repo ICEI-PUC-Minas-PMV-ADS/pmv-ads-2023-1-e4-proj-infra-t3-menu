@@ -4,9 +4,12 @@ body {
     overflow-x: hidden;
 }
 
+#navButton {
+    margin: 2px;
+}
+
 h2 {
     position: relative;
-    margin: 20px;
 }
 
 p {
@@ -34,6 +37,7 @@ p {
 .img {
     height: 15vw;
     width: 100%;
+    position: relative;
     border-top-right-radius: 10px;
     border-top-left-radius:10px ;
 }

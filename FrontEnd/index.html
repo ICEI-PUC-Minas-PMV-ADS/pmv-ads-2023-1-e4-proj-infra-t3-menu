@@ -12,10 +12,10 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary justify-content-center">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
-                    <img src="img/logoteste.png" alt="Logo" width="30" height="24"
+                    <img src="img/logoteste.png" alt="Logo" width="60" height="60"
                         class="d-inline-block align-text-top">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -26,29 +26,26 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mt-2 mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active link-danger fw-bold" aria-current="page" href="#">início</a>
+                            <a class="nav-link active link-danger fw-bold" aria-current="page" href="index.html">início</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active link-danger fw-bold" href="pedidos.html">Meus Pedidos</a>
                         </li>
+
                         <form class="d-flex" role="search">
                             <input class="form-control me-2" type="search" placeholder="Procurar" aria-label="Search">
                             <button class="btn btn-danger" type="submit">Buscar</button>
                         </form>
-                        <li>
-                            <a class="navbar-brand" href="login.html"><button class="btn btn-danger  "
-                                    type="button">Entrar</button></a>
-                        </li>
-                        <li>
-                            <a class="navbar-brand" href="cadastro.html"><button class="btn btn-danger  "
-                                    type="button">Registrar</button></a>
-                        </li>
                     </ul>
+                    <form class="d-flex" role="search">
+                       <a href="login.html"><button class="btn btn-outline-danger" id="navButton" type="button">Entrar</button></a>
+                       <a href="cadastro.html"><button class="btn btn-outline-danger" id="navButton" type="button">Registrar</button></a>
+                      </form>
                 </div>
             </div>
         </nav>
     </header>
-    <main class="row align-items-start">
+    <main class="row">
         <!-- LANCHES -->
         
         <div class="container row justify-content-center">
