@@ -59,5 +59,12 @@ p {
 /* PEDIDOS */
 
 .tabela {
+    position: relative;
+    left: 10vw;
+    text-align: center;
+    width: 80%;
     margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color:   rgb(221, 221, 221);
 }
