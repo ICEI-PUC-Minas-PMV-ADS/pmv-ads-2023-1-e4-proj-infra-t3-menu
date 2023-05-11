@@ -2,6 +2,9 @@ body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     height: 100%;
     overflow-x: hidden;
+    background-image: url(/FrontEnd/img/background2.avif);
+    background-size:cover;
+    background-repeat: repeat;
 }
 
 #navButton {
@@ -18,13 +21,14 @@ p {
 
 .container {
     display: inline-flex;
+    color: white;
     height: 45%;
     width: 100%;
-    background-color: white;
+    
 }
 
 .content {
-    background-color: rgb(236, 232, 232);
+    background-color:   rgba(209, 209, 209, 0.308);
     text-align: center;
     border: 2px solid;
     border-color: red;
@@ -32,6 +36,10 @@ p {
     margin: 5px;
     margin-bottom: 15px;
     border-radius: 10px;
+}
+
+.text-center {
+    color: white;
 }
 
 .img {
@@ -42,7 +50,24 @@ p {
     border-top-left-radius:10px ;
 }
 
+footer {
+    text-align: center;
+    padding: 25px;
+    color: white;
+    opacity: 75%;
+}
+
 /*   LOGIN E CADASTRO   */
+
+.login {
+    background-image: url(/FrontEnd/img/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#NoAccount {
+    color: white;
+}
 
 #formulario {
     background-color: rgba(209, 209, 209, 0.308) ;
@@ -53,10 +78,15 @@ p {
     border-radius: 10px;
     border-color: red;
     width: 35%;
+    color: white;
 }
 
 
 /* PEDIDOS */
+
+.pedidos {
+    color: white;
+}
 
 .tabela {
     position: relative;
@@ -66,5 +96,13 @@ p {
     margin: 10px;
     padding: 15px;
     border-radius: 10px;
-    background-color:   rgb(221, 221, 221);
+    background-color:   rgba(209, 209, 209, 0.308);
+}
+
+th {
+    color: whitesmoke;
+}
+
+tr {
+    color: whitesmoke;
 }

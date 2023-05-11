@@ -10,7 +10,7 @@
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 
-<body>
+<body class="login">
     <header class="">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
@@ -26,7 +26,8 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mt-2 mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active link-danger fw-bold" aria-current="page" href="index.html">início</a>
+                            <a class="nav-link active link-danger fw-bold" aria-current="page"
+                                href="index.html">início</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active link-danger fw-bold" href="pedidos.html">Meus Pedidos</a>
@@ -38,9 +39,11 @@
                         </form>
                     </ul>
                     <form class="d-flex" role="search">
-                       <a href="login.html"><button class="btn btn-outline-danger" id="navButton" type="button">Entrar</button></a>
-                       <a href="cadastro.html"><button class="btn btn-outline-danger" id="navButton" type="button">Registrar</button></a>
-                      </form>
+                        <a href="login.html"><button class="btn btn-outline-danger" id="navButton"
+                                type="button">Entrar</button></a>
+                        <a href="cadastro.html"><button class="btn btn-outline-danger" id="navButton"
+                                type="button">Registrar</button></a>
+                    </form>
                 </div>
             </div>
         </nav>
@@ -53,22 +56,25 @@
                 <input type="text" class="form-control border border-danger" placeholder="Nome">
             </div>
             <div class="mb-3 col-5">
-                <input type="text" class="form-control border border-danger" id="formGroupExampleInput2" placeholder="Sobrenome">
+                <input type="text" class="form-control border border-danger" id="formGroupExampleInput2"
+                    placeholder="Sobrenome">
             </div>
             <div class="mb-3 col-10">
                 <input type="text" class="form-control border border-danger" placeholder="Email">
             </div>
             <div class="mb-3 col-10">
-                <input type="text" class="form-control border border-danger" id="formGroupExampleInput2" placeholder="Criar senha">
+                <input type="text" class="form-control border border-danger" id="formGroupExampleInput2"
+                    placeholder="Criar senha">
             </div>
             <div class="mb-3 col-10">
-                <input type="text" class="form-control border border-danger" id="formGroupExampleInput2" placeholder="Confirmar senha">
+                <input type="text" class="form-control border border-danger" id="formGroupExampleInput2"
+                    placeholder="Confirmar senha">
             </div>
             <div class="col-12 mb-2">
                 <button type="submit" class="btn btn-danger">Confirmar</button>
             </div>
             <div>
-                <a href="login.html">Já tenho uma conta.</a>
+                <a id="NoAccount" href="login.html">Já tenho uma conta.</a>
             </div>
 
         </form>
@@ -77,6 +83,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
+
+    <footer class="fixed-bottom">Todos os direitos reservados a CookingDigital-PUCMINAS 2@23</footer>
 </body>
 
 </html>
