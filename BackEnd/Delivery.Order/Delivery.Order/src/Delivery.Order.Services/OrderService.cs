@@ -117,7 +117,20 @@ namespace Delivery.Order.Services
         public async Task updateStatusOrder(string orderId, string statusOrder)
         {
             try
-            { 
+            {
+                if (statusOrder.ToLower() == "cancelado") {
+                    var filter = Builders<OrderModel>.Filter.And(
+                                 Builders<OrderModel>.Filter.Eq(x => x.Id, orderId));                    
+
+                    var orders = await _dbRepository.GetAllByFilterAsync(filter);
+                    
+                    if((orders != null) && (orders.Count > 0) && (orders[0].StatusOrder != "Aguardando inicio"))
+                    {
+                        throw new Exception("Não é possível cancelar o pedido. O pedido está "+ orders[0].StatusOrder);
+                    }
+
+                }
+
                 await _dbRepository.updateStatusOrder(orderId, statusOrder);
             }
             catch (Exception)

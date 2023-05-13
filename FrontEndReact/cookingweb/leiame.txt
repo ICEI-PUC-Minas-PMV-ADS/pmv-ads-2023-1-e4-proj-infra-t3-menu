@@ -1,0 +1,22 @@
+Para executar no vscode:
+
+Abrir o terminal e ir para a pasta de projeto
+ 
+cd cookingweb
+npm start
+
+
+Exemplo de uso da rota da api rest:
+http://localhost:3000/api/pedido/6285
+
+Integrando app react com nodejs
+https://www.youtube.com/watch?v=edeoWfH_70U
+
+- em 11/05/2023 Foi necessário instalar o cors na api rest porque não estava sendo permitido acessar a api rest pelo frontend react
+executar na api rest:
+npm install cors
+
+- depois executei 
+npm install bootstrap 
+npm install react-router
+

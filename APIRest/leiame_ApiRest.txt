@@ -23,6 +23,8 @@ https://www.youtube.com/watch?v=WhFx2heoFrA
 Para acessar a documentação swagger dessa API REST, acesse:
 http://localhost:3000/api-docs/
 
+Para executar a API:
+node index.js 
 
 
 
