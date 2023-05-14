@@ -2,9 +2,18 @@
 
 <span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>, <a href="4-Metodologia.md"> Metodologia</a>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>, <a href="5-Arquitetura da Solução.md"> Arquitetura da Solução</a>
 
-Implementação do sistema descritas por meio dos requisitos funcionais e/ou não funcionais. Deve relacionar os requisitos atendidos os artefatos criados (código fonte) além das estruturas de dados utilizadas e as instruções para acesso e verificação da implementação que deve estar funcional no ambiente de hospedagem.
+## Wireframe Interativo
 
-Para cada requisito funcional, pode ser entregue um artefato desse tipo
+Wireframe interativo com o intuito de orientar os usuários e clientes que irão usufruir da aplicação Cooking Digital.
+É possível assistir o vídeo gravado através do link: https://drive.google.com/drive/folders/1yLvqDjTcBo-BZ-HGYOZszXU8fpJMU4YQ
+
+É possível também visualizar a interação do wireframe direto pelo site do Figma: https://www.figma.com/file/YkhxqBNTm6AYEZjpk7cS50/Untitled?type=design&node-id=0%3A1&t=G4BCLRXEr92BQyFZ-1
+
+* Como dar start no wireframe interativo pelo Figma?
+- Ao clickar no link do figma, é possível visualizar no canto superior direto a opção de um "play"
+- ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e4-proj-infra-t3-menu/assets/90850392/07de7fdb-4ab4-4d15-bb3d-6f8905bc2cb2)
+- Então só seguir o fluxo dos botões interativos. Dica: o mouse muda o formato para uma "mão" que realizar um click.
+
 
 > **Links Úteis**:
 >

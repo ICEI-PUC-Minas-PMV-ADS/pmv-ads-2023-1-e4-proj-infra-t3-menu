@@ -50,32 +50,37 @@ Apresente aqui as histórias de usuário que são relevantes para o projeto de s
 
 ### Análise da Situação Atual
 
-Apresente aqui os problemas existentes que viabilizam sua proposta. Apresente o modelo do sistema como ele funciona hoje. Caso sua proposta seja inovadora e não existam processos claramente definidos, apresente como as tarefas que o seu sistema pretende implementar são executadas atualmente, mesmo que não se utilize tecnologia computacional. 
+Diariamente, temos vivido rotinas cada vez mais cansativas e esgotantes. Toda essa correria tem influenciado negativamente na maneira como as pessoas se alimentam. Infelizmente, muitas pessoas não conseguem se alimentar adequadamente por não conseguirem uma pausa em seu dia que seja suficiente para fazê-lo, sendo que muitas sequer conseguem tempo para prepararem sua própria alimentação.
 
 ### Descrição Geral da Proposta
 
-Apresente aqui uma descrição da sua proposta abordando seus limites e suas ligações com as estratégias e objetivos do negócio. Apresente aqui as oportunidades de melhorias.
+Como proposta para atender a demanda da situação atual, forneceremos uma plataforma digital na qual as pessoas poderão se cadastrar, visualizar e escolher os produtos e efetuar o pedido de lanches com comodidade, segurança e de maneira personalizada. Neste documento não abordaremos sobre os métodos de pagamento, pois não comporão o escopo desse projeto.
 
-### Processo 1 – NOME DO PROCESSO
-
-Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN. 
-
-![Processo 1](img/02-bpmn-proc1.png)
-
-### Processo 2 – NOME DO PROCESSO
-
-Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
-
-![Processo 2](img/02-bpmn-proc2.png)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e4-proj-infra-t3-menu/assets/90807703/5a96294a-ef84-48bd-bf79-5d79e48960db)
 
 ## Indicadores de Desempenho
 
-Apresente aqui os principais indicadores de desempenho e algumas metas para o processo. Atenção: as informações necessárias para gerar os indicadores devem estar contempladas no diagrama de classe. Colocar no mínimo 5 indicadores. 
+Para avaliação de desempenho e metas do negócio, faremos o acompanhamento de cinco indicadores, conforme abaixo:
 
-Usar o seguinte modelo: 
+### Receita gerada por mês
+Evolução mensal da receita total gerada com os pedidos realizados pelos usuários.
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e4-proj-infra-t3-menu/assets/90807703/9950216c-e60b-41fc-8488-e9e34ac57dcd)
 
-![Indicadores de Desempenho](img/02-indic-desemp.png)
-Obs.: todas as informações para gerar os indicadores devem estar no diagrama de classe a ser apresentado a posteriori. 
+### Total de pedidos por mês
+Evolução mensal do total de pedidos realizados pelos usuários.
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e4-proj-infra-t3-menu/assets/90807703/704fd2f4-4d41-427f-b3b2-a17b4f26a19b)
+
+### Total de pedidos por produto
+Comparativo do total de reservas que cada quadra teve no período.
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e4-proj-infra-t3-menu/assets/90807703/58d49d28-3833-475f-80da-ced99cff8b31)
+
+### Total de usuários por gênero
+Comparativo do total de jogadores de cada sexo que utilizaram as quadras.
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e4-proj-infra-t3-menu/assets/90807703/4d7b791e-a9fa-469b-b2a6-b84d33b325ba)
+
+### Média de idade dos usuários por gênero
+Comparativo da média de idade dos jogadores de cada sexo que utilizaram as quadras.
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e4-proj-infra-t3-menu/assets/90807703/f1af0238-5875-460a-8d21-6bb26afb8c71)
 
 ## Requisitos
 
