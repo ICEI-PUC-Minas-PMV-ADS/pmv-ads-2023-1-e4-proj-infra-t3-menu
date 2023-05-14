@@ -20,7 +20,7 @@ export const register = async (param) => {
   }
 }
 
-export const login = async (param) => {
+export const authenticate = async (param) => {
   try{
     return await API.post(`${BASE_URL}/usuario/login`, param).then( 
       response => {

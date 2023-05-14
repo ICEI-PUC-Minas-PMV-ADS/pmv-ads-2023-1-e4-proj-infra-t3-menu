@@ -1,25 +1,13 @@
 import React, { useEffect, useState } from 'react';
-// import { FlatList, View, StyleSheet } from 'react';
-// import { List, Text, FAB, Button } from 'react';
-
-// import Header from '../components/Header';
-// import Container from '../components/Container';
-// import Body from '../components/Body';
-// import Logo from '../components/Logo';
-
-//import {useUser} from '../contexts/UserContext';
 import {getallByUser} from '../services/orders.services';
 import '../styles/ViewOrders.css';
 
 
 function ViewOrders() {
 
-//  const navigation = useNavigation();
-  //const isFocused = useIsFocused();
-  //const {name} = useUser();
   const [orders, setOrders] = useState([]);
 
-   useEffect(() => {    
+  useEffect(() => {    
     getallByUser().then(dados => {            
       if (dados) {
           setOrders(dados);
@@ -32,8 +20,17 @@ function ViewOrders() {
   return (
     <div className="centered-list">
       <ul className="my-list">
+        <li className="header-tabular">
+          <span className="id">ID</span>
+          <span className="status">Status</span>
+          <span className="total">Total a pagar</span>
+        </li>
         {orders.map(item => (
-          <li key={item.id}>{'Pedido: ' + item.id + ' - Status: ' + item.statusOrder + ' - Valor a pagar: ' + item.totalValue}</li>
+          <li key={item.id}>
+            <span className="id">{item.id}</span>
+            <span className="status">{item.statusOrder}</span>            
+            <span className="total">{item.totalValue.toFixed(2)}</span>
+          </li>
         ))}
       </ul>
     </div>

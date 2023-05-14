@@ -1,0 +1,153 @@
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    height: 100%;
+    overflow-x: hidden;
+    background-image: url(../../public/img/background2.avif);
+    background-size:cover;
+    background-repeat: repeat;
+}
+
+nav {
+    height: 75px;
+}
+
+#navButton {
+    margin: 2px;
+}
+
+.icon-link {
+    padding: 5px;
+    color: rgb(200, 0, 0);
+}
+
+.icon-link:hover {
+    color: rgb(151, 0, 0);
+}
+
+h2 {
+    position: relative;
+}
+
+p {
+    padding-top: 10px;
+}
+
+.container {
+    display: inline-flex;
+    color: white;
+    height: 45%;
+    width: 100%;
+    
+}
+
+.content {
+    background-color:   rgba(209, 209, 209, 0.308);
+    text-align: center;
+    border: 2px solid;
+    border-color: red;
+    width: 25%;
+    margin: 5px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.text-center {
+    color: white;
+}
+
+.img {
+    height: 15vw;
+    width: 100%;
+    position: relative;
+    border-top-right-radius: 10px;
+    border-top-left-radius:10px ;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: white;
+    opacity: 75%;
+}
+
+/* Carrinho */
+
+.tabelaCarrinho {
+    position: relative;
+    text-align: center;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color:   rgba(209, 209, 209, 0.308);
+}
+
+#tableResumo {
+    text-align: center;
+}
+
+
+.qty button{
+    border: 0;
+    margin: 5px;
+    color: white;
+    font-weight: bold ;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.qty button:hover{
+    color: red;
+}
+
+.imgProduto {
+    width: 70%;
+}
+
+/*   LOGIN E CADASTRO   */
+
+.login {
+    background-image: url(../../public/img/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#NoAccount {
+    color: white;
+}
+
+#formulario {
+    background-color: rgba(209, 209, 209, 0.308) ;
+    align-items: end;
+    justify-content: center;
+    text-align: center;
+    border: solid 2px;
+    border-radius: 10px;
+    border-color: red;
+    width: 35%;
+    color: white;
+}
+
+
+/* PEDIDOS */
+
+.pedidos {
+    color: white;
+}
+
+.tabela {
+    position: relative;
+    left: 10vw;
+    text-align: center;
+    width: 80%;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color:   rgba(209, 209, 209, 0.308);
+}
+
+th {
+    color: whitesmoke;
+}
+
+tr {
+    color: whitesmoke;
+}

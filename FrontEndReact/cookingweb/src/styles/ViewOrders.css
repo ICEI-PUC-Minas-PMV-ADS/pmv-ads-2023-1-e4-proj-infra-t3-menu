@@ -1,25 +1,47 @@
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  li {
-    background-color: #f4f4f4;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  li:hover {
-    background-color: #e6e6e6;
-  }
-  
-  .centered-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
+.centered-list {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.my-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 50%;
+  color: #eee;
+}
+
+.header-tabular {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  background-color: #eee;
+  padding: 10px;
+  color: black;
+}
+
+.id {
+  width: 20%;
+}
+
+.status {
+  width: 40%;
+}
+
+.total {
+  width: 40%;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+li:last-child {
+  border-bottom: none;
+}

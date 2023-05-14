@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { register } from '../services/auth.services';
 import '../styles/Register.css';
 
@@ -7,7 +7,8 @@ function Register() {
   const [surname, setSurName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [userId, setUserId] = useState(null);
+  const [userId, setUserId] = useState(null)
+  const [error, setError] = useState(null);
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -21,17 +22,23 @@ function Register() {
     };
     register(newUser)
       .then(response => {
-        setUserId(response.data.id);
+        //console.log(response.data.id);
+        setError(null);
+        setUserId(response.data.id);        
       })
-      .catch(error => {
-        console.error('Erro ao criar usuário:', error);
+      .catch(error => {        
+        setError({ message: 'Ocorreu um erro ao criar o usuário.' });
       });
   }
+
+  useEffect(() => {
+    console.log(userId);
+  }, [userId]);
 
   return (
     <div className="register-container">
       <form onSubmit={handleSubmit}>
-        <h2>Cadastro de usuário</h2>
+        <h2>Registre-se gratuitamente</h2>
 
         <label>
           Nome:
@@ -53,11 +60,17 @@ function Register() {
       </form>
 
       {userId && (
-        <div className="success-message">
-          <p>Usuário criado com sucesso!</p>
-          <p>Código do usuário: {userId}</p>
+        <div className="success-message">          
+          <p style={{ color: 'white' }}>Usuário criado com sucesso!</p>
+          <p style={{ color: 'white' }}>Código do usuário: {userId}</p>
         </div>
       )}
+      {error && (
+        <div className="error-message">
+          <p>Ocorreu um erro ao criar o usuário: {error.message}</p>
+        </div>
+      )}
+
     </div>
   );
 }

@@ -31,11 +31,22 @@ function ViewProducts() {
   
 
   return (
-    <ul>
-      {products.map(item => (
-        <li key={item.id}>{item.name}</li>
-      ))}
+    <div className="centered-list">
+    <ul className="my-list">
+        <li className="header-tabular">
+          <span>ID</span>
+          <span>Nome</span>
+          <span>Valor unitário</span>
+        </li>
+        {products.map(item => (
+          <li key={item.id}>
+            <span className="id">{item.id}</span>
+            <span className="nome">{item.name}</span>            
+            <span className="Valor unitário">{item.price.toFixed(2)}</span>
+          </li>
+        ))}
     </ul>
+    </div>
   );
 
 };
