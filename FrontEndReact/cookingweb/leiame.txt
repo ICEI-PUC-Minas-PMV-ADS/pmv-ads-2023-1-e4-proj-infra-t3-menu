@@ -16,7 +16,49 @@ https://www.youtube.com/watch?v=edeoWfH_70U
 executar na api rest:
 npm install cors
 
-- depois executei 
+- Pacotes instalados no projeto 
 npm install bootstrap 
 npm install react-router
+npm install styled-components@5.3.9
+npm install @mui/material@5.13.0
+npm install @mui/icons-material@5.11.16
+npm install @emotion/react@11.11.0
+npm install @emotion/styled@11.11.0
+
+---- PENDENCIAS ----
+1 - Bloquear acesso ao path de vieworders e carrinho para usuários não conectados.
+O app está dando erro ao invés de direcionar para a págnia de login
+
+2 - Ao clicar no carrinho, o app está deslogando o usuário. Ver o motivo.
+- Ajustado
+
+3 - Ajustar o campo de total do pedido
+- Ajustado
+
+4 - Ajustar as imagens na tela de entrada
+- Ajustado
+
+5 - Melhorar o visual do botão de pesquisa do pedido
+- Ajustado. 
+
+6 - Melhorar o visual da tela do carrinho de compras
+
+7 - Retirar os console.log de toda a aplicação
+
+8 - Mudar a pesquisa do pedido para não carregar todos de uma vez
+Feito
+
+9 - criar campo em produtos para gravar a descrição do produto
+
+10 - Mudar a cor do botão Finalizar compra do carrinho
+
+11 - Ao tentar cancelar um pedido que está em andamento, o vieworders esta quebrando.
+Ajustado. O botão de cancelamento só estará ativo se o status do pedido for "Aguardando inicio"
+
+
+
+
+
+
+
 

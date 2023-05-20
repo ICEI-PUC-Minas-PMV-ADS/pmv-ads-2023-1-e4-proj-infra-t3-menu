@@ -24,7 +24,7 @@
     margin-bottom: 10px;
   }
   
-  input[type='id'],
+  input[type='userId'],
   input[type='password'] {
     width: 100%;
     padding: 10px;
@@ -35,18 +35,19 @@
   }
   
   button[type='submit'] {
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
+    background-color: white;
+    color: red;
+    /* border: none; */
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 5px;    
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    /* transition: background-color 0.3s ease; */
+    /* background-color: red;  */
   }
   
   button[type='submit']:hover {
-    background-color: #357a38;
+    background-color: red;
   }
   

@@ -43,6 +43,7 @@ namespace Delivery.Products.Api.Controllers
         [ProducesResponseType(Status400BadRequest, Type = typeof(ValidationErrorResponse))]
         [ProducesResponseType(Status404NotFound, Type = typeof(NotFoundResponse))]
         [ProducesResponseType(Status500InternalServerError, Type = typeof(ErrorResponse))]
+        [AllowAnonymous]
         public async Task<ActionResult<Product>> GetById(string? id)
         {
             try
@@ -66,6 +67,36 @@ namespace Delivery.Products.Api.Controllers
         }
 
         /// <summary>
+        /// Get Product by Category
+        /// </summary>
+        /// <param name="Categ">The product category to find</param>
+        /// <returns>List of Products</returns>
+        /// <response code="200">Products found</response>
+         /// <response code="404">Products not found</response>
+        /// <response code="500">Server Error</response>
+        [HttpGet("GetByCategory")]        
+        [ProducesResponseType(Status200OK, Type = typeof(Product))]
+        [ProducesResponseType(Status400BadRequest, Type = typeof(ValidationErrorResponse))]
+        [ProducesResponseType(Status404NotFound, Type = typeof(NotFoundResponse))]
+        [ProducesResponseType(Status500InternalServerError, Type = typeof(ErrorResponse))]
+        [AllowAnonymous]
+        public async Task<ActionResult<List<Product>>> GetByCategory(string? Categ)
+        {
+            try
+            {
+                return await _services.GetProductByCategAsync(Categ);
+            }
+            catch (KeyNotFoundException)
+            {
+                return StatusCode(Status404NotFound, new NotFoundResult().ToNotFoundReponse("Product"));
+            }
+            catch (Exception exception)
+            {
+                return StatusCode(Status500InternalServerError, exception.ToErrorReponse());
+            }
+        }
+
+        /// <summary>
         /// Get all Products
         /// </summary>
         /// <returns>List of Products</returns>
@@ -76,6 +107,7 @@ namespace Delivery.Products.Api.Controllers
         [ProducesResponseType(Status200OK, Type = typeof(List<Product>))]
         [ProducesResponseType(Status404NotFound, Type = typeof(NotFoundResponse))]
         [ProducesResponseType(Status500InternalServerError, Type = typeof(ErrorResponse))]
+        [AllowAnonymous]
         public async Task<ActionResult<List<Product>>> GetAll()
         {
             try

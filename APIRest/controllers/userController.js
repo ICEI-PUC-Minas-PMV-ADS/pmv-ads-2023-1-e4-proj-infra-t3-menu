@@ -66,7 +66,8 @@ exports.createOne = (req, res) => {
         porta: PORTA_BACKEND_USU,
         token: req.headers.authorization,
         method: 'POST',
-        path: path
+        path: path,
+        isAuthenticated: false
     },
     bodyData, (data, statusCode) => {
         sendResAnyRequest(res, data, statusCode);

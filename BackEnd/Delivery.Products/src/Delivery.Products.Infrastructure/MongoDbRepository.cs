@@ -41,6 +41,19 @@ namespace Delivery.Products.Infrastructure
             }
         }
 
+        public async Task<List<Product>> GetByCategAsync(string? categ)
+        {
+            try
+            {
+                var filter = Builders<Product>.Filter.Eq("Category", categ);                
+                return await _productsCollection.Find(filter).ToListAsync();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         public async Task CreateAsync(Product product) 
         {
             try

@@ -14,7 +14,25 @@ exports.getOne = (req, res) => {
         porta: PORTA_BACKEND_PRODUTOS,
         token: req.headers.authorization,
         method: 'GET',
-        path: path
+        path: path,
+        isAuthenticated: false
+    },
+    null, (data, statusCode) => {
+        sendResAnyRequest(res, data, statusCode);
+    }
+   );
+};
+
+// Produtos - GetAllCateg
+exports.getAllCateg = (req, res) => {        
+    const path = sPATH + 'Product/GetByCategory?Categ=' + req.params.Categ; 
+
+    httpsRequest({
+        porta: PORTA_BACKEND_PRODUTOS,
+        token: req.headers.authorization,
+        method: 'GET',
+        path: path,
+        isAuthenticated: false
     },
     null, (data, statusCode) => {
         sendResAnyRequest(res, data, statusCode);
@@ -27,10 +45,10 @@ exports.getAll = (req, res) => {
     const path = sPATH + 'Product'; 
 
     httpsRequest({
-        porta: PORTA_BACKEND_PRODUTOS,
-        token: req.headers.authorization,
+        porta: PORTA_BACKEND_PRODUTOS,        
         method: 'GET',
-        path: path
+        path: path,
+        isAuthenticated: false
     },
     null, (data, statusCode) => {
         sendResAnyRequest(res, data, statusCode);

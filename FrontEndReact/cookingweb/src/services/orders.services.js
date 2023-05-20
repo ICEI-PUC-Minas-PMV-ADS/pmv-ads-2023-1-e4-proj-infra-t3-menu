@@ -1,13 +1,14 @@
 import API from './webapi.services';
 import {BASE_URL} from './urls';
+import { getUserLocalStorage } from './auth.services';
 
-const token = '';
-
-export const getOrders = async () => {
+export const getOrderById = async (param) => {
   try{
-    return await API.get(`${BASE_URL}/pedido/6285`,{
+    const userLogado = await getUserLocalStorage();
+    
+    return await API.get(`${BASE_URL}/pedido/${param.searchCode}`,{
       headers: {
-        'Authorization': `Bearer ${token}`,
+        'Authorization': `Bearer ${userLogado.token}`,
         'Content-Type': 'application/json'
       }
     }).then( 
@@ -26,11 +27,12 @@ export const getOrders = async () => {
 }
 
 export const getallByUser = async () => {
-  try{
-    return await API.get(`${BASE_URL}/pedido/allByUser/25`,
+  try{    
+    const userLogado = await getUserLocalStorage();
+    return await API.get(`${BASE_URL}/pedido/allByUser/${userLogado.userId}`,
     {
       headers: {
-        'Authorization': `Bearer ${token}`,
+        'Authorization': `Bearer ${userLogado.token}`,
         'Content-Type': 'application/json'
       }
     }).then( 
@@ -49,21 +51,43 @@ export const getallByUser = async () => {
 }
 
 export const createOrder = async (param) => {
-  try{
-    return await API.post(`${BASE_URL}/pedido`, param).then( 
-      response => {
-        console.log('response.data no createOrder: ');
-        console.log(response.data);
-        return response;
-      },
-      error =>{
-        console.log(error);
-        return  null;
-      }
+  try {
+    const userLogado = await getUserLocalStorage();    
+    const response = await API.post(`${BASE_URL}/pedido`, 
+      param, 
+      {headers: {
+        'Authorization': `Bearer ${userLogado.token}`,
+        'Content-Type': 'application/json'
+      }}
     );
-  }catch(error){
+    
+    return response;
+  } catch (error) {
     console.log(error);
     return null;
   }
 }
+
+export const cancelOrder = async (orderId) => {  
+
+  console.log('orderId no orderservices: '+orderId);
+  let statusOrder = 'Cancelado';
+
+    try {
+      const userLogado = await getUserLocalStorage();    
+      const response = await API.patch(`${BASE_URL}/pedido/updateStatusOrder/${orderId}/${statusOrder}`,
+      {}, // Dados vazios, já que não há corpo na requisição PATCH
+      {headers: {
+        'Authorization': `Bearer ${userLogado.token}`,
+        'Content-Type': 'application/json'
+      }}
+    );
+    
+    return response;
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+};
+
 

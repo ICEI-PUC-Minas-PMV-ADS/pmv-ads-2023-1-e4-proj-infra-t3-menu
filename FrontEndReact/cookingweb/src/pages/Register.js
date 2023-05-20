@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { register } from '../services/auth.services';
 import '../styles/Register.css';
+import { useNavigate } from 'react-router-dom'
 
 function Register() {
   const [name, setName] = useState('');
@@ -9,6 +10,8 @@ function Register() {
   const [password, setPassword] = useState('');
   const [userId, setUserId] = useState(null)
   const [error, setError] = useState(null);
+
+  const navigate = useNavigate();
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -21,10 +24,12 @@ function Register() {
       perfil: 1
     };
     register(newUser)
-      .then(response => {
-        //console.log(response.data.id);
+      .then(response => {        
+        console.log(response);        
         setError(null);
-        setUserId(response.data.id);        
+        setUserId(response.data.id);
+        alert('Código do usuário criado: ' + response.data.id);
+        navigate("/Login");        
       })
       .catch(error => {        
         setError({ message: 'Ocorreu um erro ao criar o usuário.' });
@@ -35,28 +40,23 @@ function Register() {
     console.log(userId);
   }, [userId]);
 
+  function doCancel() {
+    navigate("/Catalogo"); 
+  }
+
   return (
     <div className="register-container">
       <form onSubmit={handleSubmit}>
         <h2>Registre-se gratuitamente</h2>
-
-        <label>
-          Nome:
-          <input type="text" value={name} onChange={(event) => setName(event.target.value)} />
-        </label>
-        <label>
-          Sobrenome:
-          <input type="text" value={surname} onChange={(event) => setSurName(event.target.value)} />
-        </label>
-        <label>
-          E-mail:
-          <input type="email" value={email} onChange={(event) => setEmail(event.target.value)} />
-        </label>
-        <label>
-          Senha:
-          <input type="password" value={password} onChange={(event) => setPassword(event.target.value)} />
-        </label>
+          <input type="text" value={name} onChange={(event) => setName(event.target.value)} placeholder="Nome"/>
+          <input type="text" value={surname} onChange={(event) => setSurName(event.target.value)} placeholder="Sobrenome" />
+          <input type="email" value={email} onChange={(event) => setEmail(event.target.value)} placeholder="e-mail"/>
+          <input type="password" value={password} onChange={(event) => setPassword(event.target.value)} placeholder="senha" />       
         <button type="submit">Cadastrar</button>
+        <button
+           onClick={doCancel} >
+            Cancelar
+        </button>
       </form>
 
       {userId && (

@@ -6,13 +6,11 @@ import Navbar from './pages/Navbar.js'
 // import OrderForm from './pages/OrderForm';
 // import ViewProducts from './pages/ViewProducts';
 //import LoginPage from './pages/LoginPage';
-// import Login from './pages/Login';
+//import Login from './pages/Login';
 
-function App() {
-  return (
-    <div>      
-      <Navbar />
-    </div>
+function App() {  
+  return (    
+    <Navbar />
   );
 }
 

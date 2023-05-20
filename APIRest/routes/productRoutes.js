@@ -6,8 +6,12 @@ const router = express.Router();
 
 router
     .route('/api/produto')
-    .get(productController.getAll)
+    .get(productController.getAll)    
     .post(productController.createOne);    
+
+router
+    .route('/api/produto/getAllCateg/:Categ')    
+    .get(productController.getAllCateg);       
 
 router
     .route('/api/produto/:id')

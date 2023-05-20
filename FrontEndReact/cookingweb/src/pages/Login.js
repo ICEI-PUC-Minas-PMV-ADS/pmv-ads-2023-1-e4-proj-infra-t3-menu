@@ -1,38 +1,45 @@
-import React, {useState} from 'react';
+import React, {useState, useContext } from 'react';
 import {authenticate} from '../services/auth.services';
 import '../styles/Login.css';
-
-// Pendência: armazenar o token obtido na ação de login
+import { useNavigate } from 'react-router-dom'
+import {UserContext} from './UserContext';
 
 const Login = () => {
-  //const { setSigned, setName, setToken } = useUser();
-  const [id, setId] = useState('');
-  const [password, setPassword] = useState('');  
+  const navigate = useNavigate();
+
+  const [userId, setUserId] = useState('');
+  const [password, setPassword] = useState('');
   const [messageLogin, setMessageLogin] = useState(null);
+
+  const { isLoggedIn, setIsLoggedIn } = useContext(UserContext);  
 
   const handleSubmit = async (event) => {    
     event.preventDefault();
 
     const logUser = {
-      id: id,            
+      id: userId,            
       password: password      
     };
 
-    const dados = await authenticate(logUser)
-    .then(response => { 
-      console.log('response: ');
-      console.log(response);
-      setMessageLogin('Usuário logado!');      
+    await authenticate(logUser)
+    .then(response => {    
+      if (response && response.jwtToken) {
+          setMessageLogin('Usuário logado!');
+          setIsLoggedIn(true);
+          navigate("/");
+      } else {
+          setMessageLogin('Erro na conexão.');
+          setIsLoggedIn(false);
+          console.log(response.data);
+          return null;        
+      }
     })
-    .catch(error => {        
-      setMessageLogin({ message: 'Ocorreu um erro ao conectar.' });
+    .catch(error => {  
+      setMessageLogin('Erro na conexão.');
+      setIsLoggedIn(false);
+      alert('Erro na conexão!');
     });
 
-    //console.log(dados);    
-    //setSigned(true);
-    //setName(dados.name);
-    //setToken(dados.jwtToken);
-    //console.log(dados.jwtToken);    
   };
 
   return (
@@ -41,7 +48,7 @@ const Login = () => {
         <h2>Login</h2>
         <label>
           Identificador:
-          <input type="id" value={id} onChange={(event) => setId(event.target.value)} />
+          <input type="userId" value={userId} onChange={(event) => setUserId(event.target.value)} />
         </label>
         <br />
         <label>
@@ -49,11 +56,11 @@ const Login = () => {
           <input type="password" value={password} onChange={(event) => setPassword(event.target.value)} />
         </label>
         <br />
-        <button type="submit">Entrar</button>
+        <button className="btn btn-outline-danger" type="submit" id="navButton">Entrar</button>
       </form>
       {messageLogin && (
         <div className="success-message">                    
-          <p>Retorno: {messageLogin}</p>
+          <p> Retorno: {messageLogin}</p>
         </div>
       )}      
     </div>

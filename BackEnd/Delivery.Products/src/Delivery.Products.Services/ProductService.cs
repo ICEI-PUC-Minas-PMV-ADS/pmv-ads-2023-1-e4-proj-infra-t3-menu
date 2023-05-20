@@ -47,6 +47,19 @@ namespace Delivery.Products.Services
         }
 
         /// <inheritdoc/>
+        public async Task<List<Product>> GetProductByCategAsync(string? categ)
+        {
+            try
+            {                
+                return await _dbRepository.GetByCategAsync(categ) ?? throw new KeyNotFoundException();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        /// <inheritdoc/>
         public async Task<Product> CreateProductAsync(Product product)
         {
             try

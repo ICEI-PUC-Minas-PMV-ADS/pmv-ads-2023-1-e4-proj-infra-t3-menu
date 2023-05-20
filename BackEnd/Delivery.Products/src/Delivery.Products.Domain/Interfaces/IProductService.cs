@@ -18,6 +18,13 @@ namespace Delivery.Products.Domain.Interfaces
         Task<Product> GetProductByIdAsync(string? id);
 
         /// <summary>
+        /// Get all Product with the specific Categ
+        /// </summary>
+        /// <param name="categ"></param>
+        /// <returns>The list of Product found</returns>
+        Task<List<Product>> GetProductByCategAsync(string? categ);
+
+        /// <summary>
         /// Create a new Product in the collection
         /// </summary>
         /// <param name="product">The object to create the Product</param>
