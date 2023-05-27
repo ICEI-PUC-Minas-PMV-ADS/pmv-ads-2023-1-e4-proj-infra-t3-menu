@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import NavigationHome from './NavigationHome';
 import PageHome from '../pages/PageHome';
+import EditOrder from '../pages/EditOrder';
 
 const Stack = createNativeStackNavigator();
 
@@ -24,6 +25,13 @@ const NavigationUserSigned = () => {
           header: () => null,
         }}
       />
+      <Stack.Screen
+        name="EditOrder"
+        component={EditOrder}
+        options={{
+          header: () => null,
+        }}
+      />            
     </Stack.Navigator>
   );
 };

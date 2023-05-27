@@ -5,32 +5,36 @@ import Container from '../components/Container';
 import Body from '../components/Body';
 import Input from '../components/Input';
 import Logo from '../components/Logo';
+import { register } from '../services/auth.services';
 
 import { useNavigation } from '@react-navigation/native';
-
-
 
 const Register = () => {
 
   const navigation = useNavigation();
  
-  const [name, setName] = useState('Rafael Mautone');
+  const [name, setName] = useState('Rafael');
+  const [surname, setSurName] = useState('Mautone');  
   const [email, setEmail] = useState('rafael@gmail.com');
-  const [password, setPassword] = useState('123456');
+  const [password, setPassword] = useState('pucminas');
+  const [userId, setUserId] = useState(null)  
   
-  const handleRegister = () => {
+  const handleRegister = async (event) => {
 
-    register({
+    const newUser = {
       name: name,
+      surname: surname,
       email: email,
-      
-      password: password
-    }).then( res => {
-      console.log(res);
+      password: password,
+      perfil: 2
+    };
+    await register(newUser)
+    .then( res => {
 
       if(res){
-
-        Alert.alert('Atenção', 'Usuário Cadastrado com sucesso!',[
+        setUserId(res.id);
+        Alert.alert('Atenção', 'Usuário Cadastrado com sucesso: '+ res.id,
+        [
           { text: "OK", onPress: () => navigation.goBack() }
         ]);
 
@@ -59,6 +63,12 @@ const Register = () => {
           left={<TextInput.Icon name="account" />}
         />
         <Input
+          label="Sobrenome"
+          value={surname}
+          onChangeText={(text) => setSurName(text)}
+          left={<TextInput.Icon name="account" />}
+        />        
+        <Input
           label="Email"
           value={email}
           onChangeText={(text) => setEmail(text)}
@@ -74,6 +84,7 @@ const Register = () => {
         <Button
          style={styles.buttonLogin}
           mode="contained"
+          onPress={handleRegister}
           >
           REGISTRAR
         </Button>
@@ -108,7 +119,7 @@ const styles = StyleSheet.create({
    textHeader: {
     color: '#FFF',
     textAlign: 'center',
-    fontFamily: 'Arial',
+    // fontFamily: 'Arial',
   },
   header: {
     alignItems: 'center',

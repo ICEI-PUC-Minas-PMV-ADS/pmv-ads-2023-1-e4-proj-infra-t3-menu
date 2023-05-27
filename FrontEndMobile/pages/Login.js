@@ -11,25 +11,29 @@ import Logo from '../components/Logo';
 
 import { useNavigation } from '@react-navigation/native';
 import { useUser } from '../contexts/UserContext';
+import { login } from '../services/auth.services';
 
 const Login = () => {
   const navigation = useNavigation();
-  const { setSigned, setName } = useUser();
+  const { setSigned, setName, setJwtToken } = useUser();
 
-  const [email, setEmail] = useState('rafael@gmail.com');
+  const [userId, setUserId] = useState('25');
   const [password, setPassword] = useState('pucminas');
 
-  const handleLogin = () => {
-    login({
-      email: email,
+  const handleLogin = async (event) => {
+    console.log('estou no handleLogin');
+    await login({
+      id: userId,
       password: password,
     }).then((res) => {
+      console.log('res depois de await login');
       console.log(res);
 
-      if (res && res.user) {
+      if (res && res.jwtToken) {
         setSigned(true);
-        setName(res.user.name);
-        AsyncStorage.setItem('@TOKEN_KEY', res.accessToken).then();
+        setJwtToken(res.jwtToken);
+        setName(res.jwtToken);
+        AsyncStorage.setItem('@TOKEN_KEY', res.jwtToken).then();
       } else {
         Alert.alert('Atenção', 'Usuário ou senha inválidos!');
       }
@@ -51,9 +55,9 @@ const Login = () => {
         <Body>
           <InputChar
             style={styles.charRegister}
-            label="Email"
-            value={email}
-            onChangeText={(text) => setEmail(text)}
+            label="Identificador"
+            value={userId}
+            onChangeText={(text) => setUserId(text)}
             left={<TextInput.Icon name="account" />}
           />
           <InputChar
@@ -67,7 +71,7 @@ const Login = () => {
           <Button
             style={styles.buttonLogin}
             mode="contained"
-            >
+            onPress={handleLogin}>
             LOGIN
           </Button>
           <Button
@@ -116,7 +120,7 @@ const styles = StyleSheet.create({
   textHeader: {
     color: '#FFF',
     textAlign: 'center',
-    fontFamily: 'Comfortaa',
+    // fontFamily: 'Comfortaa',
   },
   header: {
     alignItems: 'center',

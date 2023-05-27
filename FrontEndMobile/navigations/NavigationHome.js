@@ -2,18 +2,19 @@ import React, {useState} from 'react';
 import { BottomNavigation, Text } from 'react-native-paper';
 
 import PageHome from '../pages/PageHome';
+import ViewOrders from '../pages/ViewOrders'
 
 const NavigationHome = () => {
   const [index, setIndex] = useState(1);
   
   const [routes] = useState([
     { key: 'Home', title: 'Home', icon: 'calendar-account' },
+    { key: 'Orders', title: 'Orders', icon: 'calendar-account' } 
   ]);
 
   const renderScene = BottomNavigation.SceneMap({
-    agenda: ViewAgenda,
-    Home: PageHome,    
-    photo: CapturePhoto,
+    Orders: ViewOrders,
+    Home: PageHome,        
   });
 
   return (
