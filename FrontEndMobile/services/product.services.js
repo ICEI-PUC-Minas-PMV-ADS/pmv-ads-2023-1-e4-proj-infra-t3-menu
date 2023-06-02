@@ -1,17 +1,20 @@
 import API from './webapi.services';
 import {BASE_URL} from './urls';
 
-export const getProdutos = async (categ) => {
+export const getAllProducts = async () => {
   try{    
-    return await API.get(`${BASE_URL}/produto/GetAllCateg/${categ}`)
+    return await API.get(`${BASE_URL}/produto`)
     .then(response => {
         return response.data;
       },
-      error =>{        
+      error =>{
+        console.log(error);
         return  null;
       }
     );
-  }catch(error){    
+  }catch(error){
+    console.log(error);
     return null;
   }
 }
+

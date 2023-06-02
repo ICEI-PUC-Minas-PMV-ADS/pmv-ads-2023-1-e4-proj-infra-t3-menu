@@ -26,7 +26,7 @@ exports.getOne = (req, res) => {
 exports.login = (req, res) => {     
     const path = sPATH+'Users/'+'authenticate';
     const bodyData = req.body; 
-    
+   
     httpsRequest({
         porta: PORTA_BACKEND_USU,
         method: 'POST',

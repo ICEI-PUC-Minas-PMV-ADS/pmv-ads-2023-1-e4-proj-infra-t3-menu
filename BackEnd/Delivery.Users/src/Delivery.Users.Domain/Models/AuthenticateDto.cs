@@ -13,6 +13,7 @@ namespace Delivery.Users.Domain.Models
         public int Id { get; set; }
 
         [Required]
-        public string? Password { get; set; }
+        public string? Password { get; set; }        
+        public List<object> PerfilAutorizado { get; set; }
     }
 }

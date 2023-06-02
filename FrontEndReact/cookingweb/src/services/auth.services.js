@@ -5,17 +5,13 @@ export const register = async (param) => {
   try{
     return await API.post(`${BASE_URL}/usuario`, param).then( 
       response => {
-        //console.log('response.data no auth: ');
-        //console.log(response.data);
         return response;
       },
       error =>{
-        console.log(error);
         return  null;
       }
     );
   }catch(error){
-    console.log(error);
     return null;
   }
 }
@@ -36,7 +32,7 @@ export const getUserLocalStorage = async () => {
   }   
 } 
 
-export const authenticate = async (param) => {
+export const authenticate = async (param) => {   
   return await API.post(`${BASE_URL}/usuario/login`, param)
   .then(response => {
     if (response && response.data) {
@@ -66,13 +62,11 @@ export const getUserById = async (param) => {
       response => {        
         return response.data;
       },
-      error =>{
-        console.log(error);
+      error =>{        
         return  null;
       }
     );
-  }catch(error){
-    console.log(error);
+  }catch(error){    
     return null;
   }
 }

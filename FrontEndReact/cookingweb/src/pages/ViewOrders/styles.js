@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   margin: 0 auto;
-  width: 90%;
+  width: 100%;
 `;
 
 export const ProductsContainer = styled.div`

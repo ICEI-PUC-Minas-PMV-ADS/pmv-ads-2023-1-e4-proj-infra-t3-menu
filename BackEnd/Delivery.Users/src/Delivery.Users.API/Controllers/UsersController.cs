@@ -11,11 +11,13 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.IdentityModel.Tokens.Jwt;
+using System.Linq;
 using System.Net;
 using System.Security.Claims;
 using System.Text;
 using System.Web;
 using static Microsoft.AspNetCore.Http.StatusCodes;
+using System.ComponentModel;
 
 namespace Delivery.Users.API.Controllers
 {
@@ -208,8 +210,13 @@ namespace Delivery.Users.API.Controllers
         {
             var usuarioDb = await _services.GetUser(model.Id);
 
-            if (usuarioDb == null || !BCrypt.Net.BCrypt.Verify(model.Password, usuarioDb.Password))
+            if (usuarioDb == null || !BCrypt.Net.BCrypt.Verify(model.Password, usuarioDb.Password))            
                 return Unauthorized();
+
+            if (model.PerfilAutorizado != null && !model.PerfilAutorizado.Any(p => p.ToString() == usuarioDb.Perfil.ToString()))
+            {
+                return Forbid();
+            }
 
             var jwt = GenerateJwtToken(usuarioDb);
 

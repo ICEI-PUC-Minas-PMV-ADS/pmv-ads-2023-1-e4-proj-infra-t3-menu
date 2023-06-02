@@ -43,7 +43,7 @@ exports.getAllCateg = (req, res) => {
 // Produtos - GetAll
 exports.getAll = (req, res) => {        
     const path = sPATH + 'Product'; 
-
+   
     httpsRequest({
         porta: PORTA_BACKEND_PRODUTOS,        
         method: 'GET',

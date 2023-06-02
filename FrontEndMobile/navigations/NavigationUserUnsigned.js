@@ -12,10 +12,9 @@ const Tab = createBottomTabNavigator();
 
 
 export default function NavigationUserUnsigned() {
-  console.log('estou na NavigationUserUnsigned');
   return (
     <Tab.Navigator initialRouteName="Cooking Digital">
-      <Tab.Screen
+      {/* <Tab.Screen
         name="COOKING DIGITAL"
         component={PageHome}
         options={{
@@ -24,9 +23,9 @@ export default function NavigationUserUnsigned() {
             <MaterialCommunityIcons name="home" color={'#FF0000'} size={size} />
           ),
         }}
-      />      
+      />       */}
       <Tab.Screen
-        name="LOGIN"
+        name="Acesso restrito"
         component={Login}
         options={{
           tabBarIcon: ({ color, size }) => (

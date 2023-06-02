@@ -286,6 +286,27 @@ namespace Delivery.Order.Api.Controllers
                 return StatusCode(Status500InternalServerError, exception.ToErrorReponse());
             }
         }
+
+        /// <summary>
+        /// Get all Orders 
+        /// </summary>
+        /// <returns>List of Orders</returns>
+        /// <response code="200">Orders found</response>        
+        /// <response code="500">Server Error</response>
+        [HttpGet("allOrders/")]
+        [ProducesResponseType(Status200OK, Type = typeof(List<Product>))]        
+        [ProducesResponseType(Status500InternalServerError, Type = typeof(ErrorResponse))]
+        public async Task<ActionResult<List<OrderModel>>> GetAllOrders()
+        {
+            try
+            {
+                return Ok(await _service.GetAllOrders());
+            }            
+            catch (Exception exception)
+            {
+                return StatusCode(Status500InternalServerError, exception.ToErrorReponse());
+            }
+        }
     }
 
 }

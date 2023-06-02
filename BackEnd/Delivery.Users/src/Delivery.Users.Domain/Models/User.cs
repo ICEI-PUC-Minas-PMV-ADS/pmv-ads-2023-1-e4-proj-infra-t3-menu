@@ -25,9 +25,13 @@ namespace Delivery.Users.Domain.Models
     {
         [Description("Administrador")]
         Administrador,
-        [Description("Empregado")]
-        Empregado,
+        [Description("Atendente")]
+        Atendente,
         [Description("Cliente")]
-        Cliente
+        Cliente,
+        [Description("Gerente")]
+        Gerente,
+        [Description("Caixa")]
+        Caixa
     }
 }

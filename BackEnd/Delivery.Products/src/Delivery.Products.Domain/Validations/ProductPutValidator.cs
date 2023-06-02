@@ -27,6 +27,10 @@ namespace Delivery.Users.Domain.Validations
             RuleFor(x => x.Price)
                 .GreaterThan(0)
                 .WithMessage("Price cannot be empty and must be greater than 0");
+
+            RuleFor(x => x.Description)
+                .NotNull()
+                .WithMessage("Description cannot be empty");
         }
     }
 }

@@ -5,6 +5,7 @@ import Navbar from '../Navbar';
 import { UserContext } from '../UserContext';
 import { useNavigate } from 'react-router-dom'
 import { Button} from '@mui/material';
+import ProductDescription from "./ProductDescription";
 
 const Catalogo = ({ setCarrinho }) => {
 
@@ -16,7 +17,7 @@ const Catalogo = ({ setCarrinho }) => {
   const navigate = useNavigate();
 
   const fetchDatas = async () => {
-    const response = await getProdutos('sanduiche');
+    const response = await getProdutos('sanduiche');    
     setProducts(response);
   };
 
@@ -41,7 +42,8 @@ const Catalogo = ({ setCarrinho }) => {
       const products = {      
         id: product.id,
         name: product.name,      
-        price: product.price
+        price: product.price,
+        description: product.description
       };
 
       if (produtoEncontrado) {
@@ -65,7 +67,6 @@ const Catalogo = ({ setCarrinho }) => {
     fetchBebidas();
     fetchAcompanhamentos();
   }, []);
-
 
   return (
     <>
@@ -92,13 +93,16 @@ const Catalogo = ({ setCarrinho }) => {
                   
                 </div>
                 <ProductInfo>
-                  <p>{product.name}</p>
-                  <p>
+                  <h3>{product.name}</h3>
+
+                  <ProductDescription description={product.description} />              
+
+                  <h3>
                     {product.price.toLocaleString("pt-BR", {
                       style: "currency",
                       currency: "BRL",
                     })}
-                </p>                  
+                </h3>                  
                   <Button
                     color="error"  
                     variant="contained"                  
@@ -131,13 +135,13 @@ const Catalogo = ({ setCarrinho }) => {
                   
                 </div>
                 <ProductInfo>
-                  <p>{product.name}</p>
-                  <p>
+                  <h3>{product.name}</h3>
+                  <h3>
                     {product.price.toLocaleString("pt-BR", {
                       style: "currency",
                       currency: "BRL",
                     })}
-                </p>                  
+                </h3>                  
                 <Button
                     color="error"  
                     variant="contained"                  
@@ -169,13 +173,13 @@ const Catalogo = ({ setCarrinho }) => {
                   
                 </div>
                 <ProductInfo>
-                  <p>{product.name}</p>
-                  <p>
+                  <h3>{product.name}</h3>
+                  <h3>
                     {product.price.toLocaleString("pt-BR", {
                       style: "currency",
                       currency: "BRL",
                     })}
-                </p>                  
+                </h3>                  
                 <Button
                     color="error"  
                     variant="contained"                  

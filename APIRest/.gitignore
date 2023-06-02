@@ -9,6 +9,10 @@ npm-debug.*
 *.mobileprovision
 *.orig.*
 web-build/
+*.rar
+*.vsidx
+*.exe
+*.dll
 
 # macOS
 .DS_Store

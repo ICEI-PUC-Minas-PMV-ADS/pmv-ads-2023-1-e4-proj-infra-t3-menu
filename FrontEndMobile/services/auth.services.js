@@ -3,9 +3,6 @@ import {BASE_URL} from './urls';
 
 export const register = async (param) => {
   try{
-    console.log('estou na register');
-    console.log(param);
-
     return await API.post(`${BASE_URL}/usuario`, param).then( 
       response => {
         return response.data;
@@ -23,20 +20,17 @@ export const register = async (param) => {
 
 export const login = async (param) => {
   try{
-console.log('param no login');    
-console.log(param);
-console.log(`${BASE_URL}/usuario/login`);
     return await API.post(`${BASE_URL}/usuario/login`, param).then( 
-      response => {
+      response => {        
         return response.data;
       },
       error =>{
-        console.log(error);
-        return  null;
+        //console.error('error na api.post: '+error);        
+        return  error;
       }
     );
   }catch(error){
-    console.log(error);
+    //console.error('catch na api.post'+error);
     return null;
   }
 }

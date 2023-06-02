@@ -42,6 +42,7 @@ O app está dando erro ao invés de direcionar para a págnia de login
 - Ajustado. 
 
 6 - Melhorar o visual da tela do carrinho de compras
+- Feito
 
 7 - Retirar os console.log de toda a aplicação
 
@@ -49,8 +50,10 @@ O app está dando erro ao invés de direcionar para a págnia de login
 Feito
 
 9 - criar campo em produtos para gravar a descrição do produto
+Feito
 
 10 - Mudar a cor do botão Finalizar compra do carrinho
+Feito
 
 11 - Ao tentar cancelar um pedido que está em andamento, o vieworders esta quebrando.
 Ajustado. O botão de cancelamento só estará ativo se o status do pedido for "Aguardando inicio"

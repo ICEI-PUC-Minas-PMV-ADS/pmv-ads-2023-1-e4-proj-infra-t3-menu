@@ -56,5 +56,11 @@ namespace Delivery.Order.Domain.Interfaces
         /// <param name="statusOrder">Status Order</param>
         /// <returns></returns>
         Task updateStatusOrder(string orderId, string statusOrder);
+
+        /// <summary>
+        /// Get a list of Orders 
+        /// </summary>        
+        /// <returns>A list of Orders</returns>
+        Task<List<OrderModel>?> GetAllOrders();
     }
 }

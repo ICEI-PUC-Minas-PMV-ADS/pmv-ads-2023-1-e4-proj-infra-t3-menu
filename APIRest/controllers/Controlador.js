@@ -24,13 +24,16 @@ function httpsRequest(params, data, callback) {
     // console.log(method);
     // console.log(path);    
     // console.log(data);
+    // console.log('executando httpsRequest');
+    // console.log(params);
 
     let isAuthenticated = params.isAuthenticated !== undefined ? params.isAuthenticated : true;
 
-    if(isAuthenticated && (token == undefined)) {
+    if(isAuthenticated && (token === undefined)) {
         const error = new Error('Não autorizado');
-        error.statusCode = 401;                 
-        callback(error, error.statusCode);        
+        error.statusCode = 401;            
+        //console.log('Não consegui passar daqui');      
+        //callback(error, error.statusCode);               
         return;
     }
 
@@ -67,8 +70,9 @@ function httpsRequest(params, data, callback) {
                     parsedData = responseData;
                 }
                 if (response.statusCode >= 400) {
-                    const error = new Error(parsedData.detail || 'Erro desconhecido');
-                    error.statusCode = response.statusCode;                
+                    const error = new Error(parsedData.detail || response.statusMessage || 'Erro desconhecido');
+                    error.statusCode = response.statusCode;
+                    error.statusMessage = response.statusMessage;
                     callback(error, response.statusCode);
                 } else {
                     callback(parsedData, response.statusCode);
@@ -83,7 +87,7 @@ function httpsRequest(params, data, callback) {
     
         if (requestData) {
             request.write(requestData);
-        }
+        }        
         request.end();         
 }
 
@@ -98,13 +102,23 @@ function StatusOk(statusCode) {
 
 function sendResAnyRequest(res, data, statusCode) { 
     if( StatusOk(statusCode)) 
+    {
+//        console.log('requisição executada com êxito. Retorno da requisição: '+statusCode);
+//        console.log(data);
         res.send(data);
-    else if (data !== null)      
-        res.status(statusCode).send(data.message);
+    }
+    else if ((data !== null) && (data.message !== null))
+    {
+        // res.status(statusCode).send(data.message);
+        // console.log('requisição executada. Retorno da requisição: '+statusCode);
+        res.send(data);
+    }
     else
     {   
         // Erro emitido por ex quando o servidor de login está desligado e chega uma requisição de login pela api rest     
         res.status(statusCode).send('Erro no servidor: '+statusCode); 
+        console.log('Erro no servidor: '+statusCode);
+        console.log(data);
     }
 }
 

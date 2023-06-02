@@ -38,6 +38,21 @@ exports.getAllByUser = (req, res) => {
    );
 };
 
+// Pedidos - getAllOrders
+exports.getAllOrders = (req, res) => {            
+    const path = sPATH + 'Order/allOrders';
+    httpsRequest({
+        porta: PORTA_BACKEND_PEDIDOS,
+        token: req.headers.authorization,
+        method: 'GET',
+        path: path
+    },
+    null, (data, statusCode) => {
+        sendResAnyRequest(res, data, statusCode);
+    }
+   );
+};
+
 // Pedidos - MÉTODO POST
 exports.createOne = (req, res) => {        
     const path = sPATH + 'Order/';
@@ -76,7 +91,7 @@ exports.updateOne = (req, res) => {
 exports.updateStatusOrder = (req, res) => {    
     const orderId = req.params.orderId;
     let statusOrder = req.params.statusOrder;
-
+    
     statusOrder = statusOrder.replace(' ', '%');
 
     const path = sPATH + 'Order/updateStatusOrder/' + orderId + '/' +statusOrder;      

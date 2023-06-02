@@ -15,13 +15,11 @@ export const getOrderById = async (param) => {
       response => {
         return response.data;
       },
-      error =>{
-        console.log(error);
+      error =>{        
         return  null;
       }
     );
   }catch(error){
-    console.log(error);
     return null;
   }
 }
@@ -39,13 +37,11 @@ export const getallByUser = async () => {
       response => {
         return response.data;
       },
-      error =>{
-        console.log(error);
+      error =>{        
         return  null;
       }
     );
-  }catch(error){
-    console.log(error);
+  }catch(error){    
     return null;
   }
 }
@@ -62,15 +58,13 @@ export const createOrder = async (param) => {
     );
     
     return response;
-  } catch (error) {
-    console.log(error);
+  } catch (error) {    
     return null;
   }
 }
 
 export const cancelOrder = async (orderId) => {  
-
-  console.log('orderId no orderservices: '+orderId);
+  
   let statusOrder = 'Cancelado';
 
     try {
@@ -84,8 +78,7 @@ export const cancelOrder = async (orderId) => {
     );
     
     return response;
-  } catch (error) {
-    console.log(error);
+  } catch (error) {    
     return null;
   }
 };

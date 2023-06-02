@@ -26,7 +26,7 @@ const Register = () => {
       surname: surname,
       email: email,
       password: password,
-      perfil: 2
+      perfil: 1
     };
     await register(newUser)
     .then( res => {
@@ -119,7 +119,7 @@ const styles = StyleSheet.create({
    textHeader: {
     color: '#FFF',
     textAlign: 'center',
-    // fontFamily: 'Arial',
+    // fontFamily: 'Comfortaa',
   },
   header: {
     alignItems: 'center',

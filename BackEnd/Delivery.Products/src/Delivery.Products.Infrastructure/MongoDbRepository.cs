@@ -75,7 +75,8 @@ namespace Delivery.Products.Infrastructure
                     .Set("Name", product.Name)
                     .Set("Category", product.Category)
                     .Set("IsAvailable", product.IsAvailable)
-                    .Set("Price", product.Price);
+                    .Set("Price", product.Price)
+                    .Set("Description", product.Description);
 
                 await _productsCollection.UpdateOneAsync(filter, update);
             }

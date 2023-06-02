@@ -18,6 +18,7 @@
     "expo-constants": "~14.0.2",
     "expo-font": "~11.0.1",
     "expo-status-bar": "~1.4.2",
+    "moment": "^2.29.4",
     "react": "18.1.0",
     "react-native": "0.70.8",
     "react-native-paper": "4.9.2",

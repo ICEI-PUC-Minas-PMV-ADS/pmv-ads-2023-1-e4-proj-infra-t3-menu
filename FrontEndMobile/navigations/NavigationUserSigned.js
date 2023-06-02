@@ -7,10 +7,10 @@ import EditOrder from '../pages/EditOrder';
 
 const Stack = createNativeStackNavigator();
 
-const NavigationUserSigned = () => {
-  console.log('estou na NavigationUserSigned');
+const NavigationUserSigned = () => {  
   return (
     <Stack.Navigator initialRouteName="NavigationHome">
+
       <Stack.Screen
         name="NavigationHome"
         component={NavigationHome}

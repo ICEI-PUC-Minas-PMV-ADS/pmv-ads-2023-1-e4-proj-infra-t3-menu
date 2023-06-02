@@ -18,7 +18,8 @@ const Login = () => {
 
     const logUser = {
       id: userId,            
-      password: password      
+      password: password,
+      perfilAutorizado: ['Gerente', 'Atendente', 'Caixa', 'Cliente']      
     };
 
     await authenticate(logUser)
@@ -29,8 +30,7 @@ const Login = () => {
           navigate("/");
       } else {
           setMessageLogin('Erro na conexão.');
-          setIsLoggedIn(false);
-          console.log(response.data);
+          setIsLoggedIn(false);          
           return null;        
       }
     })
@@ -41,6 +41,10 @@ const Login = () => {
     });
 
   };
+
+  function doCancel() {
+    navigate("/Catalogo"); 
+  }
 
   return (
     <div className="login-container">
@@ -56,7 +60,15 @@ const Login = () => {
           <input type="password" value={password} onChange={(event) => setPassword(event.target.value)} />
         </label>
         <br />
-        <button className="btn btn-outline-danger" type="submit" id="navButton">Entrar</button>
+        <button 
+            className="btn btn-outline-danger" 
+            type="submit" 
+            id="navButton">Entrar
+        </button>
+        <button
+           onClick={doCancel} >
+            Cancelar
+        </button>
       </form>
       {messageLogin && (
         <div className="success-message">                    

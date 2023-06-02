@@ -50,6 +50,29 @@ namespace Delivery.Order.Services
         }
 
         ///<inheritdoc/>
+        public async Task<List<OrderModel>?> GetAllOrders()
+        {            
+            try
+            {
+                // Filter.Ne - Ne: Not Equal
+                var filter = Builders<OrderModel>.Filter.And(
+                    Builders<OrderModel>.Filter.Ne("StatusOrder", "Concluído"),
+                    Builders<OrderModel>.Filter.Ne("StatusOrder", "Cancelado")
+                );
+
+                //var filter = Builders<OrderModel>.Filter.Eq("StatusOrder", "Cancelado");
+
+                return await _dbRepository.GetAllByFilterAsync(filter);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+
+
+        ///<inheritdoc/>
         public async Task<OrderModel> CreateOrderAsync(OrderModel order)
         {
             try

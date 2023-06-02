@@ -22,12 +22,9 @@ export default function PageHome({ navigation }) {
       <SafeAreaView style={styles.container}>
         <View style={styles.logo}>
           <Logo />
+          <Text style={styles.text1}>COOKING DIGITAL</Text>
+          <Text style={styles.text1}>Página em construção</Text>
         </View>
-        <ScrollView>
-          <View style={styles.content}>
-            <Tabela />
-          </View>
-        </ScrollView>
       </SafeAreaView>
     </ImageBackground>
   );
@@ -63,5 +60,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFF',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  text1: {
+    marginBottom: 10,
+    color: 'white',
+    alignSelf: 'center',
+    fontSize: 25
   },
 });

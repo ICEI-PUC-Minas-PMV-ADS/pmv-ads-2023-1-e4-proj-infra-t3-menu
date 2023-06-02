@@ -84,11 +84,7 @@ export const ViewOrders = () => {
             event.preventDefault();
             var confirmed = window.confirm("Tem certeza de que deseja CANCELAR pedido?");
             if (confirmed){
-                console.log('row.pedido: ');
-                console.log(row);
                 const response = await cancelOrder(row.id);
-console.log('response: ');              
-console.log(response);
                if (response.status === 200) {
                  fetchPedidos();
                  alert('Pedido cancelado!');
@@ -103,9 +99,12 @@ console.log(response);
                         <Typography variant="h5" gutterBottom component="div">
                             Produtos do pedido
                         </Typography>
-                        <ul>                            
-                            {row.products.map((product) => (
-                                <li key={product.id}>{product.name} - {product.price.toLocaleString("pt-BR", {
+                        <ul>                             
+                            {row.products.map((product) => (                                
+                                <li 
+                                    key={product.id}>
+                                    <img src={`img/${product.name.replace(/ /g, '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')}.png`} alt={product.name} width={100} height={100} />
+                                    {product.name} - {product.price.toLocaleString("pt-BR", {
                                     style: "currency",
                                     currency: "BRL",
                                 })} - {product.quantity} {product.quantity === 1 ? 'item' : 'itens'}</li>
@@ -129,7 +128,7 @@ console.log(response);
                         </Typography>
                         <ButtonGroup>
                             <Button variant="contained" 
-                                style={{ backgroundColor: 'gray' }} 
+                                style={{ backgroundColor: 'red' }} 
                                 onClick={handleCancelOrder}
                                 disabled={row.statusOrder != 'Aguardando inicio'}
                             >
@@ -144,7 +143,7 @@ console.log(response);
     }
 
     return (
-        <Container>
+        <Container>            
             <div>
                 <Navbar />
             </div>
@@ -179,7 +178,7 @@ console.log(response);
                     acoes={acoes}
                     lineCollapsable={LineCollapsable}
                 />
-            )}
+            )}            
         </Container>
     );
 };

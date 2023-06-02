@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, Alert, ImageBackground } from 'react-native';
+import { StyleSheet, View, ImageBackground } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { TextInput, Button, Headline, Text } from 'react-native-paper';
 import { useFonts } from 'expo-font';
@@ -17,25 +17,22 @@ const Login = () => {
   const navigation = useNavigation();
   const { setSigned, setName, setJwtToken } = useUser();
 
-  const [userId, setUserId] = useState('25');
+  const [userId, setUserId] = useState('75');
   const [password, setPassword] = useState('pucminas');
 
-  const handleLogin = async (event) => {
-    console.log('estou no handleLogin');
+  const handleLogin = async (event) => {    
     await login({
       id: userId,
       password: password,
-    }).then((res) => {
-      console.log('res depois de await login');
-      console.log(res);
-
+      perfilAutorizado: ['Gerente', 'Atendente', 'Caixa']
+    }).then((res) => {       
       if (res && res.jwtToken) {
         setSigned(true);
         setJwtToken(res.jwtToken);
         setName(res.jwtToken);
         AsyncStorage.setItem('@TOKEN_KEY', res.jwtToken).then();
-      } else {
-        Alert.alert('Atenção', 'Usuário ou senha inválidos!');
+      } else {             
+        console.error('Usuário ou senha inválidos ou Acesso restrito');
       }
     });
   };

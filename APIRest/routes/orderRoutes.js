@@ -16,7 +16,11 @@ router
 
 router
      .route('/api/pedido/allByUser/:userId')
-     .get(orderController.getAllByUser);    
+     .get(orderController.getAllByUser);   
+     
+router
+     .route('/api/pedido/allOrders')
+     .get(orderController.getAllOrders);        
 
 router
      .route('/api/pedido/addProduct/:orderId')

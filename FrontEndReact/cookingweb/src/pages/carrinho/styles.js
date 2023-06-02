@@ -5,7 +5,7 @@ export const ProductsContainer = styled.div`
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 24px;
   margin: 32px;
-  background-color: white;
+  /* background-color: white; */
 `;
 
 export const Product = styled.div`

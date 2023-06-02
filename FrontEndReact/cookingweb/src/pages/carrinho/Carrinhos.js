@@ -27,8 +27,6 @@ export const Carrinho = ({ setCarrinho }) => {
     );
     carrinho[index].quantity++;
     localStorage.setItem("CARRINHO", JSON.stringify(carrinho));
-    console.log('carrinho na aumentarQuantidade');
-    console.log(carrinho)
     setCarrinho(carrinho);
     atualizarTotalCompra();  
   }
@@ -114,13 +112,13 @@ export const Carrinho = ({ setCarrinho }) => {
                 />
               </div>
               <ProductInfo>
-                <p>{product.name}</p>
-                <p> Valor unitário: &nbsp;
+                <h4>{product.name}</h4>
+                <h4> Valor unitário: &nbsp;
                   {product.price.toLocaleString("pt-BR", {
                     style: "currency",
                     currency: "BRL",
                   })}
-                </p>
+                </h4>
                 {/* <p style={{ textAlign: 'right' }}>Quantidade:</p> */}
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                   <Button func={() => diminuirQuantidade(product.id)} text={"-"}>
@@ -144,7 +142,7 @@ export const Carrinho = ({ setCarrinho }) => {
       </ProductsContainer>
 
       <div style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', color: 'white' }}>        
-        <h3 style={{ marginBottom: '10px' }}>Total da compra: {totalCompra}</h3>
+        <h2 style={{ marginBottom: '10px'}}>Total da compra: {totalCompra}</h2>
                 
         <Button
           width

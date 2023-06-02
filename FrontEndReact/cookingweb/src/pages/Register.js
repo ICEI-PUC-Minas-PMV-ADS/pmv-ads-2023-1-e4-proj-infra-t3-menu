@@ -24,8 +24,7 @@ function Register() {
       perfil: 1
     };
     register(newUser)
-      .then(response => {        
-        console.log(response);        
+      .then(response => {                       
         setError(null);
         setUserId(response.data.id);
         alert('Código do usuário criado: ' + response.data.id);
@@ -44,7 +43,7 @@ function Register() {
     navigate("/Catalogo"); 
   }
 
-  return (
+  return (    
     <div className="register-container">
       <form onSubmit={handleSubmit}>
         <h2>Registre-se gratuitamente</h2>
@@ -71,7 +70,7 @@ function Register() {
         </div>
       )}
 
-    </div>
+    </div>    
   );
 }
 

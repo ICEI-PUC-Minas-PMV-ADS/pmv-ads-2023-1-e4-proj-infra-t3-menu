@@ -35,7 +35,15 @@
                   },
                   "password": {
                     "type": "string"
+                  }, 
+                  
+                  "perfilAutorizado": {                                       
+                    "type": "array",
+                    "items": {
+                      "type": "string"                          
+                    }             
                   }
+                  
                 }
               }
             }
@@ -681,6 +689,36 @@
           "404": {
             "description": "Código não encontrado"
           }      
+        }
+      }
+    },
+
+    "/pedido/allOrders/": {
+      "get": {
+        "summary": "Pesquisa de pedidos",
+        "description": "Busca todos os pedidos em aberto",
+        "tags": [
+          "Pedido"
+        ],
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],        
+        "responses": {
+          "200": {
+            "description": "Dados dos pedidos",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Order"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Não autorizado"
+          }          
         }
       }
     },

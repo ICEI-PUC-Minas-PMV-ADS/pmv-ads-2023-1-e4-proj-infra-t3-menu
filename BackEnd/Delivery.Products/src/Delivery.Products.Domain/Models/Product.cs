@@ -29,5 +29,11 @@ namespace Delivery.Products.Domain.Models
         /// Product Price
         /// </summary>
         public double Price { get; set; }
+
+        /// <summary>
+        /// Product Description
+        /// </summary>
+        public string? Description { get; set; }
+
     }
 }
