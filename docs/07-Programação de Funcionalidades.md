@@ -22,3 +22,14 @@ Wireframe interativo com o intuito de orientar os usuários e clientes que irão
 > - [JSON Data Set Sample](https://opensource.adobe.com/Spry/samples/data_region/JSONDataSetSample.html)
 > - [JSON - Introduction (W3Schools)](https://www.w3schools.com/js/js_json_intro.asp)
 > - [JSON Tutorial (TutorialsPoint)](https://www.tutorialspoint.com/json/index.htm)
+
+
+
+
+Requisitos atendidos:
+
+Tela inicial: Home
+
+RF-01 - A aplicação deverá apresentar na Home Page as informações dos produtos e a navegação para as demais páginas
+
+![Home](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e4-proj-infra-t3-menu/assets/85632403/447cbbec-6350-43bd-b835-32ef86f97195)
