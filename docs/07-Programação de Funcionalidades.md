@@ -27,16 +27,16 @@ Wireframe interativo com o intuito de orientar os usuários e clientes que irão
 
 
 
-Requisitos atendidos:
+# Requisitos atendidos:
 
-Tela inicial: Home
+## Tela inicial: Home
 
 RF-01 - A aplicação deverá apresentar na Home Page as informações dos produtos e a navegação para as demais páginas
 
 ![Home](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e4-proj-infra-t3-menu/assets/85632403/447cbbec-6350-43bd-b835-32ef86f97195)
 
 
-Tela de Login:
+## Tela de Login:
 
 RF-02 - A aplicação deverá permitir ao usuário efetuar login.
 
