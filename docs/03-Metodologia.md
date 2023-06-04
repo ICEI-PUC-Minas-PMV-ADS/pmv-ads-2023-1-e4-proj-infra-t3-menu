@@ -50,11 +50,11 @@ Foi utilizado OKR com o Trello para atribuir demanda aos integrantes com prazo d
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e4-proj-infra-t3-menu/assets/90850392/bc7ad2a1-827b-4f96-ad36-3d6658d88288)
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e4-proj-infra-t3-menu/assets/90850392/6c397815-cc6e-4636-bfd7-15919a7e7e19)
 
-*Desenvolvimento* : Camila, Rafael, Jaqueline, Hugo e Tarcísio.
-*Designer* : Rafael e Camila.
-*Responsáveis por elaboração de documentação* : Camila, Rafael, Jaqueline, Hugo, Diego e Tarcísio.
-*Product Owner* : Camila.
-*Tester* : Camila e Jaqueline.
+- *Desenvolvimento* : Camila, Rafael, Jaqueline, Hugo e Tarcísio.
+- *Designer* : Rafael e Camila.
+- *Responsáveis por elaboração de documentação* : Camila, Rafael, Jaqueline, Hugo, Diego e Tarcísio.
+- *Product Owner* : Camila.
+- *Tester* : Camila e Jaqueline.
 
 
 
