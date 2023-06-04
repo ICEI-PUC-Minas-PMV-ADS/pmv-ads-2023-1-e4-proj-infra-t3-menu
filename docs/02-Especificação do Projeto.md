@@ -50,7 +50,7 @@ Apresente aqui as histórias de usuário que são relevantes para o projeto de s
 
 ### Análise da Situação Atual
 
-Diariamente, temos vivido rotinas cada vez mais cansativas e esgotantes. Toda essa correria tem influenciado negativamente na maneira como as pessoas se alimentam. Infelizmente, muitas pessoas não conseguem se alimentar adequadamente por não conseguirem uma pausa em seu dia que seja suficiente para fazê-lo, sendo que muitas sequer conseguem tempo para prepararem sua própria alimentação.
+Diariamente, temos vivido rotinas cada vez mais cansativas e esgotantes. Toda essa correria tem influenciado negativamente na maneira como as pessoas se alimentam. Infelizmente, muitas pessoas não conseguem manter uma alimentação adequada por não conseguirem uma pausa em seu dia que seja suficiente para fazê-lo, sendo que muitas sequer conseguem tempo para prepararem sua própria alimentação.
 
 ### Descrição Geral da Proposta
 
