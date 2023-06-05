@@ -50,7 +50,9 @@ Apresente aqui as histórias de usuário que são relevantes para o projeto de s
 
 ### Análise da Situação Atual
 
-Diariamente, temos vivido rotinas cada vez mais cansativas e esgotantes. Toda essa correria tem influenciado negativamente na maneira como as pessoas se alimentam. Infelizmente, muitas pessoas não conseguem se alimentar adequadamente por não conseguirem uma pausa em seu dia que seja suficiente para fazê-lo, sendo que muitas sequer conseguem tempo para prepararem sua própria alimentação.
+A cada dia, temos tido rotinas exaustivas que têm influenciado negativamente no comportamento alimentar das pessoas. Infelizmente, a maioria não consegue manter uma alimentação adequada por não conseguirem uma pausa que seja suficiente o bastante para realizar suas refeições regularmente. Além disso, muitas sequer conseguem priorizar um tempo para prepararem uma alimentação de qualidade que possa suprir suas necessidades nutricionais.
+
+Por outro lado, estes dias corridos que vivenciamos hoje proporcionaram a popularização de lanches rápidos e que, aliados ao aperfeiçoamento diário da tecnologia, facilitaram o acesso a alimentações práticas e acessíveis.
 
 ### Descrição Geral da Proposta
 
@@ -91,15 +93,19 @@ O escopo do projeto é definido por meio dos requisitos funcionais que descrevem
 |ID   | Descrição do Requisito  | Prioridade |
 |-----|-----------------------------------------|----|
 |RF-01| A aplicação deverá apresentar na Home Page as informações dos produtos e a navegação para as demais páginas   | Média | 
-|RF-02| A aplicação deverá permitir ao usuário efetuar cadastro/login   | Alta | 
-|RF-03| A aplicação deverá apresentar na página 'Pedidos' a funcionalidade de selecionar a quantidade desejada dos produtos   | Alta | 
-|RF-04| A aplicação deverá permitir na página 'Pedidos' que o usuário selecione mais de um produto   | Média | 
-|RF-05| A aplicação deverá apresentar na Home Page uma barra de pesquisa   | Alta | 
-|RF-06| A aplicação deverá permitir na página de Pedidos que o usuário realize o cancelamento de seu pedido em andamento   | Alta | 
-|RF-07| A aplicação deverá apresentar na página 'Pedidos' as informações e o status dos pedidos realizados pelo usuário   | Média | 
-|RF-08| A aplicação deverá disponibilizar ao usuário o número do pedido realizado   | Alta | 
+|RF-02| A aplicação deverá permitir ao usuário efetuar login   | Alta | 
+|RF-03| A aplicação deverá apresentar na página "Meus Pedidos" a funcionalidade de selecionar a quantidade desejada dos produtos   | Alta | 
+|RF-04| A aplicação deverá permitir na página 'Meus Pedidos' que o usuário selecione mais de um produto   | Média | 
+|RF-05| A aplicação deverá permitir ao usuário efetuar o cadastro   | Alta | 
+|RF-06| A aplicação deverá permitir na página de "Meus Pedidos" que o usuário realize o cancelamento de seu pedido em andamento   | Alta | 
+|RF-07| A aplicação deverá apresentar na página 'Meus Pedidos' as informações e o status dos pedidos realizados pelo usuário   | Média | 
+|RF-08| A aplicação deverá disponibilizar ao usuário o código do pedido realizado   | Alta | 
 |RF-09| A aplicação deverá disponibilizar ao usuário as informações do pedido, tais como: produto solicitado, quantidade, preço unitário e valor total   | Média | 
-|RF-10| A aplicação deverá disponibilizar ao usuário o número do pedido realizado   | Baixa | 
+|RF-10| A aplicação deverá permitir na página de "Carrinho", que o usuário inclua um pedido no carrinho   | Baixa | 
+|RF-11|	A aplicação deverá permitir na página de "Carrinho", a visualização de todos intens adicionados no carrinho	| Média |
+|RF-12| A aplicação deverá permitir na página de "Carrinho", a opção de exclusão de um item do carrinho | Alta |
+|RF-13|A aplicação deverá permitir na página de "Carrinho", a finalização da compra dos itens presentes no carrinho | Alta |
+
 
 ### Requisitos não Funcionais
 

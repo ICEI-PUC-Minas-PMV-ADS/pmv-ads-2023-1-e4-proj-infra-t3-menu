@@ -45,18 +45,23 @@ Discuta como a configuração do projeto foi feita na ferramenta de versionament
 
 ### Divisão de Papéis
 
-Apresente a divisão de papéis entre os membros do grupo.
+Foi utilizado OKR com o Trello para atribuir demanda aos integrantes com prazo de entrega.
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e4-proj-infra-t3-menu/assets/90850392/3275d8c7-9446-4d75-a716-424a1a21d98a)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e4-proj-infra-t3-menu/assets/90850392/bc7ad2a1-827b-4f96-ad36-3d6658d88288)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e4-proj-infra-t3-menu/assets/90850392/6c397815-cc6e-4636-bfd7-15919a7e7e19)
 
-Exemplificação: A equipe utiliza metodologias ágeis, tendo escolhido o Scrum como base para definição do processo de desenvolvimento. A equipe está organizada da seguinte maneira:
-- Scrum Master: Felipe Domingos;
-- Product Owner: Rommel Carneiro;
-- Equipe de Desenvolvimento: Pedro Penna, Pedro Ivo, Rodrigo Richard;
-- Equipe de Design: Simone Nogueira.
+- *Desenvolvimento* : Camila, Rafael, Jaqueline, Hugo e Tarcísio.
+- *Designer* : Rafael e Camila.
+- *Responsáveis por elaboração de documentação* : Camila, Rafael, Jaqueline, Hugo, Diego e Tarcísio.
+- *Product Owner* : Camila.
+- *Tester* : Camila e Jaqueline.
 
-> **Links Úteis**:
-> - [11 Passos Essenciais para Implantar Scrum no seu Projeto](https://mindmaster.com.br/scrum-11-passos/)
-> - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
-> - [Os papéis do Scrum e a verdade sobre cargos nessa técnica](https://www.atlassian.com/br/agile/scrum/roles)
+
+
+
+> **Link Trello**:
+> https://trello.com/b/P7bMMDRW/cooking-digital
+
 
 ### Processo
 
