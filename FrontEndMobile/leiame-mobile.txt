@@ -1,0 +1,20 @@
+1 - Para criar o build do projeto:
+https://docs.expo.dev/build/setup/
+No final será gerado um apk  para instalação em um dispositivo móvel.
+Foi gerado o instalador para Android mas não consegui gerar para ioS porque preciso de uma conta Apple.
+
+2- Para colocar o Frontend mobile ou web em execução:
+
+Se for a primeira vez:
+    - instale o nodejs:
+      https://nodejs.org/en/download
+
+    - Acesse a pasta principal do projeto no vscode e execute o comando abaixo para que todas as dependências do projeto sejam instaladas:
+      npm install
+
+Acesse a pasta principal do projeto pelo Terminal e execute o comando:
+npm start
+
+
+
+

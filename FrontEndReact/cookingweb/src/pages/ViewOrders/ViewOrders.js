@@ -115,11 +115,11 @@ export const ViewOrders = () => {
                         <Typography variant="h6" gutterBottom component="div">
                             Total do pedido
                         </Typography>
-                        <p>{row.totalValue.toLocaleString("pt-BR", {
+                        <h1>{row.totalValue.toLocaleString("pt-BR", {
                             style: "currency",
                             currency: "BRL",
                         })}
-                        </p>                        
+                        </h1>                        
                     </div>
 
                     <div style={{ margin: 10 }}>

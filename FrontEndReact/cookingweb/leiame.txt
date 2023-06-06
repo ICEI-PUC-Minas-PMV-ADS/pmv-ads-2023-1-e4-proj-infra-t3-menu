@@ -58,6 +58,31 @@ Feito
 11 - Ao tentar cancelar um pedido que está em andamento, o vieworders esta quebrando.
 Ajustado. O botão de cancelamento só estará ativo se o status do pedido for "Aguardando inicio"
 
+12 - Publicar:
+
+Configurar o build usando a documentação do expo:
+https://docs.expo.dev/build/setup/
+
+13 - Para liberar a porta 8080 no firewall:
+
+Windows:
+
+Pressione as teclas "Windows + R" para abrir o Executar e digite "firewall.cpl".
+Clique em "Configurações avançadas" no painel esquerdo.
+Selecione "Regras de Entrada" no painel esquerdo e clique em "Nova Regra".
+Selecione "Porta" e clique em "Avançar".
+Especifique "8080" como o número da porta e clique em "Avançar".
+Selecione "Permitir a conexão" e clique em "Avançar".
+Escolha as opções de perfil adequadas e clique em "Avançar".
+Digite um nome para a regra e clique em "Concluir".
+
+O cookingweb foi configurado para esse link:
+http://192.168.0.40:8080
+Após reiniciar a máquina, ver se ele funciona. A regra foi criada no firewall mas falta reiniciar o servidor.
+
+
+
+
 
 
 

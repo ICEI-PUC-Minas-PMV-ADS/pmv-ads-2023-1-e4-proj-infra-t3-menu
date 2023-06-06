@@ -4,7 +4,6 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import NavigationHome from './NavigationHome';
 import PageHome from '../pages/PageHome';
 import EditOrder from '../pages/EditOrder';
-
 const Stack = createNativeStackNavigator();
 
 const NavigationUserSigned = () => {  
@@ -31,7 +30,8 @@ const NavigationUserSigned = () => {
         options={{
           header: () => null,
         }}
-      />            
+      />     
+
     </Stack.Navigator>
   );
 };

@@ -31,7 +31,9 @@ const Login = () => {
         setJwtToken(res.jwtToken);
         setName(res.jwtToken);
         AsyncStorage.setItem('@TOKEN_KEY', res.jwtToken).then();
-      } else {             
+      } else {   
+        // A navegação para a tela de acesso negado não funcionou porque precisa ajustar o navigation da NavigationUserUnsigned
+        //navigation.navigate('AccessDenied');          
         console.error('Usuário ou senha inválidos ou Acesso restrito');
       }
     });
@@ -74,7 +76,7 @@ const Login = () => {
           <Button
             style={styles.buttonRegister}
             mode="contained"
-            onPress={() => navigation.navigate('CADASTRO')}>
+            onPress={() => navigation.navigate('REGISTRO')}>
             Registrar
           </Button>
         </Body>
