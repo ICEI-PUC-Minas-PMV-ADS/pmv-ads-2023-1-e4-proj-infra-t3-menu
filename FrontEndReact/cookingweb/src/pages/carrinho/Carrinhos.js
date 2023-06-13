@@ -8,7 +8,7 @@ import { UserContext } from '../UserContext';
 import { useNavigate } from 'react-router-dom'
 
 export const Carrinho = ({ setCarrinho }) => {
-  const { isLoggedIn, setIsLoggedIn } = useContext(UserContext);  
+  const {isLoggedIn} = useContext(UserContext);  
   const carrinho = JSON.parse(localStorage.getItem("CARRINHO") || "[]");
   const [totalCompra, setTotalCompra] = useState(0);
   const navigate = useNavigate()

@@ -4,7 +4,6 @@
 //jaque: ver essa pagina novamente:
 // https://www.w3schools.com/react/showreact.asp?filename=demo2_react_context2
 
-import React from 'react';
 import { createContext } from "react";
 
 export const UserContext = createContext();

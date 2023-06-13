@@ -11,7 +11,7 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [messageLogin, setMessageLogin] = useState(null);
 
-  const { isLoggedIn, setIsLoggedIn } = useContext(UserContext);  
+  const { setIsLoggedIn } = useContext(UserContext);  
 
   const handleSubmit = async (event) => {    
     event.preventDefault();

@@ -11,14 +11,13 @@ import Box from "@mui/material/Box";
 import { Container } from "./styles";
 import { StyledTableCell } from "../../components/Table/styles";
 import IconButton from "@mui/material/IconButton";
-import CheckIcon from '@mui/icons-material/Check';
 import ClearIcon from '@mui/icons-material/Clear';
 import Navbar from '../Navbar';
 import { UserContext } from '../UserContext';
 import { useNavigate } from 'react-router-dom'
 
 export const ViewOrders = () => {
-    const { isLoggedIn, setIsLoggedIn } = useContext(UserContext);
+    const { isLoggedIn } = useContext(UserContext);
 
     const [pedidos, setPedidos] = useState([]);
     const [searchCode, setSearchCode] = useState("");
@@ -130,7 +129,7 @@ export const ViewOrders = () => {
                             <Button variant="contained" 
                                 style={{ backgroundColor: 'red' }} 
                                 onClick={handleCancelOrder}
-                                disabled={row.statusOrder != 'Aguardando inicio'}
+                                disabled={row.statusOrder !== 'Aguardando inicio'}
                             >
                             <ClearIcon />
                                Cancelar
