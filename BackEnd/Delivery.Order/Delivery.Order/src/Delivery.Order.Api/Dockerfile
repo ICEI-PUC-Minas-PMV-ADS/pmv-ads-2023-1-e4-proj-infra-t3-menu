@@ -13,7 +13,7 @@ COPY ["src/Delivery.Order.Services/Delivery.Order.Services.csproj", "src/Deliver
 COPY ["src/Delivery.Order.Infrastructure/Delivery.Order.Infrastructure.csproj", "src/Delivery.Order.Infrastructure/"]
 RUN dotnet restore "src/Delivery.Order.Api/Delivery.Order.Api.csproj"
 COPY . .
-WORKDIR "/src/Delivery.Order.Api"
+WORKDIR "/app/src/Delivery.Order.Api"
 RUN dotnet build "Delivery.Order.Api.csproj" -c Release -o /app/build
 
 FROM build AS publish
