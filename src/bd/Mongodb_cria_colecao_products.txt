@@ -1,0 +1,110 @@
+db.products.insertOne({
+  "_id": "7752",
+  "Name": "São Paulo",
+  "Category": "sanduiche",
+  "IsAvailable": true,
+  "Price": 25.0,
+  "Description": "Hambúrguer de carne bovina suculento\nQueijo cheddar derretido\nAlface fresca\nTomate fatiado\nCebola caramelizada\nMolho especial da casa\nServido em um pão de hambúrguer tradicional"
+})
+
+db.products.insertOne({
+  "_id": "4000",
+  "Name": "Belo Horizonte",
+  "Category": "sanduiche",
+  "IsAvailable": true,
+  "Price": 20.0,
+  "Description": "Hambúrguer de carne bovina grelhado\nQueijo Minas derretido\nBacon crocante\nMolho de churrasco defumado\nCebola roxa em conserva\nServido em um pão de brioche"
+})
+
+db.products.insertOne({
+  "_id": "9525",
+  "Name": "Anéis de cebola",
+  "Category": "acompanhamento",
+  "IsAvailable": true,
+  "Price": 8.5
+})
+
+db.products.insertOne({
+  "_id": "1731",
+  "Name": "Batata Pequena",
+  "Category": "acompanhamento",
+  "IsAvailable": true,
+  "Price": 3.99
+})
+
+db.products.insertOne({
+  "_id": "7688",
+  "Name": "Batata Média",
+  "Category": "acompanhamento",
+  "IsAvailable": true,
+  "Price": 6.5
+})
+
+db.products.insertOne({
+  "_id": "4098",
+  "Name": "Batata Grande",
+  "Category": "acompanhamento",
+  "IsAvailable": true,
+  "Price": 8.5
+})
+
+db.products.insertOne({
+  "_id": "3685",
+  "Name": "Coca Cola Zero",
+  "Category": "Bebida",
+  "IsAvailable": true,
+  "Price": 6.0
+})
+
+db.products.insertOne({
+  "_id": "7734",
+  "Name": "Coca Cola",
+  "Category": "Bebida",
+  "IsAvailable": true,
+  "Price": 6.0
+})
+
+db.products.insertOne({
+  "_id": "4060",
+  "Name": "Suco Natural - Laranja",
+  "Category": "Bebida",
+  "IsAvailable": true,
+  "Price": 3.99
+})
+
+db.products.insertOne({
+  "_id": "5257",
+  "Name": "Cerveja Artesanal",
+  "Category": "Bebida",
+  "IsAvailable": true,
+  "Price": 3.99
+})
+
+db.products.insertOne({
+  "_id": "6275",
+  "Name": "Rio de Janeiro",
+  "Category": "sanduiche",
+  "IsAvailable": true,
+  "Price": 22.9,
+  "Description": "Bolinho de grão-de-bico e vegetais\nQueijo de cabra cremoso\nAbacate fatiado\nRúcula fresca\nMolho de iogurte com ervas\nServido em um pão integral"
+})
+
+db.products.insertOne({
+  "_id": "1955",
+  "Name": "Recife",
+  "Category": "sanduiche",
+  "IsAvailable": true,
+  "Price": 20.9,
+  "Description": "Hambúrguer de carne bovina temperado com especiarias\nQueijo pepper jack derretido\nJalapeños em conserva\nPimenta-do-reino\nMolho de pimenta picante\nServido em um pão de hambúrguer com gergelim"
+})
+
+db.products.insertOne({
+  "_id": "1159",
+  "Name": "Salvador",
+  "Category": "sanduiche",
+  "IsAvailable": true,
+  "Price": 24.9,
+  "Description": "Hambúrguer de carne bovina grelhado\nQueijo suíço derretido\nCogumelos salteados\nCebolas caramelizadas\nMaionese de alho\nServido em um pão de batata artesanal"
+})
+
+

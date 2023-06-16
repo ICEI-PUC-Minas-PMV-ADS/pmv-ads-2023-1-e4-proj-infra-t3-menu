@@ -266,6 +266,10 @@ namespace Delivery.Order.Api.Controllers
         {
             try
             {
+                if(orderId == null || statusOrder == null)
+                {
+                    return BadRequest();
+                } 
                 var idValidator = new IdValidator();
 
                 var orderIdValidationResult = idValidator.Validate(orderId);

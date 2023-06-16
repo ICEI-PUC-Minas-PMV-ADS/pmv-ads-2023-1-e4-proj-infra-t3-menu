@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "WOxHliEKgZRF0cBRQDX64CLp2CiCPi6IhwnMR9hlCTxFLz/FIQdRraoDNMIsffxzG2NW4T+jaslhqn74w3/rZw==",
+  "dgSpecHash": "Rr0CAF7ton/N2y3L/Xh6TEFOfubPcvQA07Ss0dthmg6LFbggp0NcwbPJ6bgipdc8LqTvCEGLhd6V8ZfqQ4we0A==",
   "success": true,
   "projectFilePath": "D:\\ProjetosPuc\\pmv-ads-2023-1-e4-proj-infra-t3-menu\\BackEnd\\Delivery.Order\\Delivery.Order\\src\\Delivery.Order.Api\\Delivery.Order.Api.csproj",
   "expectedPackageFiles": [
@@ -24,6 +24,7 @@
     "C:\\Users\\polet\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.10.0\\microsoft.identitymodel.tokens.6.10.0.nupkg.sha512",
     "C:\\Users\\polet\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\polet\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\polet\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.0\\microsoft.visualstudio.azure.containers.tools.targets.1.17.0.nupkg.sha512",
     "C:\\Users\\polet\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\polet\\.nuget\\packages\\mongodb.bson\\2.19.1\\mongodb.bson.2.19.1.nupkg.sha512",
     "C:\\Users\\polet\\.nuget\\packages\\mongodb.driver\\2.19.1\\mongodb.driver.2.19.1.nupkg.sha512",
