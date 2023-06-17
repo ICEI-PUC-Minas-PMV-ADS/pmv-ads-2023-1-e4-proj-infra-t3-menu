@@ -18,6 +18,7 @@ const app = express();
 // Configuração do CORS
 const corsOptions = {
     origin: origensPermitidas,
+    // origin: "https://cooking-digital.netlify.app/",
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'], // Métodos permitidos
     allowedHeaders: ['Content-Type', 'Authorization'], // Cabeçalhos permitidos
   };
@@ -42,7 +43,7 @@ app.get('/', (req, res) => {
 
 app.listen(3000, '0.0.0.0', () => {    
     console.log('Servidor escutando na porta 3000');  
-    console.log(origensPermitidas); 
+    console.log('Origens permitidas: '+origensPermitidas); 
   });
   
   

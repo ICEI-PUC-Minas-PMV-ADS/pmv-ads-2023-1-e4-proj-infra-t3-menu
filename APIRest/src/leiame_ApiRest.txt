@@ -33,6 +33,16 @@ http://localhost:3000/api-docs/
 Para executar a API:
 node index.js 
 
+Para publicar a API REST no railway:
+documentação oficial: https://docs.railway.app/getting-started
+npm i -g @railway/cli
+npm install --save-dev nodemon
+npm install -g railway 
+ou
+npm install -g railway --force
+railway up
+
+
 
 
 

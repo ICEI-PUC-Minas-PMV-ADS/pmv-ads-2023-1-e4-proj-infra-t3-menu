@@ -19,13 +19,13 @@ function httpsRequest(params, data, callback) {
     method = params.method;
     path = params.path;
 
-    // console.log(porta);
-    // console.log(token);
-    // console.log(method);
-    // console.log(path);    
-    // console.log(data);
-    // console.log('executando httpsRequest');
-    // console.log(params);
+    console.log(porta);
+    console.log(token);
+    console.log(method);
+    console.log(path);    
+    console.log(data);
+    console.log('executando httpsRequest');
+    console.log(params);
 
     let isAuthenticated = params.isAuthenticated !== undefined ? params.isAuthenticated : true;
 
