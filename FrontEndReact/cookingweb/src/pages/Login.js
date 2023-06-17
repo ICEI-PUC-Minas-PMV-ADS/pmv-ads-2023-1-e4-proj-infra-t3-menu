@@ -12,6 +12,7 @@ const Login = () => {
   const [messageLogin, setMessageLogin] = useState(null);
 
   const { setIsLoggedIn } = useContext(UserContext);  
+  const { setUserName } = useContext(UserContext);
 
   const handleSubmit = async (event) => {    
     event.preventDefault();
@@ -27,16 +28,19 @@ const Login = () => {
       if (response && response.jwtToken) {
           setMessageLogin('Usuário logado!');
           setIsLoggedIn(true);
+          setUserName(response.userName);
           navigate("/");
       } else {
           setMessageLogin('Erro na conexão.');
-          setIsLoggedIn(false);          
+          setIsLoggedIn(false);
+          setUserName('');
           return null;        
       }
     })
     .catch(error => {  
       setMessageLogin('Erro na conexão.');
       setIsLoggedIn(false);
+      setUserName('');
       alert('Erro na conexão!');
     });
 

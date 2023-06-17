@@ -48,7 +48,7 @@ export const ViewOrders = () => {
         {
             navigate("/Login");
         }
-    }, []);
+    }, [isLoggedIn, navigate]);
 
     const handleSearch = () => {
         fetchPedidos();

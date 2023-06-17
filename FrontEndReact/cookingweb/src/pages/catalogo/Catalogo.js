@@ -13,7 +13,7 @@ const Catalogo = ({ setCarrinho }) => {
   const [bebidas, setBebidas] = useState([]);  
   const [acompanhamentos, setAcompanhamentos] = useState([]); 
 
-  const { isLoggedIn, setIsLoggedIn } = useContext(UserContext);
+  const { isLoggedIn } = useContext(UserContext);
   const navigate = useNavigate();
 
   const fetchDatas = async () => {
@@ -80,7 +80,8 @@ const Catalogo = ({ setCarrinho }) => {
         </TitleProductsContainer>
 
         <ProductsContainer>
-          {products.map((product) => {
+          {products &&
+           products.map((product) => {
             return (
               <Product key={product.id}>
                 <div style={{ margin: '0 auto' }}>
@@ -122,7 +123,8 @@ const Catalogo = ({ setCarrinho }) => {
         </TitleProductsContainer>
 
          <ProductsContainer>
-          {acompanhamentos.map((product) => {
+          {acompanhamentos &&
+           acompanhamentos.map((product) => {
             return (
               <Product key={product.id}>
                 <div style={{ margin: '0 auto' }}>
@@ -160,7 +162,8 @@ const Catalogo = ({ setCarrinho }) => {
         </TitleProductsContainer>
 
         <ProductsContainer>
-          {bebidas.map((product) => {
+          {bebidas &&
+           bebidas.map((product) => {
             return (
               <Product key={product.id}>
                 <div style={{ margin: '0 auto' }}>

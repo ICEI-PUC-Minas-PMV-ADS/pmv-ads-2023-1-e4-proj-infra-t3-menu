@@ -213,14 +213,15 @@ namespace Delivery.Users.API.Controllers
             if (usuarioDb == null || !BCrypt.Net.BCrypt.Verify(model.Password, usuarioDb.Password))            
                 return Unauthorized();
 
-            if (model.PerfilAutorizado != null && !model.PerfilAutorizado.Any(p => p.ToString() == usuarioDb.Perfil.ToString()))
+            if ((usuarioDb.Perfil.ToString() != "Administrador") &&
+                (model.PerfilAutorizado != null && !model.PerfilAutorizado.Any(p => p.ToString() == usuarioDb.Perfil.ToString())))
             {
                 return Forbid();
             }
 
             var jwt = GenerateJwtToken(usuarioDb);
 
-            return Ok(new { jwtToken = jwt });            
+            return Ok(new { jwtToken = jwt, userName = usuarioDb.Name+' '+usuarioDb.Surname });            
         }
     }
 

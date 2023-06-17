@@ -9,6 +9,7 @@ import { useNavigate } from 'react-router-dom'
 
 function Navbar() {    
     const { isLoggedIn, setIsLoggedIn } = useContext(UserContext);
+    const { userName } = useContext(UserContext);
     const navigate = useNavigate();
     
     const handleLogout = () => {
@@ -18,19 +19,19 @@ function Navbar() {
     };
 
     return (
-        <>
+        <>            
             <header className="align-items-center justify-content-end">
                 <nav className="navbar navbar-expand-lg bg-body-tertiary">
                     <div className="container-fluid"> 
-                        <a className="navbar-brand" href="#">
+                        <a className="navbar-brand" href="/">
                             <img src="/img/logoteste.png" alt="Logo" width="60" height="60"
                                 className="d-inline-block align-text-top"/>
-                        </a>
+                        </a>                        
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
-                        </button>                                               
+                        </button>                                                                        
                         <ul className="navbar-nav me-auto nav-fill mt-2 mb-2 mb-lg-0">                            
                             <li className="nav-item flex-grow-1">
                                  <Link
@@ -41,7 +42,7 @@ function Navbar() {
                             </li>                             
                             {/* Verifica se o usuário está logado antes de mostrar os botões */}
                             {isLoggedIn ? (
-                                <>
+                                <>                                
                                     <li className="nav-item flex-grow-1">
                                         <Link
                                             className="nav-link active link-danger fw-bold"
@@ -55,8 +56,21 @@ function Navbar() {
                                         <Link className="nav-link active link-danger fw-bold" to="/Carrinho">
                                             <img src={'/img/carrinho.png'} alt="Ícone Carrinho" className="me-1" />                                            
                                         </Link>
-                                    </li> 
+                                    </li>                                                                                                           
+                                </>
+                            ) : (
+                                <>
+                                </>
+                            )}
+                        </ul>
 
+                        <ul className="navbar-nav ml-auto">                                                        
+                            {/* Verifica se o usuário está logado antes de mostrar os botões */}
+                            {isLoggedIn ? (
+                                <>        
+                                    <li className="nav-item text-end">                                                                                
+                                        <label className="nav-link active link-danger fw-bold">Bem-vindo(a), {userName}</label>
+                                    </li>                                                            
                                     <li className="nav-item flex-grow-1">
                                         <button
                                             className="btn btn-outline-danger me-2"
@@ -66,7 +80,7 @@ function Navbar() {
                                         >
                                             Sair
                                         </button>
-                                    </li>
+                                    </li>                                                                        
                                 </>
                             ) : (
                                 <>
@@ -84,7 +98,7 @@ function Navbar() {
                                                 Registrar
                                             </button>
                                         </Link>
-                                    </li>
+                                    </li>                                    
                                 </>
                             )}
                         </ul>

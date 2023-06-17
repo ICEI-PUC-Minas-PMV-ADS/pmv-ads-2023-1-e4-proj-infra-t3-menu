@@ -1,4 +1,4 @@
-import { React, useState, useEffect, useContext } from "react";
+import { React, useState, useEffect, useContext, useCallback } from "react";
 import { Product, ProductImg, ProductInfo, ProductsContainer } from "./styles";
 import Button from "../../components/Button/button";
 import { createOrder } from '../../services/orders.services';
@@ -13,13 +13,10 @@ export const Carrinho = ({ setCarrinho }) => {
   const [totalCompra, setTotalCompra] = useState(0);
   const navigate = useNavigate()
 
-  function atualizarTotalCompra() {
-    const total = carrinho.reduce(
-      (acc, cur) => acc + cur.quantity * cur.price,
-      0
-    );
+  const atualizarTotalCompra = useCallback(() => {
+    const total = carrinho.reduce((acc, cur) => acc + cur.quantity * cur.price, 0);
     setTotalCompra(total.toFixed(2));
-  }
+  }, [carrinho, setTotalCompra]);
 
   function aumentarQuantidade(id) {
     const index = carrinho.findIndex(
@@ -89,7 +86,7 @@ export const Carrinho = ({ setCarrinho }) => {
     else {
       navigate("/Login");
     }         
-  }, []);
+  }, [isLoggedIn, atualizarTotalCompra, navigate]);
 
   return (
     <>
