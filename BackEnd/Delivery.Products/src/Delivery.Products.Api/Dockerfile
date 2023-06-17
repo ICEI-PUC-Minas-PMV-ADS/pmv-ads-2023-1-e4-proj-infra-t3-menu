@@ -7,13 +7,13 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["src/Delivery.Products.Api/Delivery.Products.Api.csproj", "src/Delivery.Products.Api/"]
-COPY ["src/Delivery.Products.Infrastructure/Delivery.Products.Infrastructure.csproj", "src/Delivery.Products.Infrastructure/"]
-COPY ["src/Delivery.Products.Domain/Delivery.Products.Domain.csproj", "src/Delivery.Products.Domain/"]
-COPY ["src/Delivery.Products.Services/Delivery.Products.Services.csproj", "src/Delivery.Products.Services/"]
-RUN dotnet restore "src/Delivery.Products.Api/Delivery.Products.Api.csproj"
+COPY ["src/Delivery.Products.Api/Delivery.Products.Api.csproj", "."]
+COPY ["src/Delivery.Products.Infrastructure/Delivery.Products.Infrastructure.csproj", "."]
+COPY ["src/Delivery.Products.Domain/Delivery.Products.Domain.csproj", "."]
+COPY ["src/Delivery.Products.Services/Delivery.Products.Services.csproj", "."]
+RUN dotnet restore "./Delivery.Products.Api.csproj"
 COPY . .
-WORKDIR "/src/src/Delivery.Products.Api"
+WORKDIR "/src/."
 RUN dotnet build "Delivery.Products.Api.csproj" -c Release -o /app/build
 
 FROM build AS publish
