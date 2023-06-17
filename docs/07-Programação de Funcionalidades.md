@@ -81,7 +81,7 @@ RF-06 -A aplicação deverá permitir na página de “Meus Pedidos” que o usu
 
 ### Carrinho de compra:
 
-RF-10- A aplicação deverá permitir na página de "Carrinho", que o usuário inclua um pedido no carrinho.
+RF-10- A aplicação deverá permitir na página de Menu, que o usuário inclua um pedido no carrinho.
 
 ![RF 10](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e4-proj-infra-t3-menu/assets/85632403/29d4bf60-ef56-45e8-8371-36c7d7c03d8e)
 
