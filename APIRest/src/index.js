@@ -41,8 +41,10 @@ app.get('/', (req, res) => {
 //     console.log('Servidor escutando na porta 3000');    
 // });
 
-app.listen(3000, '0.0.0.0', () => {    
-    console.log('Servidor escutando na porta 3000');  
+const port = process.env.PORT || 3000
+
+app.listen(port, '0.0.0.0', () => {    
+    console.log('Servidor escutando na porta '+port);  
     console.log('Origens permitidas: '+origensPermitidas); 
   });
   
