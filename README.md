@@ -15,7 +15,7 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 * Hugo Vinicius Damasceno Pinto
 * Jaqueline Câmara Poletto
 * Rafael Mautone Costa
-* Tarcísio Junior Amaral de Almeida
+* Tarcísio Junio Amaral de Almeida
 
 ## Orientador
 

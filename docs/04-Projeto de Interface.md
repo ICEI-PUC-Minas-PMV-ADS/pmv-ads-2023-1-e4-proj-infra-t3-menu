@@ -9,7 +9,14 @@ Visão geral da interação do usuário pelas telas do sistema e protótipo inte
 
 ## Diagrama de Fluxo
 
-O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema interativo e  muitas vezes sem a necessidade do desenho do design das telas da interface. Isso permite que o design das interações seja bem planejado e gere impacto na qualidade no design do wireframe interativo que será desenvolvido logo em seguida.
+Neste exemplo, o diagrama começa com a tela de início e, em seguida, o cliente pode optar por fazer login ou se registrar no aplicativo. Após o login bem-sucedido, o cliente é direcionado para a tela principal, onde tem acesso ao "Cardápio" e opção "Meus Pedidos".
+
+Na tela de cardápio, o cliente pode visualizar os itens disponíveis para pedido. A partir dessa tela, há a opção de adicionar itens ao "Carrinho de compras" e a opção de "Buscar" (busca produtos específicos).
+O cliente pode revisar e modificar o conteúdo do carrinho de compras na própria tela do carrinho.
+
+Além disso, o cliente pode verificar o status do pedido na tela de "Meus Pedidos". Essa tela pode fornecer informações status da preparação do pedido, como "em processamento", "em preparação" ou "entregue". Há também as opções de verificar a fila de pedidos e a opção de cancelar um pedido, caso seja da vontade do cliente.
+
+Esse diagrama ilustra de forma simplificada as principais interações que o cliente pode ter com o aplicativo, desde o registro até a visualização do cardápio, realização de pedidos, verificação do status e gerenciamento do carrinho de compras.
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e4-proj-infra-t3-menu/assets/85632403/e82db670-2071-4ba1-96c4-b54d92d7aeb0)
 
