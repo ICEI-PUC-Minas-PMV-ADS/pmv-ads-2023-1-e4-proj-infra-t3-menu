@@ -122,6 +122,23 @@ Caso a API REST esteja em execução localmente, o acesso à documentação pode
 
 ## Hospedagem
 
+* O banco de dados MongoDB foi hospedado no [railway](https://railway.app/) <br>
+Nome do banco de dados: delivery
+
+Coleção: Products: <br> <br>
+
+![delivery_MongoDB_produtos](img/delivery_MongoDB_produtos.jpg)
+
+Coleção: Orders: <br> <br>
+![delivery_MongoDB_pedidos](img/delivery_MongoDB_pedidos.jpg)
+
+* O Frontend web foi publicado na URL: <br>
+  https://cooking-digital.netlify.app/ <br>
+* O Frontend mobile pode ser instalado a partir dessa URL: <br>
+  https://expo.dev/artifacts/eas/6iJcjUuwVjiALmU7XWv9Vf.aab
+* Para o backend foi criada uma rota no ngrock apenas para fins de teste: <br>
+  https://7639-2804-14c-5bc6-9f9d-fd3c-ae1b-fd6e-14e1.ngrok-free.app/api-docs/  <br>
+
 Explique como a hospedagem e o lançamento da plataforma foi feita.
 
 > **Links Úteis**:
