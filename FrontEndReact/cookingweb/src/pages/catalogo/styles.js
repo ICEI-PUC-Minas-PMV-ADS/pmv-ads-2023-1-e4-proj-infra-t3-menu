@@ -1,15 +1,13 @@
 import styled from "styled-components";
 
 export const ProductsContainer = styled.div`
-  justify-content: center;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 24px;
   margin: 32px auto;
-  width: 70vw;
+  max-width: 70vw;
   border-radius: 10px;
-  background-color:   rgba(209, 209, 209, 0.308);
+  background-color: rgba(209, 209, 209, 0.308);
   text-align: center;
 `;
 
@@ -47,3 +45,11 @@ export const ProductInfo = styled.div`
   grid-gap: 12px;
   color: white; 
 `;
+export const MainContainer = styled.div`
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+

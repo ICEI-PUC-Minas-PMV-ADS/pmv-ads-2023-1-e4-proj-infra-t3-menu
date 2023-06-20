@@ -9,7 +9,6 @@ import {
   ImageBackground,
 } from 'react-native';
 
-import Tabela from '../components/Tabela';
 import Logo from '../components/Logo';
 
 const statusBarHeight = StatusBar.currentHeight;

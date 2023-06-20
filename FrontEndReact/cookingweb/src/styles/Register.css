@@ -3,84 +3,76 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  /* background-color: #f0f0f0; */
 }
 
-/* form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px;
-  } */
+form {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
 
-  form {
-    display: flex;
-    flex-direction: column;
-    /* background-color: #fff; */
-    border-radius: 5px;
-    padding: 20px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-    /* align-items: center; */
-    /* margin-top: 50px; */
-  }
+h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
 
-  h2 {
-    margin-top: 0;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  label {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-  }
-  
+label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 16px;
+  background-color: red;
+  color: white;
+  border-color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: red;
+  color: white;
+}
+
+button[type='submit'] {
+  background-color: green;
+  color: white;
+}
+
+button[type='submit']:hover {
+  background-color: green;
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 500px) {
+  /* Reduzir a largura dos inputs para telas menores */
   input {
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid gray;
-    border-radius: 5px;
-    width: 500px;    
-    margin-bottom: 10px;
+    width: 100%;
   }
-  
+
+  /* Centralizar os botões */
   button {
-    padding: 10px 20px;
-    margin-top: 20px;    
-    font-size: 16px;      
-    background-color: red;
-    color: white;  
-    border-color: white;  
-    padding: 10px 20px;
-    border-radius: 5px;    
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    /* background-color: red;  */
+    margin-left: auto;
+    margin-right: auto;
   }
-  
-  button:hover {
-    background-color: red;
-    color: white;
-  }
-
-  button[type='submit'] {
-    background-color: green;
-    color: white;
-    /* border: none; */
-    padding: 10px 20px;
-    border-radius: 5px;    
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    /* transition: background-color 0.3s ease; */
-    /* background-color: red;  */
-  }
-
-  button[type='submit']:hover {
-    background-color: green;
-  }
-  
-  
+}

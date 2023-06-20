@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from "react";
-import { TitleProductsContainer, Product, ProductImg, ProductInfo, ProductsContainer } from "./styles";
+import { TitleProductsContainer, Product, ProductImg, ProductInfo, ProductsContainer, MainContainer } from "./styles";
 import {getProdutos} from '../../services/products.services';
 import Navbar from '../Navbar';
 import { UserContext } from '../UserContext';
@@ -11,7 +11,7 @@ const Catalogo = ({ setCarrinho }) => {
 
   const [products, setProducts] = useState([]);
   const [bebidas, setBebidas] = useState([]);  
-  const [acompanhamentos, setAcompanhamentos] = useState([]); 
+  const [acompanhamentos, setAcompanhamentos] = useState([]);
 
   const { isLoggedIn } = useContext(UserContext);
   const navigate = useNavigate();
@@ -74,6 +74,9 @@ const Catalogo = ({ setCarrinho }) => {
           <div>                  
               <Navbar />      
           </div>
+
+          <MainContainer>
+
 
         <TitleProductsContainer>
                 <h2 style={{ margin: 0 }}>Sanduiches</h2>
@@ -198,6 +201,7 @@ const Catalogo = ({ setCarrinho }) => {
         </ProductsContainer>
 
         
+      </MainContainer>
       </main>
     </>
   );

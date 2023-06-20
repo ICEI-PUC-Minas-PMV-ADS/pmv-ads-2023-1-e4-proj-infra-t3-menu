@@ -11,8 +11,8 @@
   },
   "servers": [
     {
-      "url": "http://localhost:3000/api",
-      "url-old": "https://51b3-2804-14c-5bc6-9f9d-bde4-e08e-295d-195c.ngrok-free.app/api"
+      "url-old": "http://localhost:3000/api",
+      "url": "https://7639-2804-14c-5bc6-9f9d-fd3c-ae1b-fd6e-14e1.ngrok-free.app/api"
     }
   ],
   "paths": {
