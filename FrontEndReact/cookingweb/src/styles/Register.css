@@ -2,11 +2,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url(../../public/img/background2.avif);
+  background-size: cover;
   height: 100vh;
 }
 
 form {
   display: flex;
+  color: #FFF;
+  border: 2px solid;
+  border-color: #EA1D2C;
+  background-color: rgba(209, 209, 209, 0.308);
   flex-direction: column;
   border-radius: 5px;
   padding: 20px;
@@ -27,20 +33,43 @@ label {
 
 input {
   padding: 10px;
-  margin-top: 5px;
-  border: 1px solid gray;
+  margin-top:10px;
+  border: 1px solid #EA1D2C;
   border-radius: 5px;
   width: 100%;
-  margin-bottom: 10px;
 }
 
-button {
+input[type='text'] {
+  padding: 10px;
+  margin-top:10px;
+  border: 1px solid #EA1D2C;
+  border-radius: 5px;
+  width: 100%;
+}
+
+input[type='email'] {
+  padding: 10px;
+  margin-top:10px;
+  border: 1px solid #EA1D2C;
+  border-radius: 5px;
+  width: 100%;
+}
+
+input[type='password'] {
+  padding: 10px;
+  margin-top:10px;
+  border: 1px solid #EA1D2C;
+  border-radius: 5px;
+  width: 100%;
+}
+
+button[type='cancel'] {
   padding: 10px 20px;
-  margin-top: 20px;
+  margin-top: 5px;
   font-size: 16px;
-  background-color: red;
-  color: white;
-  border-color: white;
+  background-color: #FFF;
+  color: #EA1D2C;
+  border: none;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
@@ -50,17 +79,21 @@ button {
 }
 
 button:hover {
-  background-color: red;
+  background-color: #EA1D2C;
   color: white;
 }
 
 button[type='submit'] {
-  background-color: green;
+  background-color: #EA1D2C;
+  border: none;
   color: white;
+  transition: background-color 0.3s ease;
 }
 
 button[type='submit']:hover {
-  background-color: green;
+  background-color: #FFF;
+  border-color: #EA1D2C;
+  color: #EA1D2C;
 }
 
 /* Estilos responsivos */

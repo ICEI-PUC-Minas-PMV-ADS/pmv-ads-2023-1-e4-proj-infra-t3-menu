@@ -1,8 +1,13 @@
+
+
 .login-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-image: url(../../public/img/background2.avif);
+    background-size: cover;
+    background-repeat: no-repeat;
     /* background-color: #f0f0f0; */
   }
   
@@ -24,20 +29,20 @@
     margin-bottom: 10px;
   }
   
-  input[type='userId'],
-  input[type='password'] {
+  /* input[type='userId'] {
     width: 100%;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
     box-sizing: border-box;
     margin-bottom: 20px;
-  }
+  } */
   
   button[type='submit'] {
     background-color: white;
     color: red;
     /* border: none; */
+    margin-top: 20px; 
     padding: 10px 20px;
     border-radius: 5px;    
     cursor: pointer;
