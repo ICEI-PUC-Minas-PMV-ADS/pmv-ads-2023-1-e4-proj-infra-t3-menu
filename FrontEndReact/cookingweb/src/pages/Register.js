@@ -72,7 +72,7 @@ function Register() {
           placeholder="senha"
         />
         <button type="submit">Cadastrar</button>
-        <button onClick={doCancel}>Cancelar</button>
+        <button type="cancel" onClick={doCancel}>Cancelar</button>
       </form>
 
       {userId && (

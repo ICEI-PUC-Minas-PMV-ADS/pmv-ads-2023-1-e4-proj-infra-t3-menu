@@ -142,8 +142,8 @@ export const Carrinho = ({ setCarrinho }) => {
         <h2 style={{ marginBottom: '10px'}}>Total da compra: {totalCompra}</h2>
                 
         <Button
-          width
           func={finalizarCompra}
+          color="error" 
           text={"Finalizar compra"}
           style={{ marginTop: '10px' }}
         >

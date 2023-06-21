@@ -79,7 +79,7 @@ const Catalogo = ({ setCarrinho }) => {
 
 
         <TitleProductsContainer>
-                <h2 style={{ margin: 0 }}>Sanduiches</h2>
+                <h2 style={{ margin: 0}}>Sanduiches</h2>
         </TitleProductsContainer>
 
         <ProductsContainer>
