@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Delivery.Products.Infrastru
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Delivery.Products.Domain", "src\Delivery.Products.Domain\Delivery.Products.Domain.csproj", "{1C7289A5-9D49-4C70-BD21-1FB703655939}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delivery.Products.Services", "src\Delivery.Products.Services\Delivery.Products.Services.csproj", "{E9141BD4-23DF-45C9-B507-699C9B35520B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Delivery.Products.Services", "src\Delivery.Products.Services\Delivery.Products.Services.csproj", "{E9141BD4-23DF-45C9-B507-699C9B35520B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -7,7 +7,7 @@
 	<GenerateDocumentationFile>true</GenerateDocumentationFile>
 	<UserSecretsId>8c101ed6-2f0d-4f3c-bfcf-afed4c4fd7a1</UserSecretsId>
 	<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-	<DockerfileContext>..\..</DockerfileContext>
+	<DockerfileContext>..\..</DockerfileContext>	
   </PropertyGroup>
 
   <ItemGroup>

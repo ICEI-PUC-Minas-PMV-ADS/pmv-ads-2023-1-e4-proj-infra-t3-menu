@@ -65,3 +65,5 @@ D:\ProjetosPuc\pmv-ads-2023-1-e4-proj-infra-t3-menu\BackEnd\Delivery.Products\sr
 D:\ProjetosPuc\pmv-ads-2023-1-e4-proj-infra-t3-menu\BackEnd\Delivery.Products\src\Delivery.Products.Api\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 D:\ProjetosPuc\pmv-ads-2023-1-e4-proj-infra-t3-menu\BackEnd\Delivery.Products\src\Delivery.Products.Api\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
 D:\ProjetosPuc\pmv-ads-2023-1-e4-proj-infra-t3-menu\BackEnd\Delivery.Products\src\Delivery.Products.Api\bin\Debug\net6.0\appsettings.Production.json
+D:\ProjetosPuc\pmv-ads-2023-1-e4-proj-infra-t3-menu\BackEnd\Delivery.Products\src\Delivery.Products.Api\bin\Debug\net6.0\railway-old.json
+D:\ProjetosPuc\pmv-ads-2023-1-e4-proj-infra-t3-menu\BackEnd\Delivery.Products\src\Delivery.Products.Api\bin\Debug\net6.0\railway.json
