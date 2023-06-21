@@ -1,14 +1,26 @@
 import React from 'react';
-import {StyleSheet, View} from 'react';
+import {StyleSheet, View,ImageBackground} from 'react';
 
-const Container = ({children}) =>{
-  return <View style={styles.container}>{children}</View>
+const Container = ({ children }) => {
+  return (
+    <ImageBackground
+      source={require('../../public/img/background2.avif')}
+      style={styles.backgroundImage}
+    >
+   <View style={styles.container}>{children}</View> 
+   </ImageBackground>);
+   
 };
 
 const styles = StyleSheet.create({
  container:{
     flex:1,
     backgroundColor: '#000000',
+  },
+  backgroundImage: {
+    flex: 1,
+    height: '100%',
+    resizeMode: 'cover',
   },
 });
 

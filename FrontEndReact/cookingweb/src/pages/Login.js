@@ -70,6 +70,7 @@ const Login = () => {
             id="navButton">Entrar
         </button>
         <button
+          type='cancel'
            onClick={doCancel} >
             Cancelar
         </button>
