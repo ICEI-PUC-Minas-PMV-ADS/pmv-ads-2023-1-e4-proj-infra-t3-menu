@@ -4,7 +4,7 @@ import {StyleSheet, View,ImageBackground} from 'react';
 const Container = ({ children }) => {
   return (
     <ImageBackground
-      source={require('../../public/img/background2.avif')}
+      source={require('../../public/img/background2.png')}
       style={styles.backgroundImage}
     >
    <View style={styles.container}>{children}</View> 

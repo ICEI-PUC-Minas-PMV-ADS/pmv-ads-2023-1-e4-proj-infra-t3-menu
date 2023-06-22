@@ -28,24 +28,21 @@ export const ViewOrders = () => {
         try {
             let response;
 
-            if(searchCode)
-            {                
-                response = [await getOrderById({searchCode})]
+            if (searchCode) {
+                response = [await getOrderById({ searchCode })]
             }
-            else
-            {
+            else {
                 response = await getallByUser();
             }
             setPedidos(response);
-            setFilteredPedidos(response);            
+            setFilteredPedidos(response);
         } catch (error) {
             console.error('Erro ao buscar pedidos:', error);
         }
     }
 
     useEffect(() => {
-        if (!isLoggedIn)
-        {
+        if (!isLoggedIn) {
             navigate("/Login");
         }
     }, [isLoggedIn, navigate]);
@@ -82,14 +79,14 @@ export const ViewOrders = () => {
         const handleCancelOrder = async (event) => {
             event.preventDefault();
             var confirmed = window.confirm("Tem certeza de que deseja CANCELAR pedido?");
-            if (confirmed){
+            if (confirmed) {
                 const response = await cancelOrder(row.id);
-               if (response.status === 200) {
-                 fetchPedidos();
-                 alert('Pedido cancelado!');
-               }
+                if (response.status === 200) {
+                    fetchPedidos();
+                    alert('Pedido cancelado!');
+                }
             }
-          };
+        };
 
         return (
             <Collapse in={open} timeout="auto" unmountOnExit>
@@ -98,15 +95,15 @@ export const ViewOrders = () => {
                         <Typography variant="h5" gutterBottom component="div">
                             Produtos do pedido
                         </Typography>
-                        <ul>                             
-                            {row.products.map((product) => (                                
-                                <li 
+                        <ul>
+                            {row.products.map((product) => (
+                                <li
                                     key={product.id}>
                                     <img src={`img/${product.name.replace(/ /g, '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')}.png`} alt={product.name} width={100} height={100} />
                                     {product.name} - {product.price.toLocaleString("pt-BR", {
-                                    style: "currency",
-                                    currency: "BRL",
-                                })} - {product.quantity} {product.quantity === 1 ? 'item' : 'itens'}</li>
+                                        style: "currency",
+                                        currency: "BRL",
+                                    })} - {product.quantity} {product.quantity === 1 ? 'item' : 'itens'}</li>
                             ))}
                         </ul>
                     </div>
@@ -118,58 +115,65 @@ export const ViewOrders = () => {
                             style: "currency",
                             currency: "BRL",
                         })}
-                        </h1>                        
+                        </h1>
                     </div>
 
-                    <div style={{ margin: 10 }}>
+                    <div style={{ margin: 10}}>
                         <Typography variant="h6" gutterBottom component="div">
                             
                         </Typography>
                         <ButtonGroup>
-                            <Button variant="contained" 
-                                style={{ backgroundColor: 'red' }} 
+                            <Button variant="contained"
+                                style={{ backgroundColor: '#EA1D2C', color: '#FFF' }}
                                 onClick={handleCancelOrder}
                                 disabled={row.statusOrder !== 'Aguardando inicio'}
                             >
-                            <ClearIcon />
-                               Cancelar
+                                <ClearIcon />
+                                Cancelar
                             </Button>
                         </ButtonGroup>
-                    </div>                    
+                    </div>
                 </Box>
             </Collapse>
         )
     }
 
     return (
-        <Container>            
+        <Container>
             <div>
                 <Navbar />
             </div>
-            <div style={{ backgroundColor: 'white', padding: '14px', border: '1px solid black', width: '100%' }}>
-                <h2 style={{ margin: 0 }}>Meus Pedidos</h2>
+            <div style={{ backgroundColor: '',color: '#FFF', padding: '14px', border: '1px solid black', width: '100%' }}>
+                <h2 style={{ margin: 0,}}>Meus Pedidos</h2>
 
                 {/* Pesquisa do pedido pelo id */}
-                <TextField style={{ backgroundColor: 'white',  width: '200px',  height: '20px'}}
+                <TextField style={{ backgroundColor: '#FFF', width: '200px', height: '52px', borderRadius: '5px'}}
                     label="Código do pedido"
                     value={searchCode}
                     onChange={(e) => setSearchCode(e.target.value)}
                     variant="outlined"
                 />
-                
-                <Button 
-                    variant="contained" 
-                    onClick={handleSearch} 
-                    style={{ backgroundImage: `url(${'/img/lupa.png'})`, 
-                    backgroundSize: 'cover',
-                    padding: '27px',
-                    minWidth: 'auto'}}>
-                     
+
+                <Button
+                    variant="contained"
+                    onClick={handleSearch}
+                    style={{
+                        background: '#EA1D2C',
+                        borderRadius: '100px',
+                        color: '#FFF',
+                        marginLeft: '10px'
+                    }}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="40" fill="currentColor"
+                        class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1
+                  1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                    </svg>
+
                 </Button>
             </div>
 
             {pedidos && pedidos.length === 0 ? (
-                <p style={{ backgroundColor: 'white' }}>Nenhum pedido encontrado</p>
+                <p style={{ backgroundColor: 'white'}}>Nenhum pedido encontrado</p>
             ) : (
                 <CustomTable
                     columns={columns}
@@ -177,7 +181,7 @@ export const ViewOrders = () => {
                     acoes={acoes}
                     lineCollapsable={LineCollapsable}
                 />
-            )}            
+            )}
         </Container>
     );
 };

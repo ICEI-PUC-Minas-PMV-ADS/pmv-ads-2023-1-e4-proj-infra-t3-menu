@@ -2,7 +2,7 @@ body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     height: 100%;
     overflow-x: hidden;
-    background-image: url(../../public/img/background2.avif);
+    background-image: url(../../public/img/background2.jpg);
     background-size:cover;
     background-repeat: repeat;
 }
@@ -40,6 +40,13 @@ p {
     
 }
 
+/* Estilos para o modo noturno */
+.dark-mode {
+    background-color: #222;
+    color: #fff;
+    /* Adicione outros estilos necessários */
+  }
+  
 .content {
     background-color:   rgba(209, 209, 209, 0.308);
     text-align: center;
