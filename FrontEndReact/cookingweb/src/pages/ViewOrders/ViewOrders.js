@@ -158,8 +158,9 @@ export const ViewOrders = () => {
                     variant="contained"
                     onClick={handleSearch}
                     style={{
-                        background: '#EA1D2C',
+                        background: 'rgb(209, 209, 209, 0.000)',
                         borderRadius: '100px',
+                        border: '',
                         color: '#FFF',
                         marginLeft: '10px'
                     }}>

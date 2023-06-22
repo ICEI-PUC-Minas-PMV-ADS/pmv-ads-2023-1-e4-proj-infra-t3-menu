@@ -1,10 +1,12 @@
 import './App.css';
 import React from 'react';
-import Navbar from './pages/Navbar.js'
+import NavbarRes from './pages/NavbarRes';
+
+
 
 function App() {  
   return (    
-    <Navbar />
+    <NavbarRes />
   );
 }
 

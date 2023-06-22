@@ -66,8 +66,7 @@ const Login = () => {
         <br />
         <button 
             className="btn btn-outline-danger" 
-            type="submit" 
-            id="navButton">Entrar
+            type="submit">Entrar
         </button>
         <button
           type='cancel'

@@ -4,15 +4,23 @@ body {
     overflow-x: hidden;
     background-image: url(../../public/img/background2.jpg);
     background-size:cover;
+    background-color: white;
     background-repeat: repeat;
 }
 
 nav {
-    height: 75px;
+    width: 100%;
 }
 
 #navButton {
-    margin: 2px;
+    margin: 5px;
+    height: 5vh;
+    width: 10vh;
+}
+
+.bgNav {
+    font-size: 2.3vh;
+    background-color: white;
 }
 
 .icon-link {
@@ -40,13 +48,8 @@ p {
     
 }
 
-/* Estilos para o modo noturno */
-.dark-mode {
-    background-color: #222;
-    color: #fff;
-    /* Adicione outros estilos necessários */
-  }
-  
+
+
 .content {
     background-color:   rgba(209, 209, 209, 0.308);
     text-align: center;
