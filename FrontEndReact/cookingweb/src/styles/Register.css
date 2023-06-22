@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(../../public/img/background2.avif);
+  background-image: url(../../public/img/background2.jpg);
   background-size: cover;
   height: 100vh;
 }
@@ -42,7 +42,6 @@ input {
 input[type='text'] {
   padding: 10px;
   margin-top:10px;
-  border: 1px solid #EA1D2C;
   border-radius: 5px;
   width: 100%;
 }
