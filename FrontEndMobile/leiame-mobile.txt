@@ -1,7 +1,15 @@
-1 - Para criar o build do projeto:
+1 - Para criar o build do projeto para publicação:
 https://docs.expo.dev/build/setup/
+eas build --platform android
+Sobre a geração de apk:
+https://docs.expo.dev/build-reference/apk/
+
 No final será gerado um apk  para instalação em um dispositivo móvel.
 Foi gerado o instalador para Android mas não consegui gerar para ioS porque preciso de uma conta Apple.
+
+O Android app foi gerado nesse link:
+https://expo.dev/artifacts/eas/5EZNNLzJFPtyTavJMpNFHZ.aab
+
 
 2- Para colocar o Frontend mobile ou web em execução:
 

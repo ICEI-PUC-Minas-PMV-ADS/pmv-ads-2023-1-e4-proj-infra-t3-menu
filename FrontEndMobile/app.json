@@ -24,11 +24,18 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.jaquepoletto.snack54c54c01e4ae4bf28112e9b515e53f96"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "description": "Projeto pucminas"
+    "description": "Projeto pucminas",
+    "extra": {
+      "eas": {
+        "projectId": "f2aaa0fd-a90b-4837-9615-6b9ac4276d6c"
+      }
+    },
+    "owner": "jaquepoletto"
   }
 }
