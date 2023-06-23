@@ -17,7 +17,7 @@ import {UserContext} from './pages/UserContext.js';
 export default function Router() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [userName, setUserName] = useState('');
-    const [setCarrinho] = useState(JSON.parse(localStorage.getItem("CARRINHO") || "[]"));
+    const [carrinho, setCarrinho] = useState(JSON.parse(localStorage.getItem("CARRINHO") || "[]"));
     
     return (
         <BrowserRouter>
