@@ -7,7 +7,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const chk = document.getElementById('chk')
+
+chk.addEventListener('change', () => {
+  document.body.classList.toggle('dark')
+})
+
+
+
 
 root.render(    
   <React.StrictMode>

@@ -1,5 +1,6 @@
 import React from 'react';
-import {StyleSheet, View} from 'react';
+import { StyleSheet, View } from 'react';
+
 
 const Body = ({children}) =>{
   return <View style={styles.container}>{children}</View>

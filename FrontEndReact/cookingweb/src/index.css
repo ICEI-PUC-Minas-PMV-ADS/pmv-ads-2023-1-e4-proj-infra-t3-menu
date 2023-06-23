@@ -12,4 +12,100 @@ code {
     monospace;
 }
 
+html {
+  --background: white;
+  --text: black;
+}
 
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.label {
+  background-color: #363535;
+  border-radius: 50px;
+  cursor: pointer;
+  display: block;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  position: absolute;
+  height: 26px;
+  width: 50px;
+  transform: scale(1.5);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+}
+
+
+.label .ball {
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 22px;
+  width: 22px;
+  transform: translateX(0px);
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked+.label .ball {
+  transform: translateX(24px);
+}
+
+.fa-moon {
+  color: #f1c40f;
+}
+
+.fa-sun {
+  color: #f39c12;
+}
+
+.dark {
+  background-image: none;
+  background-color: whitesmoke;
+}
+
+.dark button {
+  background-color: #EA1D2C;
+  color: #FFF;
+}
+
+.dark h3 {
+  color: black;
+}
+
+.dark h4 {
+  color: black;
+}
+
+.dark h2 {
+  color: #EA1D2C;
+  font-weight: bold;
+}
+
+.dark p {
+  color: black;
+}
+
+.dark label {
+  color: black;
+  font-weight: bold;
+}
+
+.dark span {
+  color: black;
+
+}

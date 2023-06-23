@@ -161,7 +161,7 @@ export const ViewOrders = () => {
                         background: 'rgb(209, 209, 209, 0.000)',
                         borderRadius: '100px',
                         border: '',
-                        color: '#FFF',
+                        color: '#ea1d2c',
                         marginLeft: '10px'
                     }}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="40" fill="currentColor"

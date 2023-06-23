@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(../../public/img/background2.jpg);
   background-size: cover;
   height: 100vh;
 }

@@ -16,7 +16,6 @@
     -->
 
     <!-- link pra rodar o bootstrap -->
-     
 
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <!--
@@ -28,6 +27,9 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+
+    <link rel="stylesheet" href="styles.css">
+
     <title>CookingWeb</title>
   </head>
   <body>
@@ -43,5 +45,17 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+    <div>
+      <input type="checkbox" class="checkbox" id="chk" />
+      <label class="label" for="chk">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+        <div class="ball"></div>
+      </label>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
   </body>
 </html>
