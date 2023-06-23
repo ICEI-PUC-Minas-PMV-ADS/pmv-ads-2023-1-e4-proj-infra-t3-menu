@@ -12,56 +12,61 @@ code {
     monospace;
 }
 
-html {
-  --background: white;
-  --text: black;
-}
-
-
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  box-sizing: border-box;
-}
 
 .checkbox {
   opacity: 0;
   position: absolute;
 }
 
-.label {
-  background-color: #363535;
+.labelTema {
+  background-color: #ffffff;
   border-radius: 50px;
   cursor: pointer;
   display: block;
   justify-content: space-between;
   align-items: center;
-  padding: 5px;
+  padding-top: 2px;
+  padding-left: 5px;
   position: absolute;
-  height: 26px;
+  height: 3.3vh;
   width: 50px;
   transform: scale(1.5);
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 95px;
+  right: 0px;
+  transform: translate(-25%, -25%);
 
 }
 
+i {
+  margin: 1px;
+}
 
-.label .ball {
-  background-color: #ffffff;
+
+.labelTema .ball {
+  background-color: #011433;
   border-radius: 50%;
   position: absolute;
   top: 2px;
   left: 2px;
-  height: 22px;
-  width: 22px;
+  height: 2.8vh;
+  width: 2.8vh;
   transform: translateX(0px);
   transition: transform 0.2s linear;
 }
 
-.checkbox:checked+.label .ball {
+.ball {
+  color: #EA1D2C;
+}
+
+.light-mode .labelTema {
+  background-color: #012053;
+}
+
+.light-mode .ball {
+  background-color: #FFF;
+}
+.checkbox:checked+.labelTema .ball {
   transform: translateX(24px);
 }
 
@@ -73,39 +78,39 @@ html {
   color: #f39c12;
 }
 
-.dark {
+.light-mode {
   background-image: none;
   background-color: whitesmoke;
 }
 
-.dark button {
+.light-mode button {
   background-color: #EA1D2C;
   color: #FFF;
 }
 
-.dark h3 {
+.light-mode h3 {
   color: black;
 }
 
-.dark h4 {
+.light-mode h4 {
   color: black;
 }
 
-.dark h2 {
+.light-mode h2 {
   color: #EA1D2C;
   font-weight: bold;
 }
 
-.dark p {
+.light-mode p {
   color: black;
 }
 
-.dark label {
+.light-mode label {
   color: black;
   font-weight: bold;
 }
 
-.dark span {
+.light-mode span {
   color: black;
 
 }
