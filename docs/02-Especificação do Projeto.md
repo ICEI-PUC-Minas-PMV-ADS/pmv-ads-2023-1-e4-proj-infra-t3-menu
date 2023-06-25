@@ -58,7 +58,7 @@ Por outro lado, estes dias corridos que vivenciamos hoje proporcionaram a popula
 
 Como proposta para atender a demanda da situação atual, forneceremos uma plataforma digital na qual as pessoas poderão se cadastrar, visualizar e escolher os produtos e efetuar o pedido de lanches com comodidade, segurança e de maneira personalizada. Neste documento não abordaremos sobre os métodos de pagamento, pois não comporão o escopo desse projeto.
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e4-proj-infra-t3-menu/assets/90807703/5a96294a-ef84-48bd-bf79-5d79e48960db)
+![modelagem_processos](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e4-proj-infra-t3-menu/assets/90807703/cccf3f03-15f2-4148-841e-277a5f7ea159)
 
 ## Indicadores de Desempenho
 
