@@ -30,10 +30,10 @@ function httpsRequest(params, data, callback) {
     let isAuthenticated = params.isAuthenticated !== undefined ? params.isAuthenticated : true;
 
     if(isAuthenticated && (token === undefined)) {
-        const error = new Error('Não autorizado');
+        const error = new Error('Usuário não autenticado');
         error.statusCode = 401;            
-        //console.log('Não consegui passar daqui');      
-        //callback(error, error.statusCode);               
+        console.log('Usuário não autenticado');      
+        callback(error, error.statusCode);               
         return;
     }
 
@@ -110,7 +110,8 @@ function sendResAnyRequest(res, data, statusCode) {
     else if ((data !== null) && (data.message !== null))
     {
         // res.status(statusCode).send(data.message);
-        // console.log('requisição executada. Retorno da requisição: '+statusCode);
+        console.log('requisição executada. Retorno da requisição: '+statusCode);
+        console.log(data);
         res.send(data);
     }
     else
